@@ -1,0 +1,53 @@
+// Header.scss
+
+$primary-color: #77a642; // 로메인 그린
+$spacing: 20px;
+
+.header {
+  background-color: #fff; // 흰색 배경색
+  color: #333; // 흑색 텍스트 색상
+  padding: $spacing 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: $spacing; // 로고와 버튼 사이의 간격 조정
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center; // 버튼을 수직 중앙 정렬
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: $spacing; // 버튼 간격 설정
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease; // 호버 시 색상 변경 트랜지션
+}
+
+nav ul li a:hover {
+  color: $primary-color; // 호버 시 로메인 그린 색상으로 변경
+}
