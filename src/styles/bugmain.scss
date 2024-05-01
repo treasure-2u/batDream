@@ -1,0 +1,29 @@
+header {
+  background-color: gold;
+}
+footer {
+  background-color: yellow;
+}
+body {
+  width: 1200px;
+  height: 100vh; /* 뷰포트의 높이를 기준으로 body 요소의 높이 설정 */
+  background-color: gray;
+}
+.bug-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 40px;
+}
+.line {
+  height: 1px;
+  background-color: #77a642;
+}
+
+.search-container {
+  display: flex;
+  border: solid 1px #77a642;
+  margin: 20px 20px;
+  width: 1000px;
+  padding: 15px;
+  border-radius: 20px;
+}
