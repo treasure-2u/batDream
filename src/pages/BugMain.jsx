@@ -67,14 +67,6 @@ export default function BugMain() {
         englishName="회 졸맛탱"
         mainImage="[회먹으러가자]"
       />
-      <MyContainer
-        title={false}
-        order="4"
-        crop="4"
-        name="회 4"
-        englishName="회 4"
-        mainImage="[4]"
-      />
 
       <footer>푸더자리</footer>
     </div>

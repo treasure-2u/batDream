@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-import './styles.scss';
+// import './BugMain/bootstrap_styles.scss';
 
 function AlwaysOpenExample() {
   return (
