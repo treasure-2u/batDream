@@ -23,12 +23,13 @@ export default function BugMain() {
   };
 
   return (
-    <div>
+    <div className="body-title">
       <div className="bug-title">병해충 도감</div>
       <div className="line"></div>
 
       <div className="BugPageMain">
         <div className="bootstrap-container">
+          <div className="Kategorie-title">병해충 정보</div>
           <NavbarDarkExample />
         </div>
         <div className="Main-Main">
@@ -71,7 +72,6 @@ export default function BugMain() {
           />
         </div>
       </div>
-      <footer>푸더자리</footer>
     </div>
   );
 }

@@ -20,10 +20,6 @@ function AlwaysOpenExample() {
         <Accordion.Header>주간농사정보</Accordion.Header>
         <Accordion.Body>농사 시러</Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="3">
-        <Accordion.Header>병해충 발생정보</Accordion.Header>
-        <Accordion.Body>벌레 시러</Accordion.Body>
-      </Accordion.Item>
     </Accordion>
   );
 }

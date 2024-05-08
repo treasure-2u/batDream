@@ -1,11 +1,3 @@
-header {
-  background-color: #77a642;
-}
-
-footer {
-  background-color: #77a642;
-}
-
 .bug-title {
   text-align: center;
   font-size: 40px;
@@ -17,25 +9,34 @@ footer {
   height: 1px;
   background-color: #77a642;
 }
+.body-title {
+  // width: 1000px;
+  text-align: center;
+}
 
 .BugPageMain {
   display: flex;
+  margin: 0 100px; /* 양쪽 여백 100px 추가 */
 }
-
-.bootstrap-container {
-  width: 180px; /* 원하는 너비로 조정 */
-  margin-right: 20px; /* 다른 요소와의 간격을 위해 오른쪽 마진 추가 */
+.Kategorie-title {
   border: 1px solid #77a642;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
+.Main-Main {
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 20px;
+}
 .search-container {
   display: flex;
   align-items: center; /* 세로 중앙 정렬 추가 */
   border: solid 1px #77a642;
-  margin: 20px 20px;
-  width: 1000px;
   padding: 15px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .search-container div {
