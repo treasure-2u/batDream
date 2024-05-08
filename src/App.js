@@ -9,6 +9,7 @@ import PlantInfo from './pages/PlantInfo';
 import BugMain from './pages/BugMain';
 import BugInfo from './pages/BugInfo';
 import NotFound from './pages/NotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/BugInfo" element={<BugInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Header />
     </div>
   );
 }
