@@ -1,0 +1,83 @@
+.bug-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 40px;
+  width: 100%;
+}
+
+.line {
+  height: 1px;
+  background-color: #77a642;
+}
+.body-title {
+  // width: 1000px;
+  text-align: center;
+}
+
+.BugPageMain {
+  display: flex;
+  margin: 0 100px; /* 양쪽 여백 100px 추가 */
+}
+.Kategorie-title {
+  border: 1px solid #77a642;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Main-Main {
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 20px;
+}
+.search-container {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 추가 */
+  border: solid 1px #77a642;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.search-container div {
+  margin-left: 10px;
+  line-height: 32px;
+}
+
+.input {
+  display: flex;
+  margin-bottom: 10px; /* 아래쪽으로 간격 추가 */
+}
+
+.input input {
+  margin-right: 10px; /* 인풋창 오른쪽으로 간격 추가 */
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.api-container-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #77a642;
+  padding: 10px;
+}
+
+.api-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d9b487;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.api-item {
+  flex: 1;
+  border-right: 1px solid lightgray;
+  padding: 5px;
+  text-align: center;
+}
+
+.api-item:last-child {
+  border-right: none;
+}

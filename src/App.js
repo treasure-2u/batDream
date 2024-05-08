@@ -9,12 +9,14 @@ import PlantInfo from './pages/PlantInfo';
 import BugMain from './pages/BugMain';
 import BugInfo from './pages/BugInfo';
 import NotFound from './pages/NotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main />} />ㅌ
         <Route path="/FarmMain" element={<FarmMain />} />
         <Route path="/FarmSearch" element={<FarmSearch />} />
         <Route path="/FarmInfo" element={<FarmInfo />} />
