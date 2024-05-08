@@ -6,14 +6,6 @@ footer {
   background-color: #77a642;
 }
 
-// body {
-//   width: 1200px;
-//   height: 100vh;
-//   background-color: white;
-//   display: flex;
-//   justify-content: center;
-// }
-
 .bug-title {
   text-align: center;
   font-size: 40px;
@@ -24,6 +16,16 @@ footer {
 .line {
   height: 1px;
   background-color: #77a642;
+}
+
+.BugPageMain {
+  display: flex;
+}
+
+.bootstrap-container {
+  width: 180px; /* 원하는 너비로 조정 */
+  margin-right: 20px; /* 다른 요소와의 간격을 위해 오른쪽 마진 추가 */
+  border: 1px solid #77a642;
 }
 
 .search-container {
