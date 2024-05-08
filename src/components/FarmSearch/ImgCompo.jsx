@@ -29,21 +29,20 @@ const ImgCompo = () => {
         console.log(parsedXml);
 
         // 필요한 데이터를 추출합니다.
-        const farmsData = parsedXml.elements[0].elements[0].elements.map(
-          (row) => ({
-            name:
-              row.elements.find((e) => e.name === 'FARM_NAME')?.elements[0]
-                .text || '',
-            address:
-              row.elements.find((e) => e.name === 'ADDRESS')?.elements[0]
-                .text || '',
-          }),
-        );
-        console.log(farmsData);
-        setFarms(farmsData);
+        const farmsData = parsedXml.weekendfarm.rows.map((row) => ({
+          name: row.find((e) => e.name === 'FARM_NAME')?.elements[0].text || '',
+          address:
+            row.find((e) => e.name === 'ADDRESS')?.elements[0].text || '',
+        }));
+        // console.log(farmsData);
+        // console.log(farmsData);
+        console.log('aa');
+
+        // setFarms(farmsData);
       } catch (error) {
         // 에러 발생 시 에러 상태 업데이트
         setError(error);
+        console.log('eee');
       }
     };
 
