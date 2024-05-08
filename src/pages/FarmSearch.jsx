@@ -2,7 +2,8 @@
 import NameFilterCompo from '../components/FarmSearch/NameFilterCompo';
 import ImgCompo from '../components/FarmSearch/ImgCompo';
 import AreaFilterCompo from '../components/FarmSearch/AreaFilterCompo';
-import { Pagination } from '../components/FarmSearch/Pagination';
+import Paging from '../components/FarmSearch/Paging';
+import Header from '../components/Header/Header';
 
 export default function FarmSearch() {
   return (
@@ -10,7 +11,7 @@ export default function FarmSearch() {
       <NameFilterCompo />
       <AreaFilterCompo />
       <ImgCompo />
-      <Pagination />
+      <Paging />
     </div>
   );
 }
