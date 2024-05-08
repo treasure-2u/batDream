@@ -11,7 +11,7 @@ import '../styles/Main/mainList.scss';
 export default function Main() {
   return (
     <>
-      {/* <Banner /> */}
+      <Banner />
       <MainList />
       {/* <Pictures /> */}
     </>

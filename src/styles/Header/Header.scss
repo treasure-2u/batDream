@@ -1,92 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@font-face {
-  font-family: 'ONE-Mobile-POP';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
-$primary-color: #77a642; // 로메인 그린
-$icon-color: #333; // 아이콘 색상
-$icon-hover-color: #77a642; // 아이콘 호버 시 색상
-$spacing: 2rem; // 40px로 대체
-$header-padding-top: 0.3rem; // 6px로 대체
-$header-padding-bottom: 1rem; // 20px로 대체
-$header-border-bottom: 0.125rem solid #d9b487; // 2px로 대체
-$logo-margin-right: $spacing; // 로고와 버튼 사이의 간격 조정
+$primary-color: #77a642;
+$icon-color: #333;
+$icon-hover-color: #77a642;
+$spacing: 2.5rem; /* rem 단위 사용 */
+$header-padding-top: 1rem; /* rem 단위 사용 */
+$header-padding-bottom: 1.25rem; /* rem 단위 사용 */
+$header-border-bottom: 0.125rem solid #d9b487; /* rem 단위 사용 */
+$logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
 
 .header {
-  background-color: #fff; // 흰색 배경색
-  color: #333; // 흑색 텍스트 색상
+  background-color: #fff;
+  color: #333;
   font-family: 'Nanum Gothic', sans-serif;
-  border-bottom: $header-border-bottom; // 아래 테두리 설정
-  padding-top: $header-padding-top; // 위 패딩 설정
-  padding-bottom: $header-padding-bottom; // 아래 패딩 설정
+  border-bottom: $header-border-bottom;
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75rem; /* rem 단위 사용 */
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .main-logo {
-  margin-left: -10rem; // 160px로 대체
-  margin-right: 6rem; // 120px로 대체
+  margin-left: -3.125rem; /* rem 단위 사용 */
+  margin-right: 3.75rem; /* rem 단위 사용 */
 }
 
 .logo {
-  margin-right: $logo-margin-right; // 로고와 버튼 사이의 간격 조정
+  margin-right: $logo-margin-right;
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  width: 3.4375rem; // 55px로 대체
+  width: 3.4375rem; /* rem 단위 사용 */
   height: auto;
 }
 
 .logo-1 {
   font-family: 'ONE-Mobile-POP';
   color: $primary-color;
-  font-size: 1.5625rem; // 25px로 대체
+  font-size: 1.5625rem; /* rem 단위 사용 */
 }
 
 .icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 4.0625rem; /* rem 단위 사용 */
 }
 
 .icon {
   color: $primary-color;
-  width: 1.25rem; // 20px로 대체
-  height: 1.25rem; // 20px로 대체
-  margin-bottom: 0.3125rem; // 5px로 대체
+  width: 1.25rem; /* rem 단위 사용 */
+  height: 1.25rem; /* rem 단위 사용 */
+  margin-bottom: 0.3125rem; /* rem 단위 사용 */
   display: flex;
-  transition: color 0.3s ease; // 호버 시 색상 변경 트랜지션
+  transition: color 0.3s ease;
 }
 
 .header-link {
   text-decoration: none;
-  font-size: 1.125rem; // 18px로 대체
+  font-size: 1.125rem; /* rem 단위 사용 */
   font-weight: bold;
   color: inherit;
-  transition: color 0.3s ease; // 호버 시 색상 변경 트랜지션
+  transition: color 0.3s ease;
+
+  @media (max-width: 48rem) {
+    display: none; /* 텍스트 숨김 */
+  }
 }
 
 #color1:hover {
   color: $primary-color;
 }
+
 #color2:hover {
   color: #8b6a42;
 }
+
 #color3:hover {
   color: #5b5959;
 }
+
 #color4:hover {
   color: #f6cd68;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 48rem) {
+  .icon-container {
+    flex-direction: column;
+    text-align: center;
+    width: 10%;
+  }
+
+  .main-logo {
+    margin-left: 0;
+    margin-right: 0;
+    /* margin-bottom: $spacing; */
+  }
+
+  .logo {
+    margin-right: 0;
+    /* margin-bottom: $spacing; */
+  }
+}
+@media (max-width: 30rem) {
+  .logo-1 {
+    font-size: 0.9375rem; /* rem 단위 사용 */
+  }
+  .main-logo {
+    width: 5%;
+  }
+}
+@media (max-width: 62rem) {
+  .container {
+    max-width: 90%; /* rem 단위 사용 */
+  }
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 75rem; /* rem 단위 사용 */
+  }
 }
