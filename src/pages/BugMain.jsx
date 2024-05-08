@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/BugMain/bugmain.scss';
-import MyContainer from '../components/BugMain/BugMain';
+import MyContainer from '../components/BugMain/MyContainer';
 import '../components/BugMain/bootstrap';
 import NavbarDarkExample from '../components/BugMain/bootstrap';
 
