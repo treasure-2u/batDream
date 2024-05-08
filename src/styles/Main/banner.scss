@@ -1,38 +1,61 @@
-/* banner.scss */
-
 .banner {
-  position: relative; /* 이미지 컨테이너에 position: relative; 적용 */
-}
+  position: relative;
 
-.banner__image {
-  display: flex;
-  width: 100%; /* 이미지가 부모 요소에 꽉 차게 */
-  height: auto; /* 이미지 비율 유지 */
-  border-radius: 20px; /* 이미지의 border-radius 설정 */
-}
+  .banner__image {
+    position: absolute;
+    text-align: center; /* 가운데 정렬을 위해 */
+  }
 
-.banner__text {
-  position: absolute; /* 이미지 내에 절대 위치 */
-  left: 20px; /* 텍스트의 왼쪽 위치 조정 */
-  bottom: 20px; /* 텍스트의 아래쪽 위치 조정 */
-  font-family: 'NanumGothic';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px; /* 폰트 사이즈 조정 */
-  line-height: 30px; /* 텍스트의 줄 간격 조정 */
-  color: #77a642; /* 텍스트 색상 설정 */
-}
+  .banner__image img {
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 600px;
+  }
 
-.banner__text h1 {
-  display: flex;
-  font-size: 40px; /* h1 태그의 폰트 사이즈 조정 */
-  line-height: 1.2; /* h1 태그의 줄 간격 조정 */
-  color: #77a642; /* h1 태그의 색상 설정 */
-}
+  .banner__text {
+    position: absolute;
+    top: 50%; /* 부모 요소의 세로 중앙으로 이동 */
+    left: 50%; /* 부모 요소의 가로 중앙으로 이동 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 트랜스폼 */
+    text-align: center; /* 가운데 정렬을 위해 */
+  }
 
-.banner__text p {
-  display: flex;
-  margin-top: 10px; /* p 태그의 위쪽 여백 조정 */
-  font-size: 16px; /* p 태그의 폰트 사이즈 조정 */
-  line-height: 30px; /* p 태그의 줄 간격 조정 */
+  .banner__text h1 {
+    font-size: 24px;
+    color: #304c10;
+    font-weight: bold;
+  }
+
+  .banner__text p {
+    font-size: 16px;
+    color: #56960d;
+    font-weight: bold;
+  }
+
+  /* 검색바 스타일 */
+  .search-bar {
+    position: absolute;
+    top: calc(50% + 50px); /* 텍스트 아래로 위치 조정 */
+    left: 50%; /* 부모 요소의 가로 중앙으로 이동 */
+    transform: translateX(-50%); /* 가운데 정렬을 위한 트랜스폼 */
+    text-align: center; /* 가운데 정렬을 위해 */
+    font-size: 10px;
+  }
+
+  .search-bar input {
+    padding: 8px 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #77a642;
+  }
+
+  .search-bar button {
+    padding: 6px 10px;
+    background-color: #77a642; /* 버튼 색상을 조정합니다. */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    // cursor: pointer;
+  }
 }

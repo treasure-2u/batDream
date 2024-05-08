@@ -10,9 +10,8 @@ import MainList from '../components/Main/mainList';
 export default function Main() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Banner />
-      <MainList />
+      <Banner />
+      {/* <MainList />
       <Pictures /> */}
     </>
   );
