@@ -1,0 +1,45 @@
+.Recommendation {
+  margin-top: 150px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+.Recommemd-container {
+  display: flex;
+}
+
+.image-container {
+  margin-top: 150px;
+}
+
+.Recommendation h2 {
+  font-size: 24px;
+  color: #77a642;
+  font-weight: bold;
+}
+
+.Recommendation p {
+  font-size: 16px;
+}
+
+.description h3 {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.description p {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.image-container button {
+  margin: 10px;
+  align-items: cener;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #cadeb3;
+  transition: background-color 0.3s; // 호버 효과에 transition 추가
+}
+
+.image-container button:hover {
+  background-color: #77a642; // 호버 시 배경색 변경
+}
