@@ -1,15 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import Main from "./pages/Main";
-import FarmMain from "./pages/FarmMain";
-import FarmSearch from "./pages/FarmSearch";
-import FarmInfo from "./pages/FarmInfo";
-import FarmGuide from "./pages/FarmGuide";
-import PlantMain from "./pages/PlantMain";
-import PlantInfo from "./pages/PlantInfo";
-import BugMain from "./pages/BugMain";
-import BugInfo from "./pages/BugInfo";
-import NotFound from "./pages/NotFound";
-import Header from "./pages/Header";
+import { Routes, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import FarmMain from './pages/FarmMain';
+import FarmSearch from './pages/FarmSearch';
+import FarmInfo from './pages/FarmInfo';
+import FarmGuide from './pages/FarmGuide';
+import PlantMain from './pages/PlantMain';
+import PlantInfo from './pages/PlantInfo';
+import BugMain from './pages/BugMain';
+import BugInfo from './pages/BugInfo';
+import NotFound from './pages/NotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (

@@ -1,0 +1,32 @@
+/* Recommendation.scss */
+
+.h2 {
+  font-size: 16px;
+  color: #77a642;
+  text-align: 'left';
+}
+
+.recommendation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recommendation-info {
+  font-size: 16px;
+  color: #77a642;
+  text-align: left;
+}
+
+// .recommendation-image {
+//   /* 이미지 스타일링을 여기에 추가하세요 */
+// }
+
+.recommendation-crops {
+  font-size: 16px;
+  color: black;
+  text-align: left;
+  // .recommendation-button {
+  //   /* 버튼 스타일링을 여기에 추가하세요 */
+  // }
+}

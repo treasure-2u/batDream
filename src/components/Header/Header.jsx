@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/Header.scss";
-//
-import { ReactComponent as Leaf } from "../assets/leafpg.svg";
-import { ReactComponent as Book } from "../assets/bookpg.svg";
-import { ReactComponent as BadBook } from "../assets/bad-bookpg.svg";
-import { ReactComponent as Notice } from "../assets/noticepg.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logoImage from '../../assets/logo.png';
+import '../../styles/Header/Header.scss';
+
+import { ReactComponent as Leaf } from '../../assets/leafpg.svg';
+import { ReactComponent as Book } from '../../assets/bookpg.svg';
+import { ReactComponent as BadBook } from '../../assets/bad-bookpg.svg';
+import { ReactComponent as Notice } from '../../assets/noticepg.svg';
 
 export default function Header() {
   return (
@@ -13,7 +14,9 @@ export default function Header() {
       <div className="container">
         <div className="main-logo">
           <div className="logo">
-            <img src="/logo1.png" alt="Logo" />
+            {/* <img src="/logo.png" alt="Logo" /> */}
+            <img src={logoImage} alt="Logo" />
+
             <div className="logo-1">밭드림</div>
           </div>
         </div>

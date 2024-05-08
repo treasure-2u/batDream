@@ -1,0 +1,38 @@
+/* banner.scss */
+
+.banner {
+  position: relative; /* 이미지 컨테이너에 position: relative; 적용 */
+}
+
+.banner__image {
+  display: flex;
+  width: 100%; /* 이미지가 부모 요소에 꽉 차게 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 20px; /* 이미지의 border-radius 설정 */
+}
+
+.banner__text {
+  position: absolute; /* 이미지 내에 절대 위치 */
+  left: 20px; /* 텍스트의 왼쪽 위치 조정 */
+  bottom: 20px; /* 텍스트의 아래쪽 위치 조정 */
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px; /* 폰트 사이즈 조정 */
+  line-height: 30px; /* 텍스트의 줄 간격 조정 */
+  color: #77a642; /* 텍스트 색상 설정 */
+}
+
+.banner__text h1 {
+  display: flex;
+  font-size: 40px; /* h1 태그의 폰트 사이즈 조정 */
+  line-height: 1.2; /* h1 태그의 줄 간격 조정 */
+  color: #77a642; /* h1 태그의 색상 설정 */
+}
+
+.banner__text p {
+  display: flex;
+  margin-top: 10px; /* p 태그의 위쪽 여백 조정 */
+  font-size: 16px; /* p 태그의 폰트 사이즈 조정 */
+  line-height: 30px; /* p 태그의 줄 간격 조정 */
+}
