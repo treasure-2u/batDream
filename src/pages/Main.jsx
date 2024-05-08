@@ -6,14 +6,14 @@ import '../styles/Main/banner.scss';
 import Pictures from '../components/Main/picture';
 import '../styles/Main/pictures.scss';
 import MainList from '../components/Main/mainList';
+import '../styles/Main/mainList.scss';
 
 export default function Main() {
   return (
     <>
-      {/* <Header /> */}
-      <Banner />
-      {/* <MainList />
-      <Pictures /> */}
+      {/* <Banner /> */}
+      <MainList />
+      {/* <Pictures /> */}
     </>
   );
 }
