@@ -14,6 +14,7 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Main />} />ㅌ
         <Route path="/FarmMain" element={<FarmMain />} />
@@ -26,7 +27,6 @@ function App() {
         <Route path="/BugInfo" element={<BugInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Header />
     </div>
   );
 }
