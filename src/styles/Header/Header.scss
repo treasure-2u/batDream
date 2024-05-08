@@ -20,6 +20,8 @@ $spacing: 20px;
   // border: 1px 0px 0px 1px solid #d9b487;
   // border-top: 1px solid #d9b487;
   border-bottom: 2px solid #d9b487;
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -30,7 +32,7 @@ $spacing: 20px;
   align-items: center;
 }
 .main-logo {
-  margin-left: -60px;
+  margin-left: -180px;
   margin-right: 60px;
 }
 .logo {
@@ -40,13 +42,13 @@ $spacing: 20px;
 }
 
 .logo img {
-  width: 50px;
+  width: 55px;
   height: auto;
 }
 .logo-1 {
   font-family: 'ONE-Mobile-POP';
   color: #77a642;
-  font-size: px;
+  font-size: 25px;
 }
 .icon-container {
   display: flex;
@@ -56,8 +58,8 @@ $spacing: 20px;
 
 .icon {
   color: #77a642;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-bottom: 5px;
   display: flex;
   // margin-right: 8px; // 아이콘과 텍스트 간격 조정
@@ -65,7 +67,7 @@ $spacing: 20px;
 }
 .header-link {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: bold;
   color: inherit;
   transition: color 0.3s ease; // 호버 시 색상 변경 트랜지션
