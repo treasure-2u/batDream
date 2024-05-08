@@ -4,8 +4,7 @@ import '../../styles/Main/mainList.scss';
 const Recommendation = () => {
   return (
     <div>
-      {/* 밭드림 정보 */}
-      <div>
+      <div className="Recommendation">
         <h2>밭드림</h2>
         <p>
           밭드림은 '밭'에서 꿈을 '드림(Dream)'이라는 의미로, 주말농장에서 자신의
@@ -14,18 +13,6 @@ const Recommendation = () => {
           표현 사용.
         </p>
       </div>
-
-      {/* 사진 */}
-      <div>{/* 여기에 사진을 넣으세요 */}</div>
-
-      {/* 추천작물과 설명 */}
-      <div>
-        <h2>추천작물</h2>
-        <p>추천작물에 대한 설명을 여기에 추가하세요.</p>
-      </div>
-
-      {/* 버튼 */}
-      <div>{/* 여기에 버튼을 추가하세요 */}</div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/BugMain/bugmain.scss';
-import MyContainer from '../components/BugMain/BugMain';
+import MyContainer from '../components/BugMain/MyContainer';
 import '../components/BugMain/bootstrap';
 import NavbarDarkExample from '../components/BugMain/bootstrap';
 
@@ -23,52 +23,55 @@ export default function BugMain() {
   };
 
   return (
-    <div>
-      <header>헤더자리</header>
+    <div className="body-title">
       <div className="bug-title">병해충 도감</div>
       <div className="line"></div>
-      <NavbarDarkExample />
-      <div className="search-container">
-        <div>병원체/작물명</div>
-        <form className="input">
-          <input
-            type="text"
-            placeholder="검색어를 입력하세요."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+
+      <div className="BugPageMain">
+        <div className="bootstrap-container">
+          <div className="Kategorie-title">병해충 정보</div>
+          <NavbarDarkExample />
+        </div>
+        <div className="Main-Main">
+          <div className="search-container">
+            <div>병원체/작물명</div>
+            <form className="input">
+              <input
+                type="text"
+                placeholder="검색어를 입력하세요."
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+              />
+              <button type="button" onClick={handleSearch}>
+                조회
+              </button>
+            </form>
+          </div>
+
+          <div className="api-container-title">
+            <div className="api-item">순번</div>
+            <div className="api-item">작물</div>
+            <div className="api-item">이름</div>
+            <div className="api-item">영문영</div>
+            <div className="api-item">대표사진</div>
+          </div>
+
+          <MyContainer
+            order="1"
+            crop="바나나"
+            name="Banana"
+            englishName="Banana"
+            mainImage="[대표사진]"
           />
-          <button type="button" onClick={handleSearch}>
-            조회
-          </button>
-        </form>
+          <MyContainer
+            order="1"
+            crop="바나나"
+            name="Banana"
+            englishName="Banana"
+            mainImage="[대표사진]"
+          />
+        </div>
       </div>
-
-      <MyContainer
-        title={true}
-        order="1"
-        crop="바나나"
-        name="Banana"
-        englishName="Banana"
-        mainImage="[대표사진]"
-      />
-      <MyContainer
-        title={false}
-        order="2"
-        crop="사과"
-        name="apple"
-        englishName="apple"
-        mainImage="[사과사진]"
-      />
-      <MyContainer
-        title={false}
-        order="3"
-        crop="회"
-        name="회 졸맛"
-        englishName="회 졸맛탱"
-        mainImage="[회먹으러가자]"
-      />
-
-      <footer>푸더자리</footer>
     </div>
   );
 }
