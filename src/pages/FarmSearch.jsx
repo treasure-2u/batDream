@@ -6,11 +6,15 @@ import Paging from '../components/FarmSearch/Paging';
 import Header from '../components/Header/Header';
 
 export default function FarmSearch() {
+  const imgComponents = Array.from({ length: 4 }, (_, index) => (
+    <ImgCompo key={index} />
+  ));
+
   return (
     <div>
       <NameFilterCompo />
       <AreaFilterCompo />
-      <ImgCompo />
+      {imgComponents}
       <Paging />
     </div>
   );
