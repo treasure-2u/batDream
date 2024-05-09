@@ -3,15 +3,31 @@
 .weather-main {
   width: 400px;
   height: 200px;
-  text-align: center;
   border-radius: 12px;
   position: relative;
   background-color: #fbfaf6;
   border: 1px solid #d9b487;
   border-radius: 12px;
-  padding-top: 50px;
-}
-.temperature {
-  font-size: 40px;
-  font-weight: 700;
+  text-align: center;
+  padding-top: 30px;
+
+  top: -20%; /* 부모 요소의 세로축 이동 */
+  left: 80%; /* 부모 요소의 가로축 이동 */
+  transform: translate(-60%, -280%);
+  /* 위치 정렬 -> 이걸 지정하면 반응형 불가능 */
+
+  .weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weather-place {
+    font-size: 14px;
+  }
+
+  .temperature {
+    font-size: 40px;
+    font-weight: 900;
+  }
 }

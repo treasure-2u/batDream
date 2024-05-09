@@ -46,13 +46,15 @@ export default function Weather() {
   return (
     <div className="weather-main">
       <div className="weather-place">{place}</div>
-      {icon && (
-        <img
-          src={`http://openweathermap.org/img/w/${icon}.png`}
-          alt="Weather-icon"
-        />
-      )}
-      <div className="weather">{nowWeather}</div>
+      <div className="weather-info">
+        {icon && (
+          <img
+            src={`http://openweathermap.org/img/w/${icon}.png`}
+            alt="Weather-icon"
+          />
+        )}
+        <div className="weather">{nowWeather}</div>
+      </div>
       <div className="temperature">{temp}°C</div>
       {error && <div>Error: {error}</div>}
     </div>
