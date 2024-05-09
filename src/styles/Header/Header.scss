@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+$primary-color: #77a642;
+$icon-color: #333;
+$icon-hover-color: #77a642;
+$spacing: 2.5rem; /* rem 단위 사용 */
+$header-padding-top: 1rem; /* rem 단위 사용 */
+$header-padding-bottom: 1.25rem; /* rem 단위 사용 */
+$header-border-bottom: 0.125rem solid #d9b487; /* rem 단위 사용 */
+$logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
+
+.header {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-bottom: $header-border-bottom;
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container {
+  max-width: 75rem; /* rem 단위 사용 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-logo {
+  margin-left: -3.125rem; /* rem 단위 사용 */
+  margin-right: 3.75rem; /* rem 단위 사용 */
+}
+
+.logo {
+  margin-right: $logo-margin-right;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 3.4375rem; /* rem 단위 사용 */
+  height: auto;
+}
+
+.logo-1 {
+  font-family: 'ONE-Mobile-POP';
+  color: $primary-color;
+  font-size: 1.5625rem; /* rem 단위 사용 */
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4.0625rem; /* rem 단위 사용 */
+}
+
+.icon {
+  color: $primary-color;
+  width: 1.25rem; /* rem 단위 사용 */
+  height: 1.25rem; /* rem 단위 사용 */
+  margin-bottom: 0.3125rem; /* rem 단위 사용 */
+  display: flex;
+  transition: color 0.3s ease;
+}
+
+.header-link {
+  text-decoration: none;
+  font-size: 1.125rem; /* rem 단위 사용 */
+  font-weight: bold;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  @media (max-width: 48rem) {
+    display: none; /* 텍스트 숨김 */
+  }
+}
+
+#color1:hover {
+  color: $primary-color;
+}
+
+#color2:hover {
+  color: #8b6a42;
+}
+
+#color3:hover {
+  color: #5b5959;
+}
+
+#color4:hover {
+  color: #f6cd68;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 48rem) {
+  .icon-container {
+    flex-direction: column;
+    text-align: center;
+    width: 10%;
+  }
+
+  .main-logo {
+    margin-left: 0;
+    margin-right: 0;
+    /* margin-bottom: $spacing; */
+  }
+
+  .logo {
+    margin-right: 0;
+    /* margin-bottom: $spacing; */
+  }
+}
+@media (max-width: 30rem) {
+  .logo-1 {
+    font-size: 0.9375rem; /* rem 단위 사용 */
+  }
+  .main-logo {
+    width: 5%;
+  }
+}
+@media (max-width: 62rem) {
+  .container {
+    max-width: 90%; /* rem 단위 사용 */
+  }
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 75rem; /* rem 단위 사용 */
+  }
+}
