@@ -1,0 +1,93 @@
+@import '../root.scss';
+
+// 배경색 글자색 toggle (romain-green & chiliflower-white)
+// @mixin dynamic-colors($background-color) {
+//   background-color: $background-color;
+//   color: if(
+//     $background-color == $romain-green,
+//     $chiliflower-white,
+//     $romain-green
+//   );
+// }
+
+// 배경색 글자색 어둡고 밝기 toggle
+@mixin dynamic-colors($background-color) {
+  background-color: $background-color;
+  @if $background-color == $romain-green or $background-color == $potato-beige {
+    color: $chiliflower-white;
+  } @else if $background-color == $chiliflower-white {
+    color: $potato-beige;
+  } @else {
+    color: $romain-green;
+  }
+}
+
+.footer {
+  height: 150px;
+  margin-top: auto;
+  // header랑 같은 느낌
+  border-top: 2px solid $potato-beige;
+
+  // 배경색 어두우면 글자색 밝기 toggle
+  @include dynamic-colors(#ffffff);
+}
+
+.contents {
+  width: 96%;
+  max-width: 1100px;
+  height: 100%;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+@mixin inlineblock {
+  display: inline-block;
+}
+
+.title {
+  @include inlineblock;
+  font-weight: 600;
+  font-size: 12px;
+  // padding-right: 20px;
+  margin-right: 20px;
+}
+
+.logo-2 {
+  font-size: 1.5625rem;
+  color: black;
+}
+
+.footer-logo {
+  // @include inlineblock;
+  margin-right: 3rem;
+  // margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 3.4375rem; /* rem 단위 사용 */
+  height: auto;
+}
+
+.title-2 {
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.bat-text {
+  float: right;
+  padding: 35px 0;
+  color: $potato-beige !important;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+#popup {
+  cursor: pointer;
+}
