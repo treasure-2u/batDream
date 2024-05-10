@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
-import { xml2js } from 'xml-js'; // xml2js 모듈 가져오기
 
 const WeekendFarmInfo = () => {
   const [farmInfo, setFarmInfo] = useState([]); // 주말농장 정보를 담을 상태와 설정 함수를 정의
-  const API_KEY = process.env.REACT_APP_FARMINFO_API_KEY; // 환경 변수에서 API 키 가져오기
 
   useEffect(() => {
-    console.log(farmInfo.length != 0);
+    // console.log(farmInfo.length != 0);
 
     const fetchFarmInfo = async () => {
       try {
         const response = await fetch(
-          `https://data.gm.go.kr/openapi/weekendfarm?key=${API_KEY}&Type=json&pIndex=1&pSize=100`, // API 주소에 API 키를 포함하여 요청합니다.
+          `https://data.gm.go.kr/openapi/weekendfarm?key=${process.env.REACT_APP_FARMINFO_API_KEY}&Type=json&pIndex=1&pSize=100`, // API 주소에 API 키를 포함하여 요청합니다.
         );
         const jsonData = await response.json(); // API 응답을 텍스트로 변환
         console.log(jsonData.weekendfarm[1].row);
@@ -22,7 +20,7 @@ const WeekendFarmInfo = () => {
     };
 
     fetchFarmInfo(); // 주말농장 정보를 가져오는 함수를 호출
-  }, [API_KEY]); // API 키가 변경될 때마다 useEffect가 다시 실행되도록 설정
+  }, [process.env.REACT_APP_FARMINFO_API_KEY]); // API 키가 변경될 때마다 useEffect가 다시 실행되도록 설정
 
   return (
     <div>
