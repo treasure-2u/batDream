@@ -15,7 +15,6 @@ export default function Main() {
     <>
       <Banner />
       <Weather />
-
       <MainList />
       <Pictures />
     </>
