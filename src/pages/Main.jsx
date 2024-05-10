@@ -7,11 +7,14 @@ import Pictures from '../components/Main/picture';
 import '../styles/Main/pictures.scss';
 import MainList from '../components/Main/mainList';
 import '../styles/Main/mainList.scss';
+import Dust from '../components/Weather/Dust';
+import Weather from '../components/Weather/Weather';
 
 export default function Main() {
   return (
     <>
       <Banner />
+      <Weather />
       <MainList />
       <Pictures />
     </>
