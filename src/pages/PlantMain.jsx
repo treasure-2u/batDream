@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Plant/PlantMain.scss';
 import PlantBox from '../components/PlantMain/PlantBox';
 import Dropdown from '../components/PlantMain/DropDown';
-import Paging from '../components/FarmSearch/Paging';
+// import PageNation from '../components/PlantMain/PageNation';
 
 export default function PlantMain() {
   const [inputValue, setInputValue] = useState('');
@@ -82,9 +82,13 @@ export default function PlantMain() {
           imgFileLinkOriginal={plant.imgFileLinkOriginal}
         />
       ))}
-      <div>
-        <Paging />
-      </div>
+      {/* <div>
+        <PageNation
+          totalPages={12}
+          currentPageNum={currentPageNum}
+          onPageChange={handlePageChange}
+        />
+      </div> */}
     </div>
   );
 }
