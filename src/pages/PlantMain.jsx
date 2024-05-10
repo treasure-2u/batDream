@@ -10,10 +10,11 @@ export default function PlantMain() {
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('품종');
   const [currentPageNum, setCurrentPageNum] = useState(1);
+  console.log(process.env.REACT_APP_PLANT_API_KEY);
 
   useEffect(() => {
     fetch(
-      `/proxy_plants/service/varietyInfo/varietyList?apiKey=20240507Y4ET9OVWBXBGGXEDIH0KA&categoryCode=FC&pageNo=${currentPageNum}`,
+      `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API_KEY}&categoryCode=FC&pageNo=${currentPageNum}`,
     )
       .then((response) => response.text())
       .then((xmlString) => {
