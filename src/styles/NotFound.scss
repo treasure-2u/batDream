@@ -1,8 +1,9 @@
 // Not Found 예외처리 디자인
+@import '../styles/root.scss';
 
 .notfound-container {
   text-align: center;
-  margin: 150px 0px;
+  margin: 9rem 0;
 
   .notfound-title {
     font-size: 36px;
@@ -14,22 +15,22 @@
   }
 
   .notfound-btn {
-    width: 120px;
-    height: 50px;
+    width: 9rem;
+    height: 3.5rem;
     text-align: center;
     font-weight: 600;
     border-radius: 8px;
-    margin: 0px 14px;
+    margin: 0 0.8rem;
     border: 0;
   }
 
   .primary-btn {
-    background-color: #d9b487;
-    color: #fbfaf6;
+    background-color: $potato-beige;
+    color: $chiliflower-white;
   }
 
   .to-home-btn {
-    background-color: #77a642;
-    color: #fbfaf6;
+    background-color: $romain-green;
+    color: $chiliflower-white;
   }
 }
