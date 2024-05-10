@@ -7,7 +7,7 @@ import BugData from '../components/BugMain/BugData.json';
 export default function BugMain() {
   const [inputValue, setInputValue] = useState('');
   const [data, setData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('전체'); // 초기값을 전체로 설정
   const [selectedBug, setSelectedBug] = useState(null); // 선택한 병원체 정보
 
   useEffect(() => {
@@ -22,14 +22,14 @@ export default function BugMain() {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-    // 병원체를 선택했을 때 선택한 병원체 정보 초기화
-    setSelectedBug(null);
+    setSelectedBug(null); // 선택한 병원체 정보 초기화
   };
 
   // 선택된 카테고리에 따라 데이터 필터링
-  const filteredData = selectedCategory
-    ? data.filter((item) => item.category === selectedCategory)
-    : data;
+  const filteredData =
+    selectedCategory !== '전체'
+      ? data.filter((item) => item.category === selectedCategory)
+      : data;
 
   // 선택한 병원체 정보가 있을 경우 해당 정보를 찾아서 설정
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function BugMain() {
         </div>
         <div className="Main-Main">
           <div className="search-container">
-            <div>병원체/작물명</div>
+            <div>이름/작물명</div>
             <form className="input" onSubmit={handleSearch}>
               <input
                 type="text"
