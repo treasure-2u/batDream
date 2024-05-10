@@ -14,7 +14,7 @@ export default function FarmSearch() {
       try {
         // API에서 데이터 가져오기
         const response = await fetch(
-          'https://data.gm.go.kr/openapi/weekendfarm',
+          `https://data.gm.go.kr/openapi/weekendfarm?key=${process.env.REACT_APP_FARMINFO_API_KEY}`, // API 주소에 API 키를 포함하여 요청
         );
         if (!response.ok) {
           throw new Error('Failed to fetch data');
