@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import '../styles/Plant/PlantMain.scss';
-import PlantBox from '../components/PlantMain/PlantBox';
-import Dropdown from '../components/PlantMain/DropDown';
-// import PageNation from '../components/PlantMain/PageNation';
+// 식물도감 메인 페이지
+
+import React from 'react';
 
 export default function PlantMain() {
   const [inputValue, setInputValue] = useState('');
