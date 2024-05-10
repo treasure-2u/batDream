@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Plant/PlantMain.scss';
 import PlantBox from '../components/PlantMain/PlantBox';
 import Dropdown from '../components/PlantMain/DropDown';
+import Paging from '../components/FarmSearch/Paging';
 
 export default function PlantMain() {
   const [inputValue, setInputValue] = useState('');
   const [plants, setPlants] = useState([]);
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('품종');
+  const [currentPageNum, setCurrentPageNum] = useState(1);
 
   useEffect(() => {
     fetch(
-      '/proxy_plants/service/varietyInfo/varietyList?apiKey=20240507Y4ET9OVWBXBGGXEDIH0KA&categoryCode=FC',
+      `/proxy_plants/service/varietyInfo/varietyList?apiKey=20240507Y4ET9OVWBXBGGXEDIH0KA&categoryCode=FC&pageNo=${currentPageNum}`,
     )
       .then((response) => response.text())
       .then((xmlString) => {
@@ -31,7 +33,7 @@ export default function PlantMain() {
         setFilteredPlants(itemElements);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [currentPageNum]);
 
   const handleDropdownSelect = (selectedItem) => {
     setSelectedCategory(selectedItem);
@@ -80,6 +82,9 @@ export default function PlantMain() {
           imgFileLinkOriginal={plant.imgFileLinkOriginal}
         />
       ))}
+      <div>
+        <Paging />
+      </div>
     </div>
   );
 }
