@@ -1,0 +1,57 @@
+/* 기본 스타일 유지 */
+
+.Recommendation {
+  margin-right: 50px;
+}
+.Recommemd-container {
+  display: flex;
+  margin: 100px;
+}
+.Recommemd-container strong {
+  color: red;
+}
+.Recommendation h2 {
+  font-size: 40px;
+  color: #77a642;
+  font-weight: bold;
+}
+.Recommendation p {
+  font-size: 14px;
+}
+.description-container {
+  display: flex;
+}
+.description {
+  padding: 30px;
+}
+.description h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #77a642;
+}
+.description p {
+  font-size: 14px;
+  color: #77a642;
+}
+.description .Pcolor {
+  font-size: 12px;
+  font-weight: bold;
+  color: #d9b487;
+  padding-top: 30px;
+}
+
+/* 미디어 쿼리 추가 */
+
+@media only screen and (max-width: 768px) {
+  .Recommemd-container {
+    flex-direction: column;
+    margin: 50px;
+  }
+  .Recommendation {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .description-container {
+    flex-direction: column;
+  }
+}

@@ -14,9 +14,9 @@ export default function Main() {
   return (
     <>
       <Banner />
-      <Weather />
+      {/* <Weather /> */}
       <MainList />
-      <Pictures />
+      {/* <Pictures /> */}
     </>
   );
 }

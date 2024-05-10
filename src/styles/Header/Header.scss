@@ -11,6 +11,7 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
 
 .header {
   background-color: #fff;
+  font-weight: bold;
   color: #333;
   font-family: 'Nanum Gothic', sans-serif;
   border-bottom: $header-border-bottom;
