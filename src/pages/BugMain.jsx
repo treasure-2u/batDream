@@ -17,19 +17,26 @@ export default function BugMain() {
   const handleSearch = (e) => {
     e.preventDefault();
     console.log('조회 버튼이 클릭되었습니다. 입력된 값:', inputValue);
-    // 검색 로직 추가 가능
+
+    // 전체 데이터에서 필터링 대상을 찾습니다.
+    const filteredData = BugData.filter((item) => {
+      // 이름 또는 작물에 검색어가 포함되는지 확인합니다.
+      return item.name.includes(inputValue) || item.crop.includes(inputValue);
+    });
+
+    // 선택된 카테고리에 따라 데이터를 필터링합니다.
+    const categorizedData =
+      selectedCategory !== '전체'
+        ? filteredData.filter((item) => item.category === selectedCategory)
+        : filteredData;
+
+    setData(categorizedData);
   };
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setSelectedBug(null); // 선택한 병원체 정보 초기화
   };
-
-  // 선택된 카테고리에 따라 데이터 필터링
-  const filteredData =
-    selectedCategory !== '전체'
-      ? data.filter((item) => item.category === selectedCategory)
-      : data;
 
   // 선택한 병원체 정보가 있을 경우 해당 정보를 찾아서 설정
   useEffect(() => {
@@ -40,6 +47,12 @@ export default function BugMain() {
       console.log('선택한 병원체 정보:', selectedBug);
     }
   }, [selectedBug]);
+
+  // 선택된 카테고리에 따라 데이터 필터링
+  const filteredData =
+    selectedCategory !== '전체'
+      ? data.filter((item) => item.category === selectedCategory)
+      : data;
 
   return (
     <div className="body-title">
