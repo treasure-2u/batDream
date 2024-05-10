@@ -1,10 +1,8 @@
-// 식물도감 메인 페이지
-
 import React, { useEffect, useState } from 'react';
 import '../styles/Plant/PlantMain.scss';
 import PlantBox from '../components/PlantMain/PlantBox';
 import Dropdown from '../components/PlantMain/DropDown';
-// import PageNation from '../components/PlantMain/PageNation';
+import PageNation from '../components/PlantMain/PageNation';
 
 export default function PlantMain() {
   const [inputValue, setInputValue] = useState('');
@@ -12,8 +10,13 @@ export default function PlantMain() {
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('품종');
   const [currentPageNum, setCurrentPageNum] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
+    fetchPlants();
+  }, [currentPageNum]); // currentPageNum이 변경될 때마다 데이터를 새로 가져옴
+
+  const fetchPlants = () => {
     fetch(
       `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API_KEY}&categoryCode=FC&pageNo=${currentPageNum}`,
     )
@@ -23,19 +26,22 @@ export default function PlantMain() {
         const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
         const itemElements = Array.from(
           xmlDoc.getElementsByTagName('item'),
-        ).map((item) => {
-          return {
-            svcCodeNm: item.querySelector('svcCodeNm').textContent,
-            mainChartrInfo: item.querySelector('mainChartrInfo').textContent,
-            imgFileLinkOriginal: item.querySelector('imgFileLinkOriginal')
-              .textContent,
-          };
-        });
+        ).map((item) => ({
+          svcCodeNm: item.querySelector('svcCodeNm').textContent,
+          mainChartrInfo: item.querySelector('mainChartrInfo').textContent,
+          imgFileLinkOriginal: item.querySelector('imgFileLinkOriginal')
+            .textContent,
+        }));
         setPlants(itemElements);
         setFilteredPlants(itemElements);
+
+        // 전체 페이지 수 계산
+        const totalCount = xmlDoc.querySelector('totalCount').textContent;
+        const pages = Math.ceil(totalCount / 10); // 한 페이지에 10개씩 표시
+        setTotalPages(pages);
       })
       .catch((error) => console.log(error));
-  }, [currentPageNum]);
+  };
 
   const handleDropdownSelect = (selectedItem) => {
     setSelectedCategory(selectedItem);
@@ -51,6 +57,10 @@ export default function PlantMain() {
       plant.svcCodeNm.includes(inputValue),
     );
     setFilteredPlants(filteredPlants);
+  };
+
+  const handlePageChange = (pageNum) => {
+    setCurrentPageNum(pageNum);
   };
 
   return (
@@ -84,13 +94,13 @@ export default function PlantMain() {
           imgFileLinkOriginal={plant.imgFileLinkOriginal}
         />
       ))}
-      {/* <div>
+      <div>
         <PageNation
-          totalPages={12}
+          totalPages={totalPages}
           currentPageNum={currentPageNum}
           onPageChange={handlePageChange}
         />
-      </div> */}
+      </div>
     </div>
   );
 }
