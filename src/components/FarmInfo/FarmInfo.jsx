@@ -2,20 +2,20 @@ import { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js'; // xml2js 모듈 가져오기
 
 const WeekendFarmInfo = () => {
-  const [farmInfo, setFarmInfo] = useState(null); // 주말농장 정보를 담을 상태와 설정 함수를 정의
+  const [farmInfo, setFarmInfo] = useState([]); // 주말농장 정보를 담을 상태와 설정 함수를 정의
   const API_KEY = process.env.REACT_APP_FARMINFO_API_KEY; // 환경 변수에서 API 키 가져오기
 
   useEffect(() => {
+    console.log(farmInfo.length != 0);
+
     const fetchFarmInfo = async () => {
       try {
         const response = await fetch(
           `https://data.gm.go.kr/openapi/weekendfarm?key=${API_KEY}&Type=json&pIndex=1&pSize=100`, // API 주소에 API 키를 포함하여 요청합니다.
         );
-
-        const xmlText = await response.text(); // API 응답을 텍스트로 변환
-        const jsonData = xml2js(xmlText, { compact: true }); // xml2js 모듈을 사용하여 XML 데이터를 JSON으로 변환
-
-        setFarmInfo(jsonData); // 변환된 JSON 데이터를 상태에 저장
+        const jsonData = await response.json(); // API 응답을 텍스트로 변환
+        console.log(jsonData.weekendfarm[1].row);
+        setFarmInfo(jsonData.weekendfarm[1].row); // 변환된 JSON 데이터를 상태에 저장
       } catch (error) {
         console.error('Error fetching farm info:', error); // 오류가 발생한 경우 콘솔에 오류 메시지를 출력
       }
@@ -27,7 +27,7 @@ const WeekendFarmInfo = () => {
   return (
     <div>
       <h2>주말농장 정보</h2>
-      {farmInfo ? ( // farmInfo가 존재하는 경우에만 정보를 표시
+      {farmInfo.length != 0 ? ( // farmInfo가 존재하는 경우에만 정보를 표시
         <ul>
           {farmInfo.map((info, index) => (
             <li key={index}>
