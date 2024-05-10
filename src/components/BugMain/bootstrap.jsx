@@ -1,3 +1,4 @@
+// NavbarDarkExample.jsx
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 
@@ -15,6 +16,10 @@ function NavbarDarkExample({ onItemClick }) {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
+        <Dropdown.Item onClick={() => handleItemClick('전체')}>
+          전체
+        </Dropdown.Item>{' '}
+        {/* 전체 카테고리 추가 */}
         <Dropdown.Item onClick={() => handleItemClick('병')}>병</Dropdown.Item>
         <Dropdown.Item onClick={() => handleItemClick('병원체')}>
           병원체
