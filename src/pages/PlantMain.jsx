@@ -10,7 +10,6 @@ export default function PlantMain() {
   const [filteredPlants, setFilteredPlants] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('품종');
   const [currentPageNum, setCurrentPageNum] = useState(1);
-  console.log(process.env.REACT_APP_PLANT_API_KEY);
 
   useEffect(() => {
     fetch(
