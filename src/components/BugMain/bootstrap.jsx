@@ -1,27 +1,30 @@
-import Accordion from 'react-bootstrap/Accordion';
-// import './BugMain/bootstrap_styles.scss';
+import React from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 
-function AlwaysOpenExample() {
+function NavbarDarkExample({ onItemClick }) {
+  const handleItemClick = (item) => {
+    if (onItemClick) {
+      onItemClick(item);
+    }
+  };
+
   return (
-    <Accordion defaultActiveKey={['0']} alwaysOpen>
-      <Accordion.Item eventKey="0">
-        <div></div>
-        <Accordion.Header>작물별 도감정보</Accordion.Header>
-        <Accordion.Body>식량작물</Accordion.Body>
-        <Accordion.Body>과수</Accordion.Body>
-        <Accordion.Body>채소</Accordion.Body>
-        <Accordion.Body>하훼</Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>병해충별 도감정보</Accordion.Header>
-        <Accordion.Body>벌렝</Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>주간농사정보</Accordion.Header>
-        <Accordion.Body>농사 시러</Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        병해충별 도감정보
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item onClick={() => handleItemClick('병')}>병</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleItemClick('병원체')}>
+          병원체
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleItemClick('곤충')}>
+          곤충
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 }
 
-export default AlwaysOpenExample;
+export default NavbarDarkExample;

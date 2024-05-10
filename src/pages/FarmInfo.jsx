@@ -1,7 +1,12 @@
-// 주말농장 상세 - 농장 정보
+import WeekendFarmInfo from '../components/FarmInfo/FarmInfo';
 
-import React from 'react';
+const App = () => {
+  return (
+    <>
+      <h1>주말농장 현황</h1>
+      <WeekendFarmInfo />
+    </>
+  );
+};
 
-export default function FarmInfo() {
-  return <div>FarmInfo</div>;
-}
+export default App;
