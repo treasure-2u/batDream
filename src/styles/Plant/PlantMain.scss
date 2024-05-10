@@ -1,3 +1,5 @@
+// PlantMain.scss
+
 .plant-main-container {
   .plant-title {
     text-align: center;
@@ -27,17 +29,19 @@
     align-items: center;
   }
 
-  .searchBox input {
-    margin-right: 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-    border: 2px solid #77a642;
-  }
+  .searchBox {
+    input {
+      margin-right: 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      border: 2px solid #77a642;
+    }
 
-  .searchBox button {
-    border-radius: 5px;
-    border: 2px solid #77a642;
-    background-color: #d9b487;
+    button {
+      border-radius: 5px;
+      border: 2px solid #77a642;
+      background-color: #d9b487;
+    }
   }
 
   .searchContainer div {

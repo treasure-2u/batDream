@@ -21,16 +21,16 @@
 
   // 내용 스타일
   .box-content {
-    .svc-code {
+    & .svc-code {
       font-weight: bold;
     }
 
-    .main-chartr-info {
+    & .main-chartr-info {
       margin-top: 5px;
       color: #555;
     }
 
-    .plant-image {
+    & .plant-image {
       width: 100%; // 이미지 너비 조정
       max-height: 200px; // 이미지 최대 높이 설정
       object-fit: cover; // 이미지 비율 유지
