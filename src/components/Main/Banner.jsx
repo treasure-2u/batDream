@@ -12,6 +12,7 @@ const Banner = () => {
   return (
     <div className="banner">
       {/* <div className="banner__image"> */}
+      <img src={bannerImage} alt="" />
       <h1>주말, 농장의 자연과 함께</h1>
       <p>
         모든 순간이 당신에게

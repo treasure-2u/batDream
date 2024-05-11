@@ -1,11 +1,14 @@
 /* 기본 스타일 유지 */
 
 .Recommendation {
-  margin-right: 50px;
+  margin-right: 200px;
 }
 .Recommemd-container {
   display: flex;
-  margin: 100px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .Recommemd-container strong {
   color: red;
@@ -22,7 +25,7 @@
   display: flex;
 }
 .description {
-  padding: 30px;
+  padding-right: 100px;
 }
 .description h3 {
   font-size: 30px;
