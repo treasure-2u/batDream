@@ -53,9 +53,10 @@ export default function Weather() {
             alt="Weather-icon"
           />
         )}
+        &nbsp;
         <div className="weather">{nowWeather}</div>
       </div>
-      <div className="temperature">{temp}°C</div>
+      <div className="temp-now">{temp}°C</div>
       {error && <div>Error: {error}</div>}
     </div>
   );

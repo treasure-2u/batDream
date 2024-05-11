@@ -3,17 +3,19 @@
 
 .weather-main {
   width: 25rem;
-  height: 12.5rem;
-  border-radius: 12px;
+  height: 14rem;
+  border-radius: 30px;
   position: relative;
-  background-color: $chiliflower-white;
-  border: 1px solid $potato-beige;
+  background-image: url('../../assets/weather-cloudy-70.png');
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  padding-top: 30px;
+  padding: 30px;
 
   top: -20%; /* 부모 요소의 세로축 이동 */
   left: 80%; /* 부모 요소의 가로축 이동 */
-  transform: translate(-60%, -280%);
+  transform: translate(-80%, -225%);
   /* 위치 정렬 -> 이걸 지정하면 반응형 불가능 */
 
   .weather-info {
@@ -23,11 +25,12 @@
   }
 
   .weather-place {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 600;
   }
 
-  .temperature {
-    font-size: 40px;
+  .temp-now {
+    font-size: 52px;
     font-weight: 900;
   }
 }
