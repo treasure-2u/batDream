@@ -4,6 +4,7 @@ import ImgCompo from '../components/FarmSearch/ImgCompo';
 import Paging from '../components/FarmSearch/Paging';
 import React, { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js';
+import { imgArr } from '../utils/imgarr';
 
 export default function FarmSearch() {
   const [farms, setFarms] = useState([]);
@@ -51,16 +52,19 @@ export default function FarmSearch() {
     fetchData();
   }, []);
 
-  // 첫 4개 농장만 보여줄 ImgCompo 컴포넌트들 생성
-  const imgComponents = farms
-    .slice(0, 4)
-    .map((farm, index) => <ImgCompo key={index} farm={farm} />);
+  // 첫 4개 농장의 이미지 URL만 추출
+  const imageUrls = farms.slice(0, 4).map((farm, index) => imgArr[index]);
+  console.log(imageUrls);
 
   return (
     <div>
       <NameFilterCompo />
-      {imgComponents}
-      <Paging />
+      <div>
+        {imageUrls.map((imageUrl, index) => (
+          <ImgCompo key={index} farm={farms[index]} imgUrl={imageUrl} />
+        ))}
+        <Paging />
+      </div>
     </div>
   );
 }

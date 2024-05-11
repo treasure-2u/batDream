@@ -11,27 +11,24 @@ const Banner = () => {
 
   return (
     <div className="banner">
-      <div className="banner__image">
-        <img src={bannerImage} alt="주말, 농장의 자연과 함께" />
-        <div className="banner__text">
-          <h1>주말, 농장의 자연과 함께</h1>
-          <p>
-            모든 순간이 당신에게
-            <br />
-            소중한 추억으로 남을 것입니다.
-          </p>
-        </div>
-        {/* 검색바 추가 */}
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="텃밭명을 입력해주세요."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button onClick={handleSearch}>검색</button>
-        </div>
+      {/* <div className="banner__image"> */}
+      <h1>주말, 농장의 자연과 함께</h1>
+      <p>
+        모든 순간이 당신에게
+        <br />
+        소중한 추억으로 남을 것입니다.
+      </p>
+
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="텃밭명을 입력해주세요."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button onClick={handleSearch}>검색</button>
       </div>
+      {/* </div> */}
     </div>
   );
 };

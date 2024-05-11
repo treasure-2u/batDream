@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { imgArr } from '../../utils/imgarr';
 
-const ImgCompo = ({ farm }) => {
+const ImgCompo = ({ farm, imageUrl }) => {
   const [image, setImage] = useState('');
   const [error, setError] = useState(null);
 
@@ -29,15 +29,8 @@ const ImgCompo = ({ farm }) => {
 
   return (
     <div>
-      {image && (
-        <div className="farmSearchImg">
-          <img
-            key={image}
-            src={`/img/farmImges/farmImg${image}.jpg`}
-            alt={`Image ${image}`}
-            className="farm-image"
-          />
-        </div>
+      {imageUrl && (
+        <img src={imageUrl} alt={`Farm Image`} className="farm-image" />
       )}
       <div className="farmSearchContent">
         {farm && (
