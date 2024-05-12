@@ -43,8 +43,14 @@ export default function Weather() {
       .catch((error) => setError('ERROR'));
   };
 
+  // 위젯 클릭시 네이버 날씨로 이동
+  const goToNaverWeather = () => {
+    let url = `https://weather.naver.com`;
+    window.open(url, '_blank'); // 새 창에서 열기
+  };
+
   return (
-    <div className="weather-main">
+    <div className="weather-main" onClick={goToNaverWeather}>
       <div className="weather-place">{place}</div>
       <div className="weather-info">
         {icon && (
@@ -53,9 +59,10 @@ export default function Weather() {
             alt="Weather-icon"
           />
         )}
+        &nbsp;
         <div className="weather">{nowWeather}</div>
       </div>
-      <div className="temperature">{temp}°C</div>
+      <div className="temp-now">{temp}°C</div>
       {error && <div>Error: {error}</div>}
     </div>
   );
