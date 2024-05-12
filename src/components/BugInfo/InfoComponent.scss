@@ -1,0 +1,31 @@
+// InfoComponent.scss
+
+.main-container {
+  background-color: white;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.InfoComponent {
+  padding: 20px;
+  margin-top: 20px;
+}
+.main-main {
+  align-items: center;
+}
+.info-container {
+  background-color: whitesmoke;
+  padding: 30px;
+  display: flex;
+  border: 1px solid #77a642;
+  margin-top: 20px;
+}
+.info-name {
+  margin-left: 40px;
+}
+.info-name p {
+  margin-top: 30px; /* 위쪽 간격 조절 */
+  margin-bottom: 30px; /* 아래쪽 간격 조절 */
+}
