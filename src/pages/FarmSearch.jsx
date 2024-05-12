@@ -4,7 +4,7 @@ import ImgCompo from '../components/FarmSearch/ImgCompo';
 import Paging from '../components/FarmSearch/Paging';
 import React, { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js';
-import { imgArr } from '../utils/imgarr';
+// import { imgArr } from '../utils/imgarr';
 
 export default function FarmSearch() {
   const [farms, setFarms] = useState([]);
@@ -53,9 +53,11 @@ export default function FarmSearch() {
   }, []);
 
   // 첫 4개 농장의 이미지 URL만 추출
-  const imageUrls = farms.slice(0, 4).map((farm, index) => imgArr[index]);
-  console.log(imageUrls);
-
+  const imageUrls = farms.slice(0, 4).map((farm, index) => {
+    return 'url_for_farm_' + (index + 1) + '_image';
+  });
+  // console.log(farms);
+  // console.log(imageUrls);
   return (
     <div>
       <NameFilterCompo />
