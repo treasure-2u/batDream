@@ -25,10 +25,10 @@ export default function InfoComponent() {
                 />
               </div>
               <div className="info-name">
-                <p>속명: Phytophthora </p>
-                <p>종명: capsici </p>
+                <p>순번: 1 </p>
                 <p>작물: 가지 </p>
-                <p>병명: 갈색부패병 </p>
+                <p>이름: 갈색부패병 </p>
+                <p>영문영: capsici </p>
               </div>
             </div>
           </div>
