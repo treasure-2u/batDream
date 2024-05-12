@@ -49,10 +49,15 @@ export default function BugMain() {
   }, [selectedBug]);
 
   // 선택된 카테고리에 따라 데이터 필터링
-  const filteredData =
-    selectedCategory !== '전체'
-      ? data.filter((item) => item.category === selectedCategory)
-      : data;
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    const filteredData =
+      selectedCategory !== '전체'
+        ? data.filter((item) => item.category === selectedCategory)
+        : data;
+    setFilteredData(filteredData);
+  }, [data, selectedCategory]);
 
   return (
     <div className="body-title">
