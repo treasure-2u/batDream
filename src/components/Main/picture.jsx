@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import '../../styles/Main/pictures.scss';
 import picture1 from '../../assets/main/sesacimg.jpeg';
 import picture2 from '../../assets/main/blueimg.jpeg';
@@ -36,7 +37,11 @@ function Pictures() {
           <br />
           새로운 재미를 느끼러 주말농장에 가보는건 어떨까요?
         </p>
-        <button>주말농장 보러가기</button>
+        <Link to="/FarmMain">
+          {' '}
+          {/* Link to FarmMain page */}
+          <button>주말농장 보러가기</button>
+        </Link>
       </div>
     </div>
   );
