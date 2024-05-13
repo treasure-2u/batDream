@@ -2,15 +2,26 @@
 import React from 'react';
 import './InfoComponent.scss'; // Sass 파일을 import합니다.
 import NavbarDarkExample from '../BugMain/bootstrap';
+import BugData from '../BugMain/BugData.json';
+import { useParams } from 'react-router-dom';
 
+import { useState, useEffect } from 'react';
+import BugMain from './../../pages/BugMain';
 export default function InfoComponent() {
+  const { BugId } = useParams();
+  console.log(BugId);
+  const [bugData, setBugData] = useState({});
+
+  useEffect(() => {
+    if (BugData && BugData.length > 0) {
+      setBugData(BugData.find((bug) => bug.id.toString() === BugId));
+    }
+  }, [BugData, BugId]);
+
   return (
     <>
       <div className="main-container">
-        <div className="Kategorie">
-          <div className="Kategorie-title">병해충 정보</div>
-          <NavbarDarkExample />
-        </div>
+        <div className="Kategorie"></div>
         <div className="main-main">
           <div className="InfoComponent">
             <div>🌱병해충 도감정보🌱</div>
@@ -19,16 +30,14 @@ export default function InfoComponent() {
             <div className="info-title"> 🎈 기본정보</div>
             <div className="info-container">
               <div className="info-pic">
-                <img
-                  src="https://ncpms.rda.go.kr/npmsAPI/thumbnailViewer2.mo?uploadSpec=npms&uploadSubDirectory=/photo/sickns/&imageFileName=53a6b017d54d3d88dc69cef7e4f4e6d355791627a617f22c32b3afbc94bb6069f91aed1f1394cacfe17430590261ab48"
-                  alt="병원체"
-                />
+                <img src={bugData.image_url} alt="병원체" />
               </div>
               <div className="info-name">
-                <p>순번: 1 </p>
-                <p>작물: 가지 </p>
-                <p>이름: 갈색부패병 </p>
-                <p>영문영: capsici </p>
+                <p>순번: {bugData.id} </p>
+                <p>작물: {bugData.crop} </p>
+                <p>이름: {bugData.name} </p>
+                <p>영문영: {bugData.english_name} </p>
+                <p>category: {bugData.category} </p>
               </div>
             </div>
           </div>
