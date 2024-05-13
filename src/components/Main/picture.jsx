@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/Main/pictures.scss';
-import picture1 from '../../assets/sesacimg.jpeg';
-import picture2 from '../../assets/blueimg.jpeg';
-import picture3 from '../../assets/conimg.jpeg';
+import picture1 from '../../assets/main/sesacimg.jpeg';
+import picture2 from '../../assets/main/blueimg.jpeg';
+import picture3 from '../../assets/main/conimg.jpeg';
 
 function Pictures() {
   const images = [picture1, picture2, picture3];

@@ -1,5 +1,5 @@
 import '../../styles/Footer/footer.scss'; // 일반적인 CSS 파일 가져오기
-import logoImage from '../../assets/logo.png';
+import logoImage from '../../assets/header/logo.png';
 
 const Footer = () => {
   const handleClick = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../../assets/logo.png';
+import logoImage from '../../assets/header/logo.png';
 import '../../styles/Header/Header.scss';
 
-import { ReactComponent as Leaf } from '../../assets/leafpg.svg';
-import { ReactComponent as Book } from '../../assets/bookpg.svg';
-import { ReactComponent as BadBook } from '../../assets/bad-bookpg.svg';
-import { ReactComponent as Notice } from '../../assets/noticepg.svg';
+import { ReactComponent as Leaf } from '../../assets/header/leafpg.svg';
+import { ReactComponent as Book } from '../../assets/header/bookpg.svg';
+import { ReactComponent as BadBook } from '../../assets/header/bad-bookpg.svg';
+import { ReactComponent as Notice } from '../../assets/header/noticepg.svg';
 
 export default function Header() {
   return (
