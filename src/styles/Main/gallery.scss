@@ -1,0 +1,70 @@
+// 변수 정의
+$gallery-background-color: rgba(0, 0, 0, 0.5);
+$gallery-text-color: #fff;
+$gallery-padding: 10px;
+$gallery-gap: 20px;
+$photo-transition-time: 0.3s;
+$photo-hover-scale: 1.05;
+$photo-description-background: rgba(0, 0, 0, 0.5);
+$photo-description-font-size: 14px;
+$button-background-color: #77a642; // 로메인 그린
+$button-text-color: #fbfaf6; // 고추꽃 화이트
+$button-hover-background-color: #d9b487; // 감자 베이지
+
+// 믹스인 정의
+@mixin gallery-text {
+  background-color: $gallery-background-color;
+  color: $gallery-text-color;
+  padding: $gallery-padding;
+  margin: 0;
+  font-size: $photo-description-font-size;
+}
+
+.Gallery {
+  text-align: center;
+  margin-bottom: 70px;
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: $gallery-gap;
+    margin-top: $gallery-gap;
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform $photo-transition-time ease;
+
+        &:hover {
+          transform: scale($photo-hover-scale);
+        }
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include gallery-text;
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out;
+
+    &.slide-out {
+      transform: translateX(-100%);
+    }
+
+    &.slide-in {
+      transform: translateX(0);
+    }
+  }
+}
