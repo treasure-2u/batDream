@@ -1,7 +1,7 @@
 .bug-title {
   text-align: center;
   font-size: 40px;
-  margin: 40px 40px;
+  margin: 20px 0; /* 모바일에서 마진 조정 */
   width: 100%;
 }
 
@@ -11,7 +11,6 @@
 }
 
 .body-title {
-  /* width: 1000px; */
   text-align: center;
 }
 
@@ -21,7 +20,6 @@
   text-align: center;
 }
 
-/* 병충해 모음 글씨 */
 .Kategorie-title {
   border: 1px solid #77a642;
   padding: 30px;
@@ -117,15 +115,12 @@
 .api-item:last-child {
   border-right: none;
 }
-img {
+
+.api-item img {
   width: 200px;
   height: 150px;
 }
 
-.api-item img {
-  max-width: 100%;
-  max-height: 50%;
-}
 @media only screen and (max-width: 768px) {
   .bootstrap-container {
     display: none; /* 병해충 정보 칸 숨기기 */
@@ -135,6 +130,7 @@ img {
     display: none; /* 병해충 도감정보 숨기기 */
   }
 }
+
 @media only screen and (max-width: 480px) {
   .input input {
     margin-left: 0; /* 왼쪽 마진 제거 */
