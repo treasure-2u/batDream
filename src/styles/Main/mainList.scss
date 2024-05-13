@@ -1,60 +1,106 @@
-/* 기본 스타일 유지 */
+.BrandstoryMain {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치합니다. */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  background-color: #e0c098;
+  border-radius: 50px;
+}
+.Brandstory h2 {
+  text-align: center;
+  padding: 50px;
+  // font-weight: bold;
+  color: #77a642;
+  font-size: 2.7rem;
+}
+.Brandstory-container {
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치합니다. */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  margin-bottom: 30px;
+}
+
+.Brandstory-container > h2 {
+  font-size: 2.7rem;
+  color: #77a642;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
 .Recommendation {
-  margin-right: 200px;
-}
-.Recommemd-container {
-  display: flex;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-.Recommemd-container strong {
-  color: red;
-}
-.Recommendation h2 {
-  font-size: 40px;
-  color: #77a642;
+  text-align: center;
+  margin-top: 30px;
   font-weight: bold;
 }
-.Recommendation p {
-  font-size: 14px;
+
+.Recommendation > div {
+  margin-bottom: 30px;
 }
+
 .description-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .description {
-  padding-right: 100px;
+  flex-basis: 30%;
+  text-align: center;
+  margin: 0 10px;
 }
+
 .description h3 {
-  font-size: 30px;
+  font-size: 2rem;
+  color: #77a642;
+  margin-bottom: 10px;
   font-weight: bold;
-  color: #77a642;
-}
-.description p {
-  font-size: 14px;
-  color: #77a642;
 }
 .description .Pcolor {
-  font-size: 12px;
+  color: #fbfaf6;
   font-weight: bold;
-  color: #d9b487;
-  padding-top: 30px;
+}
+.description p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+strong {
+  color: red;
 }
 
-/* 미디어 쿼리 추가 */
+@media screen and (max-width: 768px) {
+  .BrandstoryMain {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
 
-@media only screen and (max-width: 768px) {
-  .Recommemd-container {
-    flex-direction: column;
-    margin: 50px;
+  .Brandstory-container > h2 {
+    font-size: 2rem;
   }
-  .Recommendation {
-    margin-right: 0;
-    margin-bottom: 20px;
+
+  .description {
+    flex-basis: 100%;
   }
-  .description-container {
-    flex-direction: column;
+}
+
+@media screen and (max-width: 480px) {
+  .mainListPage {
+    padding: 20px;
+  }
+
+  .BrandstoryMain {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .Brandstory-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    flex-basis: 100%;
+    margin: 0;
   }
 }
