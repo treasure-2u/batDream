@@ -18,6 +18,7 @@
 .BugPageMain {
   display: flex;
   margin: 0 100px; /* 양쪽 여백 100px 추가 */
+  text-align: center;
 }
 
 /* 병충해 모음 글씨 */
@@ -115,6 +116,10 @@
 
 .api-item:last-child {
   border-right: none;
+}
+img {
+  width: 200px;
+  height: 150px;
 }
 
 .api-item img {

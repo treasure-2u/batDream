@@ -10,10 +10,12 @@
 }
 .InfoComponent {
   display: flex;
+  // justify-content: center; /* 가로 가운데 정렬 */
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
 }
+
 .main-main {
   align-items: center;
   border: 1px solid #77a642;
@@ -46,4 +48,12 @@ button {
 }
 .info-deatil-main {
   margin-top: 20px;
+}
+// InfoComponent.scss
+
+// 다른 스타일들...
+
+.info-pic img {
+  width: 300px;
+  height: auto;
 }
