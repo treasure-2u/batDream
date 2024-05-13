@@ -6,11 +6,9 @@
   height: 14rem;
   position: relative;
   text-align: center;
-  border: 1px solid $potato-beige;
   border-radius: 20px;
   margin-top: 4rem;
   padding: 50px;
-  background-color: $chiliflower-white;
 
   left: 80%; /* 부모 요소의 가로축 이동 */
   transform: translate(-80%, -235%);
@@ -24,6 +22,7 @@
 
   &.normal {
     background-color: $chiliflower-white;
+    border: 1px solid $potato-beige;
   }
 
   &.bad {
