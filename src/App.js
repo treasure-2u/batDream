@@ -26,7 +26,7 @@ function App() {
         <Route path="/PlantMain" element={<PlantMain />} />
         <Route path="/PlantInfo" element={<PlantInfo />} />
         <Route path="/BugMain" element={<BugMain />} />
-        <Route path="/BugInfo" element={<BugInfo />} />
+        <Route path="/BugInfo/:BugId/" element={<BugInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

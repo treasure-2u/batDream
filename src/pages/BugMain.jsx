@@ -58,7 +58,6 @@ export default function BugMain() {
     <div className="body-title">
       <div className="bug-title">병해충 도감</div>
       <div className="line"></div>
-
       <div className="BugPageMain">
         <div className="bootstrap-container">
           <div className="Kategorie-title">병해충 정보</div>
