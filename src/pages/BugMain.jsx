@@ -58,14 +58,12 @@ export default function BugMain() {
     <div className="body-title">
       <div className="bug-title">병해충 도감</div>
       <div className="line"></div>
-
       <div className="BugPageMain">
-        <div className="bootstrap-container">
-          <div className="Kategorie-title">병해충 정보</div>
-          <NavbarDarkExample onItemClick={handleCategorySelect} />
-        </div>
         <div className="Main-Main">
           <div className="search-container">
+            <div className="bootstrap-container">
+              <NavbarDarkExample onItemClick={handleCategorySelect} />
+            </div>
             <div>이름/작물명</div>
             <form className="input" onSubmit={handleSearch}>
               <input

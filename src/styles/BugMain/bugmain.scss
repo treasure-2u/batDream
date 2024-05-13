@@ -1,7 +1,7 @@
 .bug-title {
   text-align: center;
   font-size: 40px;
-  margin: 40px 40px;
+  margin: 20px 0; /* 모바일에서 마진 조정 */
   width: 100%;
 }
 
@@ -11,16 +11,19 @@
 }
 
 .body-title {
-  /* width: 1000px; */
   text-align: center;
 }
 
+.NavbarDarkExample {
+  background-color: #77a642;
+}
 .BugPageMain {
   display: flex;
-  margin: 0 100px; /* 양쪽 여백 100px 추가 */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-/* 병충해 모음 글씨 */
 .Kategorie-title {
   border: 1px solid #77a642;
   padding: 30px;
@@ -48,7 +51,7 @@
 
 .search-container {
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 추가 */
+  align-items: center;
   border: solid 1px #77a642;
   padding: 15px;
   border-radius: 20px;
@@ -66,15 +69,15 @@
   padding: 8px;
   border-radius: 5px;
   margin-left: 10px;
-  border: 1px solid #77a642; /* 테두리 추가 */
+  border: 1px solid #77a642;
 }
 
 .input button {
   margin-top: 10px;
   padding: 8px 15px;
-  border: 1px solid #77a642; /* 테두리 추가 */
+  border: 1px solid #77a642;
   border-radius: 5px;
-  background-color: #fff; /* 배경색 추가 */
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -118,118 +121,37 @@
 }
 
 .api-item img {
-  max-width: 100%;
-  max-height: 50%;
+  width: 200px;
+  height: 150px;
 }
 
-@media (max-width: 75rem) {
-  /* 1200px 이상 */
-  /* 추가적인 스타일링 작성 */
-}
-
-@media (max-width: 62rem) {
-  /* 992px 이상 */
-  .body-title {
-    width: 90%;
-  }
-
-  .bug-title {
-    font-size: 30px;
-  }
-
-  .Main-Main {
-    width: 90%;
-  }
-
-  .api-item {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 48rem) {
-  /* 768px 이상 */
-  body {
-    font-size: 5px;
-  }
-
+@media only screen and (max-width: 768px) {
   .bootstrap-container {
-    display: none;
+    display: none; /* 병해충 정보 칸 숨기기 */
   }
 
-  .Kategorie-title {
-    display: none;
-  }
-}
-
-@media (max-width: 40.625rem) {
-  /* 650px 이상 */
-  .search-container,
   .api-container-title {
-    width: 90%;
-  }
-
-  .api-item {
-    font-size: 12px;
+    display: none; /* 병해충 도감정보 숨기기 */
   }
 }
 
-@media (max-width: 30rem) {
-  /* 480px 이상 */
-  .body-title {
-    width: 95%;
-  }
-
-  .bug-title {
-    font-size: 24px;
-  }
-
-  .Main-Main {
-    width: 95%;
-  }
-
-  .api-container {
-    width: 100%; /* 표와 리스트들의 너비를 화면에 꽉 차게 조정합니다. */
-  }
-
-  .api-item {
-    font-size: 12px;
-  }
-
-  .search-container {
-    width: 100%; /* 검색창의 너비를 줄입니다. */
-  }
-
+@media only screen and (max-width: 480px) {
   .input input {
-    width: 100%; /* 인풋창의 너비를 줄입니다. */
-  }
-}
-
-@media (max-width: 707px) {
-  /* 707px 이하 */
-  .body-title {
-    width: 100%;
+    margin-left: 0; /* 왼쪽 마진 제거 */
+    width: calc(100% - 20px); /* 부모 요소에 맞게 너비 조정 */
   }
 
-  .bug-title {
-    font-size: 20px;
-  }
-
-  .Main-Main {
-    width: 100%;
+  .search-container div {
+    display: none; /* 미디어 쿼리에서는 텍스트 숨김 */
   }
 
   .api-item {
-    font-size: 10px;
+    display: none; /* 모바일에서 숨김 */
   }
 
-  .search-container,
-  .api-container-title {
-    width: 100%;
-  }
-
-  .input input,
-  .input button {
-    width: 100%;
-    font-size: 8px;
+  .api-item:nth-child(3), /* 이름 */
+  .api-item:nth-child(5) {
+    /* 사진 */
+    display: block; /* 해당 요소들만 표시 */
   }
 }

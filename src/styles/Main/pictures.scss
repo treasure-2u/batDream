@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   margin-left: 100px;
+  margin-bottom: 50px;
 
   img {
     object-fit: cover;
@@ -45,7 +46,8 @@
 
     button {
       background-color: white;
-      color: black;
+      color: #d9b487;
+      font-weight: bold;
       padding: 10px 20px;
       border-radius: 15px;
       cursor: pointer;

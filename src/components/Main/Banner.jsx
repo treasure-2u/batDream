@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/Main/banner.scss';
-import bannerImage from '../../assets/banner.svg';
+import bannerImage from '../../assets/main/banner.svg';
 
 const Banner = () => {
   const [searchTerm, setSearchTerm] = useState('');

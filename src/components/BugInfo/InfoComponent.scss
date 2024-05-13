@@ -8,42 +8,86 @@
   justify-content: center;
   align-items: flex-start; /* 여기를 수정합니다. */
 }
+
 .InfoComponent {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
+  flex-direction: column; /* 모바일 화면에서 세로로 배치 */
+  align-items: center; /* 가운데 정렬 */
 }
+
 .main-main {
   align-items: center;
   border: 1px solid #77a642;
   border-radius: 20px;
   margin: 20px;
   padding: 20px;
-  flex: 1; /* 추가: main-main이 가능한 공간을 모두 차지하도록 설정합니다. */
+  flex: 1;
+  width: 100%; /* 가로 너비 100%로 변경 */
 }
+
 button {
   border: 1px solid #77a642;
   background-color: white;
   border-radius: 20px;
 }
+
 .info-container {
   background-color: whitesmoke;
   padding: 30px;
   display: flex;
   border: 1px solid #77a642;
   margin-top: 20px;
+  flex-direction: column; /* 모바일 화면에서 세로로 배치 */
 }
+
 .info-name {
-  margin-left: 40px;
+  margin-left: 0; /* 모바일 화면에서 왼쪽 여백 제거 */
 }
+
 .info-name p {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px; /* 간격 축소 */
+  margin-bottom: 15px; /* 간격 축소 */
 }
+
 .info-detail-title {
   margin-top: 20px;
 }
+
 .info-deatil-main {
   margin-top: 20px;
+}
+
+.info-pic img {
+  width: 100%; /* 이미지 너비 100%로 변경하여 반응형으로 조정 */
+  height: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 90%; /* 768px 이하에서 너비 축소 */
+  }
+
+  .info-name p {
+    margin-top: 10px; /* 간격 축소 */
+    margin-bottom: 10px; /* 간격 축소 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-main {
+    margin: 10px; /* 여백 축소 */
+  }
+
+  .info-container {
+    padding: 20px; /* 여백 축소 */
+  }
+
+  .info-name p {
+    font-size: 14px; /* 폰트 크기 축소 */
+    margin-top: 8px; /* 간격 축소 */
+    margin-bottom: 8px; /* 간격 축소 */
+  }
 }
