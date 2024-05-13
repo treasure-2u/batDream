@@ -1,10 +1,10 @@
 // 주말농장 상세 - 농장 찾기
 import NameFilterCompo from '../components/FarmSearch/NameFilterCompo';
 import ImgCompo from '../components/FarmSearch/ImgCompo';
-import Paging from '../components/FarmSearch/Paging';
 import React, { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js';
 import imageUrls from '../assets/farm/data.js';
+import PageNation from '../components/PlantMain/PageNation';
 
 export default function FarmSearch() {
   const [farms, setFarms] = useState([]);
@@ -67,9 +67,6 @@ export default function FarmSearch() {
   }, []);
 
   useEffect(() => {
-    if (currentPage === 1) {
-      return;
-    }
     currentFarmArr(currentPage);
   }, [currentPage]);
 
@@ -80,9 +77,12 @@ export default function FarmSearch() {
         {farmArr.map((farmInfo, index) => (
           <ImgCompo key={index} farm={farmInfo} />
         ))}
-        <Paging />
+        <PageNation
+          totalPages={Math.ceil(farms.length / 4)}
+          currentPageNum={currentPage}
+          onPageChange={setCurrentPage}
+        />
       </div>
-      <button onClick={() => setCurrentPage(currentPage + 1)}> + 1</button>
     </div>
   );
 }
