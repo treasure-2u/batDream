@@ -20,12 +20,12 @@ const WeekendFarmInfo = () => {
     };
 
     fetchFarmInfo(); // 주말농장 정보를 가져오는 함수를 호출
-  }, [process.env.REACT_APP_FARMINFO_API_KEY]); // API 키가 변경될 때마다 useEffect가 다시 실행되도록 설정
+  }, []); // API 키가 변경될 때마다 useEffect가 다시 실행되도록 설정
 
   return (
     <div>
       <h2>주말농장 정보</h2>
-      {farmInfo.length != 0 ? ( // farmInfo가 존재하는 경우에만 정보를 표시
+      {farmInfo.length !== 0 ? ( // farmInfo가 존재하는 경우에만 정보를 표시
         <ul>
           {farmInfo.map((info, index) => (
             <li key={index}>
