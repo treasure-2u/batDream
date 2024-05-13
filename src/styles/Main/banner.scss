@@ -1,46 +1,40 @@
 .banner {
-  // position: relative;
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow: hidden;
+  margin-left: 100px;
+  border-radius: 30px;
 
-  .banner__image {
-    // position: absolute;
-    text-align: center; /* 가운데 정렬을 위해 */
-  }
-
-  .banner__image img {
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 600px;
-  }
-
-  .banner__text {
+  img {
+    margin-top: 50px;
     position: absolute;
-    top: 50%; /* 부모 요소의 세로 중앙으로 이동 */
-    left: 50%; /* 부모 요소의 가로 중앙으로 이동 */
-    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 트랜스폼 */
-    text-align: center; /* 가운데 정렬을 위해 */
+    z-index: 0;
   }
 
-  .banner__text h1 {
+  h1 {
     font-size: 24px;
     color: #304c10;
     font-weight: bold;
+    z-index: 1;
   }
 
-  .banner__text p {
+  p {
     font-size: 16px;
     color: #56960d;
     font-weight: bold;
+    z-index: 1;
   }
 
   /* 검색바 스타일 */
   .search-bar {
-    position: absolute;
-    top: calc(50% + 50px); /* 텍스트 아래로 위치 조정 */
-    left: 50%; /* 부모 요소의 가로 중앙으로 이동 */
-    transform: translateX(-50%); /* 가운데 정렬을 위한 트랜스폼 */
-    text-align: center; /* 가운데 정렬을 위해 */
     font-size: 10px;
+    z-index: 1;
   }
 
   .search-bar input {
@@ -56,6 +50,6 @@
     color: white;
     border: none;
     border-radius: 5px;
-    // cursor: pointer;
+    cursor: pointer;
   }
 }

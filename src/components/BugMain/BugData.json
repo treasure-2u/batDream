@@ -1,0 +1,243 @@
+[
+  {
+    "id": 1,
+    "crop": "가지",
+    "name": "갈색부패병",
+    "english_name": "Phytophthora capsici Leonian",
+    "image_url": "https://ncpms.rda.go.kr/npmsAPI/thumbnailViewer2.mo?uploadSpec=npms&uploadSubDirectory=/photo/sickns/&imageFileName=53a6b017d54d3d88dc69cef7e4f4e6d355791627a617f22c32b3afbc94bb6069f91aed1f1394cacfe17430590261ab48",
+    "category": "병원체"
+  },
+  {
+    "id": 2,
+    "crop": "가지",
+    "name": "갈색점무늬병",
+    "english_name": "Paracercospora egenula",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns2/&fileName=D00000208002201010190000000_TMB.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 3,
+    "crop": "가지",
+    "name": "역병",
+    "english_name": "Phytophthora nicotianae Breda de Haan",
+    "image_url": "https://i.namu.wiki/i/QE6KKBaNUb-UBD5zvuTryPRcYUTRk9JYYhdx-SuQedRgb5syeOjK_rwbChrhJQ3I8VRcWGNtexKy3pB-A_XxDg.webp",
+    "category": "병원체"
+  },
+  {
+    "id": 4,
+    "crop": "가지",
+    "name": "점무늬병",
+    "english_name": "Ascochyta sp.",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=%EC%9E%90%EB%91%90_%EA%B2%80%EC%9D%80%EC%A0%90%EB%AC%B4%EB%8A%AC%EB%B3%91%20%EB%B3%91%EC%A7%95[20190109162443732]_TMB.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 5,
+    "crop": "감",
+    "name": "검은점무늬병",
+    "english_name": "Phomopsis sp.",
+    "image_url": "https://www.nongmin.com/-/raw/srv-nongmin/data2/content/image/2006/02/02/.cache/512/20060202071309.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 6,
+    "crop": "감",
+    "name": "그을음병",
+    "english_name": "Capnophaeum fuliginodes (Rehm) Yamanoto",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns2/&fileName=img_2008_0220161026131503868_TMB.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 7,
+    "crop": "감",
+    "name": "둥근무늬낙엽병",
+    "english_name": "Mycosphaerella nawae Hiura et Ikata",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns2/&fileName=img_8014_0120161026091621973_TMB.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 8,
+    "crop": "감귤",
+    "name": "검은무늬병",
+    "english_name": "Diaporthe citri (H.S. Fawc.) F.A. Wolf",
+    "image_url": "https://blog.kakaocdn.net/dn/K8cKh/btqDjdBuRt9/muGgVgPtHo2yEQG1tbRCWk/img.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 9,
+    "crop": "감귤",
+    "name": "궤양병",
+    "english_name": "Xanthomonas citri subsp. citri (Hasse) Vauterin et al.",
+    "image_url": "https://lh3.googleusercontent.com/proxy/0UNupdDiB8JVmRn34sYgBEU5ipcOO_yAOZMoF44EjdfMuuiAu4J_ZN1UQ8a3qIzuIqIPkHWUaYTZAT5MI-MZ9Yr097vLXakkX9jMIUli85F7xli3",
+    "category": "병원체"
+  },
+  {
+    "id": 10,
+    "crop": "감귤",
+    "name": "녹색곰팡이병",
+    "english_name": "Penicillium digitatum (Pers.) Sacc.",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=%EA%B7%B8%EC%9D%84%EC%9D%8C%EB%B3%91-1[20161116102332202]_TMB.jpg",
+    "category": "병원체"
+  },
+  {
+    "id": 11,
+    "crop": "가지",
+    "name": "갈색둥근무늬병",
+    "english_name": "Cercospora leaf spot",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns2/&fileName=D00000007001201010190000000_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 12,
+    "crop": "가지",
+    "name": "갈색무늬병",
+    "english_name": "Phomopsis blight",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=%EA%B0%88%EC%83%89%EB%AC%B4%EB%8A%AC%EB%B3%91_8[20180402092604012]_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 13,
+    "crop": "가지",
+    "name": "갈색점무늬병",
+    "english_name": "Leaf Spot",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=%EA%B0%90%EC%B4%88_%EA%B0%88%EC%83%89%EC%A0%90%EB%AC%B4%EB%8A%AC%EB%B3%91_%EB%B3%91%EB%B0%98%EC%9D%98%ED%99%95%EB%8C%80[20151112130346762]_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 14,
+    "crop": "가지",
+    "name": "검은썩음병",
+    "english_name": "Charcoal rot",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns2/&fileName=%EC%96%91%EB%B0%B0%EC%B6%94_%EA%B2%80%EC%9D%80%EC%8D%A9%EC%9D%8C%EB%B3%9120160801200703758_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 15,
+    "crop": "가지",
+    "name": "검은점뿌리썩음병",
+    "english_name": "Black dot root rot",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=%ED%86%A0%EB%A7%88%ED%86%A0_%EA%B2%80%EC%9D%80%EC%A0%90%EB%BF%8C%EB%A6%AC%EC%8D%A9%EC%9D%8C%EB%B3%912[20160803115123799]_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 16,
+    "crop": "가지",
+    "name": "겹무늬병",
+    "english_name": "Early blight",
+    "image_url": "https://www.nongsaro.go.kr/portal/imgView.do?filePath=/npms/photo/sickns/&fileName=D00001532001[201010190000000]_TMB.jpg",
+    "category": "병"
+  },
+  {
+    "id": 17,
+    "crop": "가지",
+    "name": "균핵병",
+    "english_name": "Sclerotinia rot",
+    "image_url": "https://www.syngenta.co.kr/sites/g/files/kgtney1266/files/media/image/2016/05/06/cuc_16.jpg",
+    "category": "병"
+  },
+  {
+    "id": 18,
+    "crop": "가지",
+    "name": "모자이크병",
+    "english_name": "Mosaic",
+    "image_url": "https://cdn.mkhealth.co.kr/news/photo/201808/img_MKH180810001_0.png",
+    "category": "병"
+  },
+  {
+    "id": 19,
+    "crop": "가지",
+    "name": "시들음병",
+    "english_name": "Fusarium wilt",
+    "image_url": "https://www.newsfm.kr/data/photos/20190730/art_15640605758716_afdc92.jpg",
+    "category": "병"
+  },
+  {
+    "id": 20,
+    "crop": "가지",
+    "name": "역병",
+    "english_name": "Phytophthora rot",
+    "image_url": "https://i.namu.wiki/i/QE6KKBaNUb-UBD5zvuTryPRcYUTRk9JYYhdx-SuQedRgb5syeOjK_rwbChrhJQ3I8VRcWGNtexKy3pB-A_XxDg.webp",
+    "category": "병"
+  },
+
+  {
+    "id": 21,
+    "crop": "사과",
+    "name": "사과나방",
+    "english_name": "Cydia pomonella (Linnaeus)",
+    "image_url": "https://species.nibr.go.kr/endangeredspecies/upload_data/rlcls_img/IN_1425.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 22,
+    "crop": "가루깍지벌레과",
+    "name": "가루깍지벌레",
+    "english_name": "Pseudococcus comstocki",
+    "image_url": "https://www.jadam.kr/news/photo/201802/12072_18398_3143.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 23,
+    "crop": "바구미과",
+    "name": "가시길쭉바구미",
+    "english_name": "Lixusdivaricatus",
+    "image_url": "https://naturing-s3-tokyo.s3-ap-northeast-1.amazonaws.com/production/observation/2018/09/12/crop/natureobserve_0912085434688_13635_18_crop.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 24,
+    "crop": "노린재과",
+    "name": "갈색날개노린재",
+    "english_name": "Plautiastali",
+    "image_url": "https://species.nibr.go.kr/UPLOAD/digital/species/12000002/120000026815/BIMGIN0000288784.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 25,
+    "crop": "좀매미충과",
+    "name": "갈색날개매미충",
+    "english_name": "Ricaniaspeculum",
+    "image_url": "https://i.namu.wiki/i/7LNwhzfnqZmg45JyUGgajVDzx2kbZQRU2_0Bu15bT6SLe4noiVlzzRSRDHBOmyE73zJ4RQzPRi9mUplT3yBzCg.webp",
+    "category": "곤충"
+  },
+  {
+    "id": 26,
+    "crop": "여치과",
+    "name": "갈색여치",
+    "english_name": "Paratlanticus",
+    "image_url": "https://species.nibr.go.kr/UPLOAD/digital/species/12000003/120000037774/thumb500/BIMGZZ0000242104.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 27,
+    "crop": "감꼭지나방과",
+    "name": "감꼭지나방",
+    "english_name": "Stathmopoda",
+    "image_url": "https://www.jadam.kr/news/photo/201808/12511_19025_917.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 28,
+    "crop": "주머니깍지벌레과",
+    "name": "감나무주머니깍지벌레",
+    "english_name": "Asiacornococcus",
+    "image_url": "https://www.jadam.kr/news/photo/201811/12723_19290_4824.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 29,
+    "crop": "진딧물과",
+    "name": "감자수염진딧물",
+    "english_name": "Macrosiphum",
+    "image_url": "https://species.nibr.go.kr/UPLOAD/digital/species/12000010/120000109671/BIMGIN0000012925.jpg",
+    "category": "곤충"
+  },
+  {
+    "id": 30,
+    "crop": "밀깍지벌레과",
+    "name": "거북밀깍지벌레",
+    "english_name": "Ceroplastes",
+    "image_url": "https://www.jadam.kr/news/photo/201901/12909_19459_4239.jpg",
+    "category": "곤충"
+  }
+]

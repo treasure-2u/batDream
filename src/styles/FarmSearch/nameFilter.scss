@@ -1,0 +1,16 @@
+@import '../root.scss';
+
+.farmFilter {
+  background-color: $romain-green;
+  padding: 5vh;
+}
+.nameFilter {
+  display: flex;
+}
+.areaFilter {
+  display: flex;
+}
+.name {
+  font-weight: bold;
+  padding: 0px 10px;
+}

@@ -1,0 +1,49 @@
+// 미세먼지 위젯 스타일링
+@import '../root.scss';
+
+.dust-box {
+  width: 25rem;
+  height: 14rem;
+  position: relative;
+  text-align: center;
+  border: 1px solid $potato-beige;
+  border-radius: 20px;
+  margin-top: 4rem;
+  padding: 50px;
+  background-color: $chiliflower-white;
+
+  left: 80%; /* 부모 요소의 가로축 이동 */
+  transform: translate(-80%, -235%);
+  /* 위치 정렬 -> 이걸 지정하면 반응형 불가능 */
+
+  // 미세먼지 정도에 따라 다른 배경색 지정
+  &.good {
+    background-color: $romain-green;
+    color: $chiliflower-white;
+  }
+
+  &.normal {
+    background-color: $chiliflower-white;
+  }
+
+  &.bad {
+    background-color: $potato-beige;
+    color: $chiliflower-white;
+  }
+}
+
+.dust-info {
+  position: relative;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dust-place {
+  font-size: 16px;
+  font-weight: 300;
+}
+.dust-grade {
+  font-size: 36px;
+  font-weight: 900;
+}

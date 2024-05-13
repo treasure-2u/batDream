@@ -9,8 +9,9 @@
   height: 1px;
   background-color: #77a642;
 }
+
 .body-title {
-  // width: 1000px;
+  /* width: 1000px; */
   text-align: center;
 }
 
@@ -18,6 +19,8 @@
   display: flex;
   margin: 0 100px; /* 양쪽 여백 100px 추가 */
 }
+
+/* 병충해 모음 글씨 */
 .Kategorie-title {
   border: 1px solid #77a642;
   padding: 30px;
@@ -25,11 +28,24 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.accordion-header {
+  border: 1px solid #77a642;
+  border-radius: 5px;
+}
+
+.accordion-body {
+  border: 1px solid #77a642;
+  border-radius: 5px;
+  margin: 5px;
+}
+
 .Main-Main {
   margin-top: 20px;
   width: 1000px;
   margin-left: 20px;
 }
+
 .search-container {
   display: flex;
   align-items: center; /* 세로 중앙 정렬 추가 */
@@ -42,6 +58,24 @@
 .search-container div {
   margin-left: 10px;
   line-height: 32px;
+}
+
+.input input {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 1px solid #77a642; /* 테두리 추가 */
+}
+
+.input button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: 1px solid #77a642; /* 테두리 추가 */
+  border-radius: 5px;
+  background-color: #fff; /* 배경색 추가 */
+  cursor: pointer;
 }
 
 .input {
@@ -67,17 +101,135 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid #d9b487;
-  padding: 10px;
+  padding: 3px;
   margin-top: 5px;
+  align-items: center;
 }
 
 .api-item {
   flex: 1;
   border-right: 1px solid lightgray;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
 }
 
 .api-item:last-child {
   border-right: none;
+}
+
+.api-item img {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+@media (max-width: 75rem) {
+  /* 1200px 이상 */
+  /* 추가적인 스타일링 작성 */
+}
+
+@media (max-width: 62rem) {
+  /* 992px 이상 */
+  .body-title {
+    width: 90%;
+  }
+
+  .bug-title {
+    font-size: 30px;
+  }
+
+  .Main-Main {
+    width: 90%;
+  }
+
+  .api-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 48rem) {
+  /* 768px 이상 */
+  body {
+    font-size: 5px;
+  }
+
+  .bootstrap-container {
+    display: none;
+  }
+
+  .Kategorie-title {
+    display: none;
+  }
+}
+
+@media (max-width: 40.625rem) {
+  /* 650px 이상 */
+  .search-container,
+  .api-container-title {
+    width: 90%;
+  }
+
+  .api-item {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 30rem) {
+  /* 480px 이상 */
+  .body-title {
+    width: 95%;
+  }
+
+  .bug-title {
+    font-size: 24px;
+  }
+
+  .Main-Main {
+    width: 95%;
+  }
+
+  .api-container {
+    width: 100%; /* 표와 리스트들의 너비를 화면에 꽉 차게 조정합니다. */
+  }
+
+  .api-item {
+    font-size: 12px;
+  }
+
+  .search-container {
+    width: 100%; /* 검색창의 너비를 줄입니다. */
+  }
+
+  .input input {
+    width: 100%; /* 인풋창의 너비를 줄입니다. */
+  }
+}
+
+@media (max-width: 707px) {
+  /* 707px 이하 */
+  .body-title {
+    width: 100%;
+  }
+
+  .bug-title {
+    font-size: 20px;
+  }
+
+  .Main-Main {
+    width: 100%;
+  }
+
+  .api-item {
+    font-size: 10px;
+  }
+
+  .search-container,
+  .api-container-title {
+    width: 100%;
+  }
+
+  .input input,
+  .input button {
+    width: 100%;
+    font-size: 8px;
+  }
 }

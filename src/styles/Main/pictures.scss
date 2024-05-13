@@ -1,48 +1,46 @@
-// * {
-//   margin: 50px;
-// }
-.container {
+.picture-container {
   position: relative;
+  display: flex;
+  margin-left: 100px;
 
-  .pictureImg {
-    width: 800px;
-    height: 600px;
+  img {
+    object-fit: cover;
+    width: 945px;
+    height: 450px;
   }
-
   .overlay {
-    position: absolute;
-    top: -50px;
-    right: -50px;
+    padding-top: 20px;
+    // position: absolute;
+    top: 0;
+    // right: 250px;
+
     background-color: #77a642;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 30px;
+    // border-radius: 10px;
     color: white;
-    padding: 10px;
-    width: 450px;
-    height: 250px;
-    display: flex; /* 내부 요소들을 수평으로 배치하기 위해 flex 사용 */
-    flex-direction: column; /* 내부 요소들을 수직으로 배치 */
+    padding: 20px;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
 
     h2 {
-      text-align: left;
-      margin-top: 10px;
       font-size: 20px;
-      font-style: bold;
-      margin-bottom: 10px; /* h2 아래 여백 추가 */
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 15px;
     }
 
     .middle-text {
-      text-align: left;
-      font-size: 15px;
-      margin-bottom: 10px; /* middle-text 아래 여백 추가 */
+      font-size: 17px;
+      margin-bottom: 10px;
     }
 
     .end-text {
-      text-align: right; /* 오른쪽 정렬 */
+      text-align: left;
       font-size: 15px;
-      margin-top: auto; /* 자동으로 아래쪽에 배치 */
+      margin-top: auto;
+      color: #fff;
+      font-style: bold;
     }
 
     button {
@@ -51,11 +49,13 @@
       padding: 10px 20px;
       border-radius: 15px;
       cursor: pointer;
-      align-self: flex-end; /* 오른쪽 정렬 */
+      align-items: center;
       margin-top: 10px;
+      margin-bottom: 20px;
+
       &:hover {
-        background-color: #77a642; /* 호버했을 때의 배경색 */
-        color: white; /* 호버했을 때의 글자색 */
+        background-color: #77a642;
+        color: white;
       }
     }
   }

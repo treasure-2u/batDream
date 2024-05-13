@@ -1,19 +1,50 @@
-// img자체 임포트 , public
-// pub 이미지 디렉토리 만들고 그 안에 각자 페이지별로 디렉토리를 만들어서 경로로 사용
-import { imgArr } from '../../utils/imgarr';
+import React, { useState, useEffect } from 'react';
+// import { imgArr } from '../../utils/imgarr';
+import imageUrls from '../../assets/farm/data';
 
-export default function ImgCompo() {
-  const randomIndex = Math.floor(Math.random() * imgArr.length);
-  const randomImage = imgArr[randomIndex];
+const ImgCompo = ({ farm }) => {
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        imageUrls.map((imageUrl, index) => {
+          console.log(`Image ${index + 1}: ${imageUrl}`);
+        });
+      } catch (error) {
+        setError(error);
+        console.error('Fetch error:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
-    <div className="searchImg">
-      <img
-        key={randomIndex}
-        src={`/img/farmImges/farmImg${randomImage}.jpg`}
-        alt={`Image ${randomIndex}`}
-        className="farm-image"
-      />
+    <div>
+      {imageUrls.map((imageUrl, index) => (
+        <img
+          key={index}
+          src={imageUrl}
+          alt={`Farm Image ${index + 1}`}
+          className="farm-image"
+        />
+      ))}
+      <div className="farmSearchContent">
+        {farm && (
+          <div className="farmSearchContent">
+            <div>
+              <p>농장명: {farm.name}</p>
+              <p>주소: {farm.address}</p>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
-}
+};
+
+export default ImgCompo;
