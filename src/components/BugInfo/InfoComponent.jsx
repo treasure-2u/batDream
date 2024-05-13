@@ -21,7 +21,6 @@ export default function InfoComponent() {
   return (
     <>
       <div className="main-container">
-        <div className="Kategorie"></div>
         <div className="main-main">
           <div className="InfoComponent">
             <div>🌱병해충 도감정보🌱</div>
