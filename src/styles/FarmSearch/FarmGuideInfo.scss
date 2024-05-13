@@ -14,3 +14,27 @@
 label {
   margin: 5px;
 }
+
+.container {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .FarmGuideBox {
+    margin: 10px;
+  }
+
+  .FarmGuideBox ul {
+    padding: 10px;
+  }
+
+  .QuizBox {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .col-md-4 {
+    display: none;
+  }
+}
