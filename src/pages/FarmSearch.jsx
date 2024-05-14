@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js';
 import imageUrls from '../assets/farm/data.js';
 import PageNation from '../components/PlantMain/PageNation';
+import AreaFilterCompo from '../components/FarmSearch/AreaFilterCompo.jsx';
+import '../styles/FarmSearch/FarmSearch.scss';
 
 export default function FarmSearch() {
   const [farms, setFarms] = useState([]);
@@ -72,17 +74,20 @@ export default function FarmSearch() {
 
   return (
     <div>
-      <NameFilterCompo />
-      <div>
+      <div className="farmFilter">
+        <NameFilterCompo />
+        <AreaFilterCompo />
+      </div>
+      <div className="farmImg">
         {farmArr.map((farmInfo, index) => (
           <ImgCompo key={index} farm={farmInfo} />
         ))}
-        <PageNation
-          totalPages={Math.ceil(farms.length / 4)}
-          currentPageNum={currentPage}
-          onPageChange={setCurrentPage}
-        />
       </div>
+      <PageNation
+        totalPages={Math.ceil(farms.length / 4)}
+        currentPageNum={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 }

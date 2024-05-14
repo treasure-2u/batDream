@@ -1,0 +1,158 @@
+@import '../root.scss';
+// ********************* 필터링 *********************
+// ! farmSearch 공통필터
+.farmFilter {
+  background-color: $romain-green;
+  padding: 3vh;
+  margin-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+// 각 compo 묶은 div
+.filter {
+  display: flex;
+  margin: 1vh;
+  align-items: center; // 세로 중앙 정렬 추가
+  justify-content: center;
+  //   padding-left: 30%;
+}
+// 각 compo div 요소의 이름
+.name {
+  font-weight: bold;
+  color: white;
+  margin: 1vh;
+}
+// ! NameFilterCompo
+input {
+  width: 40vh;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin-right: 1vh; // input 요소 오른쪽에 여백 추가
+}
+input:focus {
+  border: 1px solid $potato-beige;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: 2px solid $potato-beige;
+  border-radius: 10px;
+}
+.SearchBtnContainer {
+  padding-left: 1vh; // 버튼과 입력 필드 간 간격 추가
+}
+.SearchBtn {
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+// ! AreaFilterCompo
+.selectBox {
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 0px;
+}
+
+.selectBox:focus {
+  border: 1px solid $potato-beige;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: 2px solid $potato-beige;
+  border-radius: 10px;
+}
+// .filter 클래스에 Flexbox 설정 추가
+.filter {
+  display: flex;
+  align-items: center; // 세로 중앙 정렬 추가
+  margin: 1vh;
+}
+// input 요소 스타일 추가
+input {
+  width: 40vh;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin-right: 1vh; // input 요소 오른쪽에 여백 추가
+}
+
+// select 요소 스타일 추가
+.selectBox {
+  width: 49vh;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 0px;
+}
+
+// ********************* 농장내용 *********************
+.farmImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+.farmSerchInfo {
+  margin: 2vh;
+}
+img {
+  width: 70vh;
+  height: 50vh;
+  object-fit: cover;
+}
+.farmSerchInfo {
+  position: relative;
+  width: 70vh;
+  height: 50vh;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.farmSerchInfo.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.farmInfoContainer {
+  height: 15vh;
+}
+.farmName,
+.farmAddress {
+  text-align: center; /* 내용을 수평으로 가운데 정렬 */
+  line-height: 20vh;
+}
+.farmName {
+  font-size: xx-large;
+  background-color: $romain-green;
+  color: white;
+}
+.farmAddress {
+  font-size: x-large;
+  font-weight: bold;
+  color: $potato-beige;
+}
