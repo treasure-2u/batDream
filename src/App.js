@@ -10,8 +10,8 @@ import BugMain from './pages/BugMain';
 import BugInfo from './pages/BugInfo';
 import NotFound from './pages/NotFound';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-// import Footer from './components/Footer/Footer420';
+// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer420';
 
 function App() {
   return (
