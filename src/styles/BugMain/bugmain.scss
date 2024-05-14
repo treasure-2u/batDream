@@ -14,10 +14,14 @@
   text-align: center;
 }
 
+.NavbarDarkExample {
+  background-color: #77a642;
+}
 .BugPageMain {
   display: flex;
-  margin: 0 100px; /* 양쪽 여백 100px 추가 */
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .Kategorie-title {
@@ -47,7 +51,7 @@
 
 .search-container {
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 추가 */
+  align-items: center;
   border: solid 1px #77a642;
   padding: 15px;
   border-radius: 20px;
@@ -65,15 +69,15 @@
   padding: 8px;
   border-radius: 5px;
   margin-left: 10px;
-  border: 1px solid #77a642; /* 테두리 추가 */
+  border: 1px solid #77a642;
 }
 
 .input button {
   margin-top: 10px;
   padding: 8px 15px;
-  border: 1px solid #77a642; /* 테두리 추가 */
+  border: 1px solid #77a642;
   border-radius: 5px;
-  background-color: #fff; /* 배경색 추가 */
+  background-color: #fff;
   cursor: pointer;
 }
 
