@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
-import '../../styles/Main/pictures.scss';
+import '../../styles/Main/main.scss';
 import picture1 from '../../assets/main/sesacimg.jpeg';
 import picture2 from '../../assets/main/blueimg.jpeg';
 import picture3 from '../../assets/main/conimg.jpeg';

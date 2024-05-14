@@ -13,10 +13,13 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <div className="main-logo">
-          <div className="logo">
-            <img src={logoImage} alt="Logo" />
-            <div className="logo-1">밭드림</div>
-          </div>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            {/* 로고를 클릭했을 때 이동할 경로 */}
+            <div className="logo">
+              <img src={logoImage} alt="Logo" />
+              <div className="logo-1">밭드림</div>
+            </div>
+          </Link>
         </div>
         <div className="icon-container">
           <Leaf className="icon" />
@@ -38,8 +41,8 @@ export default function Header() {
         </div>
         <div className="icon-container">
           <Notice className="icon" />
-          <Link to="/announcements" className="header-link" id="color4">
-            공지사항
+          <Link to="/FarmGuide" className="header-link" id="color4">
+            팜가이드
           </Link>
         </div>
       </div>

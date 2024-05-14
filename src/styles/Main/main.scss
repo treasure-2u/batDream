@@ -1,0 +1,522 @@
+// banner scss
+.banner {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow: hidden;
+  // margin-left: 100px;
+  border-radius: 30px;
+
+  img {
+    margin-top: 50px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #304c10;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  p {
+    font-size: 16px;
+    color: #56960d;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  /* 검색바 스타일 */
+  .search-bar {
+    font-size: 10px;
+    z-index: 1;
+  }
+
+  .search-bar input {
+    padding: 8px 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #77a642;
+  }
+
+  .search-bar button {
+    padding: 6px 10px;
+    background-color: #77a642; /* 버튼 색상을 조정합니다. */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+//Gallery.scss
+// 변수 정의
+$gallery-background-color: rgba(0, 0, 0, 0.5);
+$gallery-text-color: #fff;
+$gallery-padding: 10px;
+$gallery-gap: 20px;
+$photo-transition-time: 0.3s;
+$photo-hover-scale: 1.05;
+$photo-description-background: rgba(0, 0, 0, 0.5);
+$photo-description-font-size: 14px;
+$button-background-color: #77a642; // 로메인 그린
+$button-text-color: #fbfaf6; // 고추꽃 화이트
+$button-hover-background-color: #d9b487; // 감자 베이지
+
+// 믹스인 정의
+@mixin gallery-text {
+  background-color: $gallery-background-color;
+  color: $gallery-text-color;
+  padding: $gallery-padding;
+  margin: 0;
+  font-size: $photo-description-font-size;
+}
+
+.Gallery {
+  text-align: center;
+  margin-bottom: 70px;
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: $gallery-gap;
+    margin-top: $gallery-gap;
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform $photo-transition-time ease;
+
+        &:hover {
+          transform: scale($photo-hover-scale);
+        }
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include gallery-text;
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out;
+
+    &.slide-out {
+      transform: translateX(-100%);
+    }
+
+    &.slide-in {
+      transform: translateX(0);
+    }
+  }
+}
+
+//mainList.scss
+.BrandstoryMain {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치합니다. */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  background-color: #e0c098;
+  border-radius: 50px;
+}
+.Brandstory h2 {
+  text-align: center;
+  padding: 50px;
+  // font-weight: bold;
+  color: #77a642;
+  font-size: 2.7rem;
+}
+.Brandstory-container {
+  display: flex;
+  flex-direction: column; /* 요소들을 수직으로 배치합니다. */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  margin-bottom: 30px;
+}
+
+.Brandstory-container > h2 {
+  font-size: 2.7rem;
+  color: #77a642;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.Recommendation {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.Recommendation > div {
+  margin-bottom: 30px;
+}
+
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.description {
+  flex-basis: 30%;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.description h3 {
+  font-size: 2rem;
+  color: #77a642;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.description .Pcolor {
+  color: #fbfaf6;
+  font-weight: bold;
+}
+.description p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+strong {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .BrandstoryMain {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .Brandstory-container > h2 {
+    font-size: 2rem;
+  }
+
+  .description {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainListPage {
+    padding: 20px;
+  }
+
+  .BrandstoryMain {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .Brandstory-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+.picture-container {
+  position: relative;
+  display: flex;
+  // margin-left: 100px;
+  margin-bottom: 50px;
+  justify-content: center;
+
+  img {
+    object-fit: cover;
+    width: 945px;
+    height: 450px;
+  }
+  .overlay {
+    padding-top: 20px;
+    // position: absolute;
+    top: 0;
+    // right: 250px;
+
+    background-color: #77a642;
+    // border-radius: 10px;
+    color: white;
+    padding: 20px;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .middle-text {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .end-text {
+      text-align: left;
+      font-size: 15px;
+      margin-top: auto;
+      color: #fff;
+      font-style: bold;
+    }
+
+    button {
+      background-color: white;
+      color: #d9b487;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: #77a642;
+        color: white;
+      }
+    }
+  }
+}
+
+//postList.scss
+.post-list {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.post-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.post-list th,
+.post-list td {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.post-list th {
+  background-color: #77a642;
+  color: #fbfaf6;
+}
+
+.post-list tbody tr:nth-child(even) {
+  background-color: #fbfaf6;
+}
+
+.post-list tbody tr:hover {
+  background-color: #d9b487;
+}
+
+.post-list table th,
+.post-list table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.post-list table th {
+  background-color: #77a642;
+  color: #fbfaf6;
+}
+
+.post-list table tbody tr:nth-child(even) {
+  background-color: #fbfaf6;
+}
+
+.post-list table tbody tr:hover {
+  background-color: #d9b487;
+}
+
+.post-list {
+  margin-left: 100px;
+}
+
+//rotation.scss
+
+h1 {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #77a642 !important;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* 요소가 넘칠 경우 줄바꿈 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 세로 중앙 정렬 */
+  margin: 0 20px; /* 이미지 정보 간격 조정 */
+}
+
+.main-image {
+  width: 420px; /* 이미지 폭 설정 */
+  height: 235px; /* 이미지 높이 설정 */
+  margin-bottom: 20px;
+  border-radius: 10px; /* 이미지 모서리 둥글게 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+  transition: transform 0.3s ease-in-out; /* 애니메이션 효과 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-image:hover {
+  transform: scale(1.1); /* 마우스 호버 시 이미지 확대 */
+}
+
+.name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #77a642;
+}
+
+// .Gallery {
+//   display: flex;
+//   justify-content: center;
+// }
+.photo {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+//dust.scss
+// 미세먼지 위젯 스타일링
+@import '../root.scss';
+$breakpoint-large: 1200px;
+$breakpoint-medium: 1099px;
+$breakpoint-small: 999px;
+
+.dust-box {
+  width: 25rem;
+  height: 14rem;
+  // position: relative;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 4rem;
+  padding: 40px;
+
+  // 미세먼지 정도에 따라 다른 배경색 지정
+  &.good {
+    background-color: $romain-green;
+    color: $chiliflower-white;
+  }
+
+  &.normal {
+    background-color: $chiliflower-white;
+    border: 1px solid $potato-beige;
+  }
+
+  &.bad {
+    background-color: $potato-beige;
+    color: $chiliflower-white;
+  }
+
+  .dust-info {
+    position: relative;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .dust-place {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .dust-grade {
+    font-size: 36px;
+    font-weight: 900;
+  }
+}
+
+//weather.scss
+// 날씨 위젯 스타일링
+@import '../root.scss';
+$breakpoint-large: 1200px;
+$breakpoint-medium: 1099px;
+$breakpoint-small: 999px;
+
+.weather-main {
+  width: 25rem;
+  height: 14rem;
+  border-radius: 20px;
+  // position: relative;
+  background-image: url('../../assets/weather-cloudy-70.png');
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 30px;
+  cursor: pointer;
+
+  .weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weather-place {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .temp-now {
+    font-size: 52px;
+    font-weight: 900;
+  }
+}
+
+//메인에서 위젯 위치 조정
+.main-full-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.main-full-weather {
+  display: flex;
+  flex-direction: column;
+  margin: 90px;
+}

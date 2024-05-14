@@ -4,7 +4,7 @@ import React from 'react';
 import farmImage from '../../assets/main/field.png'; // 이미지 import
 import plantGuideImage from '../../assets/main/mainplant.png'; // 이미지 import
 import pestGuideImage from '../../assets/main/pest.jpeg'; // 이미지 import
-import '../../styles/Main/rotation.scss'; // SCSS 파일 import
+import '../../styles/Main/main.scss'; // SCSS 파일 import
 
 const Rotation = () => {
   const images = [

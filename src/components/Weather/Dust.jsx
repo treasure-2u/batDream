@@ -1,7 +1,7 @@
 /* 미세먼지 위젯 */
 
 import { useEffect, useState } from 'react';
-import '../../styles/weather/Dust.scss';
+import '../../styles/Main/main.scss';
 
 // 서울시 미세먼지 API
 const DUST_API = {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Main/banner.scss';
+import '../../styles/Main/main.scss';
 import bannerImage from '../../assets/main/banner.svg';
 
 const Banner = () => {
