@@ -4,6 +4,7 @@ import '../../styles/Main/main.scss';
 import picture1 from '../../assets/main/sesacimg.jpeg';
 import picture2 from '../../assets/main/blueimg.jpeg';
 import picture3 from '../../assets/main/conimg.jpeg';
+import middleImage from '../../assets/main/person.png';
 
 function Pictures() {
   const images = [picture1, picture2, picture3];
@@ -29,13 +30,11 @@ function Pictures() {
       <div className="overlay">
         <h2>서울에 있는 주말농장</h2>
         <p className="middle-text">
-          도심 속에서 자연을 경험하고 농업 활동을 <br />
-          즐길 수 있는 장소입니다.
+          도심 속에서 자연을 경험하고 농업 활동을 즐길 수 있는 장소입니다.
         </p>
+        <img src={middleImage} alt="중간 이미지" className="middle-image" />
         <p className="end-text">
-          가족과 친구와 함께
-          <br />
-          새로운 재미를 느끼러 주말농장에 가보는건 어떨까요?
+          가족과 친구와 함께 새로운 재미를 느끼러 주말농장에 가보는건 어떨까요?
         </p>
         <Link to="/FarmMain">
           {' '}
