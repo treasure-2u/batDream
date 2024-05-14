@@ -16,7 +16,26 @@ import Gallery from '../components/Main/Gallery';
 export default function Main() {
   return (
     <>
-      <Banner />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+          margin: '20px',
+        }}
+      >
+        <Banner />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            margin: '90px',
+          }}
+        >
+          <Weather />
+          <Dust />
+        </div>
+      </div>
+
       <MainList />
       <Rotation />
       <Pictures />

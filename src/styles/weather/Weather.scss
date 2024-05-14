@@ -8,7 +8,7 @@ $breakpoint-small: 999px;
   width: 25rem;
   height: 14rem;
   border-radius: 20px;
-  position: relative;
+  // position: relative;
   background-image: url('../../assets/weather-cloudy-70.png');
   background-position: center;
   background-size: cover;
@@ -17,34 +17,34 @@ $breakpoint-small: 999px;
   padding: 30px;
   cursor: pointer;
 
-  @media screen and (min-width: $breakpoint-large) {
-    // 1200px 이상
-    left: 80%; /* 부모 요소의 가로축 이동 */
-    transform: translate(-80%, -225%); /* 위치 고정 */
-  }
+  // @media screen and (min-width: $breakpoint-large) {
+  //   // 1200px 이상
+  //   left: 80%; /* 부모 요소의 가로축 이동 */
+  //   transform: translate(-80%, -225%); /* 위치 고정 */
+  // }
 
-  @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
-    // 1099px ~ 1200px
-    left: 55%; /* 부모 요소의 가로축 이동 */
-    transform: translate(-5%, -210%); /* 위치 고정 */
-    height: 13rem;
-  }
+  // @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  //   // 1099px ~ 1200px
+  //   left: 55%; /* 부모 요소의 가로축 이동 */
+  //   transform: translate(-5%, -210%); /* 위치 고정 */
+  //   height: 13rem;
+  // }
 
-  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-    // 999px ~ 1099px
-    top: -20%; /* 부모 요소의 세로축 이동 */
-    left: 55%; /* 부모 요소의 가로축 이동 */
-    transform: translate(-5%, -205%); /* 위치 고정 */
-    height: 13rem;
-  }
+  // @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+  //   // 999px ~ 1099px
+  //   top: -20%; /* 부모 요소의 세로축 이동 */
+  //   left: 55%; /* 부모 요소의 가로축 이동 */
+  //   transform: translate(-5%, -205%); /* 위치 고정 */
+  //   height: 13rem;
+  // }
 
-  @media screen and (max-width: $breakpoint-small) {
-    // 999px 이하
-    left: 15%;
-    margin: 20px 0;
-    width: 18rem;
-    height: 14rem;
-  }
+  // @media screen and (max-width: $breakpoint-small) {
+  //   // 999px 이하
+  //   left: 15%;
+  //   margin: 20px 0;
+  //   width: 18rem;
+  //   height: 14rem;
+  // }
 
   .weather-info {
     display: flex;
