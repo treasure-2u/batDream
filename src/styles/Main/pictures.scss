@@ -1,8 +1,9 @@
 .picture-container {
   position: relative;
   display: flex;
-  margin-left: 100px;
+  // margin-left: 100px;
   margin-bottom: 50px;
+  justify-content: center;
 
   img {
     object-fit: cover;

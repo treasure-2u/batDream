@@ -1,4 +1,5 @@
 // rotation.scss
+
 h1 {
   padding-top: 50px;
   padding-bottom: 40px;
@@ -28,6 +29,9 @@ h1 {
   border-radius: 10px; /* 이미지 모서리 둥글게 */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
   transition: transform 0.3s ease-in-out; /* 애니메이션 효과 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-image:hover {
@@ -39,4 +43,22 @@ h1 {
   margin-bottom: 10px;
   font-weight: bold;
   color: #77a642;
+}
+
+// .Gallery {
+//   display: flex;
+//   justify-content: center;
+// }
+.photo {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
