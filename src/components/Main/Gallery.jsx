@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/Main/gallery.scss'; // SCSS 파일을 import
+import '../../styles/Main/main.scss'; // SCSS 파일을 import
 
 // 사진 import
 import farm1 from '../../assets/main/gallery1.png';

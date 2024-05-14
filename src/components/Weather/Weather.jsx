@@ -1,7 +1,7 @@
 /* 날씨 위젯 */
 
 import { useEffect, useState } from 'react';
-import '../../styles/weather/Weather.scss';
+import '../../styles/Main/main.scss';
 
 // 날씨 api key
 const WEATHER_API = {

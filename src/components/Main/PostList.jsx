@@ -1,7 +1,7 @@
 // PostList.jsx
 
 import React from 'react';
-import '../../styles/Main/postList.scss';
+import '../../styles/Main/main.scss';
 
 const PostList = (props) => {
   return (
