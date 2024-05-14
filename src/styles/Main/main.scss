@@ -1,3 +1,5 @@
+@import '../root.scss';
+
 // banner scss
 .banner {
   position: relative;
@@ -42,12 +44,12 @@
     padding: 8px 50px;
     margin-right: 10px;
     border-radius: 5px;
-    border: 0.5px solid #77a642;
+    border: 0.5px solid $romain-green;
   }
 
   .search-bar button {
     padding: 6px 10px;
-    background-color: #77a642; /* 버튼 색상을 조정합니다. */
+    background-color: $romain-green; /* 버튼 색상을 조정합니다. */
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,9 +67,9 @@ $photo-transition-time: 0.3s;
 $photo-hover-scale: 1.05;
 $photo-description-background: rgba(0, 0, 0, 0.5);
 $photo-description-font-size: 14px;
-$button-background-color: #77a642; // 로메인 그린
-$button-text-color: #fbfaf6; // 고추꽃 화이트
-$button-hover-background-color: #d9b487; // 감자 베이지
+$button-background-color: $romain-green; // 로메인 그린
+$button-text-color: $chiliflower-white; // 고추꽃 화이트
+$button-hover-background-color: $potato-beige; // 감자 베이지
 
 // 믹스인 정의
 @mixin gallery-text {
@@ -112,6 +114,7 @@ $button-hover-background-color: #d9b487; // 감자 베이지
     }
   }
 
+  //mainList.scss
   .photo {
     position: relative;
     opacity: 1;
@@ -127,23 +130,27 @@ $button-hover-background-color: #d9b487; // 감자 베이지
   }
 }
 
-//mainList.scss
+//picture.scss
+
 .BrandstoryMain {
   padding-top: 50px;
   padding-bottom: 70px;
   display: flex;
   flex-direction: column; /* 요소들을 수직으로 배치합니다. */
   align-items: center; /* 가로 방향 가운데 정렬 */
-  background-color: #e0c098;
-  border-radius: 50px;
+  background-image: url('../../assets/main/mainListfarm\ 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .Brandstory h2 {
   text-align: center;
   padding: 50px;
-  // font-weight: bold;
   color: #77a642;
   font-size: 2.7rem;
 }
+
 .Brandstory-container {
   display: flex;
   flex-direction: column; /* 요소들을 수직으로 배치합니다. */
@@ -153,9 +160,9 @@ $button-hover-background-color: #d9b487; // 감자 베이지
 
 .Brandstory-container > h2 {
   font-size: 2.7rem;
-  color: #77a642;
+  color: black;
   margin-bottom: 20px;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .Recommendation {
@@ -182,20 +189,23 @@ $button-hover-background-color: #d9b487; // 감자 베이지
 
 .description h3 {
   font-size: 2rem;
-  color: #77a642;
+  color: black;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 .description .Pcolor {
-  color: #fbfaf6;
+  color: black;
   font-weight: bold;
 }
+
 .description p {
   font-size: 1rem;
-  color: #333;
+  color: black;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 strong {
   color: red;
 }
@@ -235,38 +245,50 @@ strong {
   }
 }
 
+//picture.scss
 .picture-container {
   position: relative;
   display: flex;
-  // margin-left: 100px;
   margin-bottom: 50px;
   justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   img {
     object-fit: cover;
-    width: 945px;
-    height: 450px;
+    width: 40%;
+    max-width: 800px;
+    height: auto;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
   }
+
   .overlay {
     padding-top: 20px;
-    // position: absolute;
     top: 0;
-    // right: 250px;
-
-    background-color: #77a642;
-    // border-radius: 10px;
-    color: white;
+    background-color: #f4f4f9;
+    color: #333;
     padding: 20px;
-    width: 400px;
-    height: 450px;
+    width: 50%;
+    max-width: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     h2 {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 15px;
+      color: #77a642;
     }
 
     .middle-text {
@@ -274,87 +296,77 @@ strong {
       margin-bottom: 10px;
     }
 
+    .middle-image {
+      margin: 20px 0;
+      max-width: 80%;
+      height: auto;
+      border-radius: 15px;
+      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .end-text {
-      text-align: left;
-      font-size: 15px;
+      font-size: 16px;
       margin-top: auto;
-      color: #fff;
-      font-style: bold;
+      color: #77a642;
+      font-weight: bold;
     }
 
     button {
-      background-color: white;
-      color: #d9b487;
+      background-color: #77a642;
+      color: white;
       font-weight: bold;
       padding: 10px 20px;
       border-radius: 15px;
       cursor: pointer;
-      align-items: center;
       margin-top: 10px;
       margin-bottom: 20px;
+      transition: background-color 0.3s, color 0.3s;
 
       &:hover {
-        background-color: #77a642;
+        background-color: #d9b487;
         color: white;
       }
     }
   }
 }
 
-//postList.scss
-.post-list {
-  width: 100%;
-  margin-top: 50px;
-}
+@media (max-width: 768px) {
+  .picture-container {
+    flex-direction: column;
 
-.post-list table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-}
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
 
-.post-list th,
-.post-list td {
-  padding: 5px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
+    .overlay {
+      width: 100%;
+      padding: 10px;
+      border-radius: 0;
 
-.post-list th {
-  background-color: #77a642;
-  color: #fbfaf6;
-}
+      h2 {
+        font-size: 18px;
+      }
 
-.post-list tbody tr:nth-child(even) {
-  background-color: #fbfaf6;
-}
+      .middle-text {
+        font-size: 15px;
+      }
 
-.post-list tbody tr:hover {
-  background-color: #d9b487;
-}
+      .middle-image {
+        margin: 10px 0;
+      }
 
-.post-list table th,
-.post-list table td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
+      .end-text {
+        font-size: 13px;
+      }
 
-.post-list table th {
-  background-color: #77a642;
-  color: #fbfaf6;
-}
-
-.post-list table tbody tr:nth-child(even) {
-  background-color: #fbfaf6;
-}
-
-.post-list table tbody tr:hover {
-  background-color: #d9b487;
-}
-
-.post-list {
-  margin-left: 100px;
+      button {
+        padding: 8px 16px;
+      }
+    }
+  }
 }
 
 //rotation.scss
@@ -364,7 +376,7 @@ h1 {
   padding-bottom: 40px;
   font-weight: bold;
   text-align: center;
-  color: #77a642 !important;
+  color: $romain-green !important;
 }
 .image-container {
   display: flex;
@@ -401,7 +413,7 @@ h1 {
   font-size: 18px;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #77a642;
+  color: $romain-green;
 }
 
 // .Gallery {
@@ -422,17 +434,15 @@ h1 {
   display: block;
 }
 
-//dust.scss
+// from dust.scss
 // 미세먼지 위젯 스타일링
-@import '../root.scss';
 $breakpoint-large: 1200px;
-$breakpoint-medium: 1099px;
 $breakpoint-small: 999px;
 
 .dust-box {
   width: 25rem;
   height: 14rem;
-  // position: relative;
+  position: relative;
   text-align: center;
   border-radius: 20px;
   margin-top: 4rem;
@@ -454,42 +464,81 @@ $breakpoint-small: 999px;
     color: $chiliflower-white;
   }
 
-  .dust-info {
-    position: relative;
-    text-align: center;
-    line-height: 2.5rem;
-    font-size: 20px;
-    font-weight: 700;
+  @media screen and (min-width: $breakpoint-large) {
+    // 1200px 이상
+    left: -10%; /* 부모 요소의 가로축 이동 */
+    bottom: 14%;
   }
-  .dust-place {
-    font-size: 16px;
-    font-weight: 300;
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
+    // 999px ~ 1200px
+    left: -10%; /* 부모 요소의 가로축 이동 */
+    bottom: 14%;
+    height: 13rem;
   }
-  .dust-grade {
-    font-size: 36px;
-    font-weight: 900;
+
+  @media screen and (max-width: $breakpoint-small) {
+    // 999px 이하
+    left: -20%;
+    bottom: 14%;
+    margin: 10px 0;
+    width: 18rem;
+    height: 12rem;
+    padding: 30px;
   }
 }
 
-//weather.scss
-// 날씨 위젯 스타일링
-@import '../root.scss';
-$breakpoint-large: 1200px;
-$breakpoint-medium: 1099px;
-$breakpoint-small: 999px;
+.dust-info {
+  position: relative;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dust-place {
+  font-size: 16px;
+  font-weight: 300;
+}
+.dust-grade {
+  font-size: 36px;
+  font-weight: 900;
+}
 
+// from weather.scss
+// 날씨 위젯 스타일링
 .weather-main {
   width: 25rem;
   height: 14rem;
   border-radius: 20px;
-  // position: relative;
+  position: relative;
   background-image: url('../../assets/weather-cloudy-70.png');
   background-position: center;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 30px;
   cursor: pointer;
+
+  @media screen and (min-width: $breakpoint-large) {
+    // 1200px 이상
+    left: -10%; /* 부모 요소의 가로축 이동 */
+    bottom: 5%;
+  }
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
+    // 999px ~ 1200px
+    left: -10%; /* 부모 요소의 가로축 이동 */
+    bottom: 8%;
+    height: 13rem;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    // 999px 이하
+    left: -20%;
+    bottom: 14%;
+    margin: 10px 0;
+    width: 18rem;
+    height: 12rem;
+  }
 
   .weather-info {
     display: flex;
@@ -508,7 +557,7 @@ $breakpoint-small: 999px;
   }
 }
 
-//메인에서 위젯 위치 조정
+// 메인에서 위젯 위치 조정
 .main-full-container {
   display: flex;
   justify-content: space-evenly;
