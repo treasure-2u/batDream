@@ -24,21 +24,21 @@ const Gallery = () => {
 
   // 농장 체험 사진 데이터
   const farmPhotos = [
-    { url: farm1, description: '작물 재배' },
-    { url: farm2, description: '가축 사육' },
-    { url: farm3, description: '자연 경관' },
-    { url: farm4, description: '자연 경관' },
-    { url: farm5, description: '자연 경관' },
-    { url: farm6, description: '자연 경관' },
-    { url: farm7, description: '자연 경관' },
-    { url: farm8, description: '자연 경관' },
-    { url: farm9, description: '자연 경관' },
-    { url: farm10, description: '자연 경관' },
-    { url: farm11, description: '자연 경관' },
-    { url: farm12, description: '자연 경관' },
-    { url: farm13, description: '자연 경관' },
-    { url: farm14, description: '자연 경관' },
-    { url: farm15, description: '자연 경관' },
+    { url: farm1, description: '가족과 함께' },
+    { url: farm2, description: '우리 농장' },
+    { url: farm3, description: '농장 체험' },
+    { url: farm4, description: '체험 학습' },
+    { url: farm5, description: '가족과 함께' },
+    { url: farm6, description: '우리 농장 관리' },
+    { url: farm7, description: '우리 농장' },
+    { url: farm8, description: '가족과 함께' },
+    { url: farm9, description: '씨앗 심기' },
+    { url: farm10, description: '자연 학습' },
+    { url: farm11, description: '우리 농장' },
+    { url: farm12, description: '직접 체험' },
+    { url: farm13, description: '농장 체험' },
+    { url: farm14, description: '자연과 함께' },
+    { url: farm15, description: '가족과 함께' },
     // 필요에 따라 추가할 수 있습니다.
   ];
 

@@ -9,7 +9,7 @@ import MainList from '../components/Main/mainList';
 import Dust from '../components/Weather/Dust';
 import Weather from '../components/Weather/Weather';
 import Rotation from '../components/Main/Rotation';
-import NoticeComponent from '../components/Main/PostList';
+
 import Gallery from '../components/Main/Gallery';
 
 export default function Main() {
@@ -27,7 +27,6 @@ export default function Main() {
       <Rotation />
       <Pictures />
       <Gallery />
-      {/* <NoticeComponent /> */}
     </>
   );
 }

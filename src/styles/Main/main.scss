@@ -114,6 +114,7 @@ $button-hover-background-color: $potato-beige; // 감자 베이지
     }
   }
 
+  //mainList.scss
   .photo {
     position: relative;
     opacity: 1;
@@ -129,23 +130,27 @@ $button-hover-background-color: $potato-beige; // 감자 베이지
   }
 }
 
-// mainList.scss
+//picture.scss
+
 .BrandstoryMain {
   padding-top: 50px;
   padding-bottom: 70px;
   display: flex;
   flex-direction: column; /* 요소들을 수직으로 배치합니다. */
   align-items: center; /* 가로 방향 가운데 정렬 */
-  background-color: #e0c098;
-  border-radius: 50px;
+  background-image: url('../../assets/main/mainListfarm\ 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .Brandstory h2 {
   text-align: center;
   padding: 50px;
-  // font-weight: bold;
-  color: $romain-green;
+  color: #77a642;
   font-size: 2.7rem;
 }
+
 .Brandstory-container {
   display: flex;
   flex-direction: column; /* 요소들을 수직으로 배치합니다. */
@@ -155,9 +160,9 @@ $button-hover-background-color: $potato-beige; // 감자 베이지
 
 .Brandstory-container > h2 {
   font-size: 2.7rem;
-  color: $romain-green;
+  color: black;
   margin-bottom: 20px;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .Recommendation {
@@ -184,20 +189,23 @@ $button-hover-background-color: $potato-beige; // 감자 베이지
 
 .description h3 {
   font-size: 2rem;
-  color: $romain-green;
+  color: black;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 .description .Pcolor {
-  color: $chiliflower-white;
+  color: black;
   font-weight: bold;
 }
+
 .description p {
   font-size: 1rem;
-  color: #333;
+  color: black;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 strong {
   color: red;
 }
@@ -237,38 +245,50 @@ strong {
   }
 }
 
+//picture.scss
 .picture-container {
   position: relative;
   display: flex;
-  // margin-left: 100px;
   margin-bottom: 50px;
   justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   img {
     object-fit: cover;
-    width: 945px;
-    height: 450px;
+    width: 40%;
+    max-width: 800px;
+    height: auto;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
   }
+
   .overlay {
     padding-top: 20px;
-    // position: absolute;
     top: 0;
-    // right: 250px;
-
-    background-color: $romain-green;
-    // border-radius: 10px;
-    color: white;
+    background-color: #f4f4f9;
+    color: #333;
     padding: 20px;
-    width: 400px;
-    height: 450px;
+    width: 50%;
+    max-width: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     h2 {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 15px;
+      color: #77a642;
     }
 
     .middle-text {
@@ -276,87 +296,77 @@ strong {
       margin-bottom: 10px;
     }
 
+    .middle-image {
+      margin: 20px 0;
+      max-width: 80%;
+      height: auto;
+      border-radius: 15px;
+      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .end-text {
-      text-align: left;
-      font-size: 15px;
+      font-size: 16px;
       margin-top: auto;
-      color: #fff;
-      font-style: bold;
+      color: #77a642;
+      font-weight: bold;
     }
 
     button {
-      background-color: white;
-      color: $potato-beige;
+      background-color: #77a642;
+      color: white;
       font-weight: bold;
       padding: 10px 20px;
       border-radius: 15px;
       cursor: pointer;
-      align-items: center;
       margin-top: 10px;
       margin-bottom: 20px;
+      transition: background-color 0.3s, color 0.3s;
 
       &:hover {
-        background-color: $romain-green;
+        background-color: #d9b487;
         color: white;
       }
     }
   }
 }
 
-// postList.scss
-.post-list {
-  width: 100%;
-  margin-top: 50px;
-}
+@media (max-width: 768px) {
+  .picture-container {
+    flex-direction: column;
 
-.post-list table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-}
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
 
-.post-list th,
-.post-list td {
-  padding: 5px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
+    .overlay {
+      width: 100%;
+      padding: 10px;
+      border-radius: 0;
 
-.post-list th {
-  background-color: $romain-green;
-  color: $chiliflower-white;
-}
+      h2 {
+        font-size: 18px;
+      }
 
-.post-list tbody tr:nth-child(even) {
-  background-color: $chiliflower-white;
-}
+      .middle-text {
+        font-size: 15px;
+      }
 
-.post-list tbody tr:hover {
-  background-color: $potato-beige;
-}
+      .middle-image {
+        margin: 10px 0;
+      }
 
-.post-list table th,
-.post-list table td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
+      .end-text {
+        font-size: 13px;
+      }
 
-.post-list table th {
-  background-color: $romain-green;
-  color: $chiliflower-white;
-}
-
-.post-list table tbody tr:nth-child(even) {
-  background-color: $chiliflower-white;
-}
-
-.post-list table tbody tr:hover {
-  background-color: $potato-beige;
-}
-
-.post-list {
-  margin-left: 100px;
+      button {
+        padding: 8px 16px;
+      }
+    }
+  }
 }
 
 //rotation.scss
