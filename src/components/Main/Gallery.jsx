@@ -25,7 +25,6 @@ import farm20 from '../../assets/main/gallery8.png';
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // 현재 사진 인덱스 상태 추가
-  const [slideDirection, setSlideDirection] = useState(''); // 슬라이드 방향 상태 추가
 
   // 농장 체험 사진 데이터
   const farmPhotos = [
@@ -64,7 +63,15 @@ const Gallery = () => {
 
   const renderPhotos = () => {
     const startIndex = currentIndex % farmPhotos.length; // 시작 인덱스 계산
-    const slicedPhotos = farmPhotos.slice(startIndex, startIndex + 5); // 5장씩 사진 슬라이싱
+    let slicedPhotos = farmPhotos.slice(startIndex, startIndex + 5); // 5장씩 사진 슬라이싱
+
+    // 남은 사진이 5장보다 적을 경우, 남은 사진만큼 슬라이싱
+    if (slicedPhotos.length < 5) {
+      slicedPhotos = [
+        ...slicedPhotos,
+        ...farmPhotos.slice(0, 5 - slicedPhotos.length),
+      ];
+    }
 
     return slicedPhotos.map((photo, index) => (
       <div className="photo" key={startIndex + index}>
@@ -75,13 +82,13 @@ const Gallery = () => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => prevIndex + 1); // 다음 사진 인덱스 설정
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % farmPhotos.length); // 다음 사진 인덱스 설정
   };
 
   return (
     <div className="Gallery">
       <h1>Gallery</h1>
-      <div className={`gallery ${slideDirection}`}>{renderPhotos()}</div>
+      <div className="gallery">{renderPhotos()}</div>
     </div>
   );
 };
