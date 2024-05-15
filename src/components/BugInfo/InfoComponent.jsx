@@ -1,6 +1,6 @@
 // InfoComponent.js
 import React from 'react';
-import './InfoComponent.scss'; // Sass 파일을 import합니다.
+import '../../styles/BugInfo/InfoComponent.scss'; // Sass 파일을 import합니다.
 import NavbarDarkExample from '../BugMain/bootstrap';
 import BugData from '../BugMain/BugData.json';
 import { useParams } from 'react-router-dom';
