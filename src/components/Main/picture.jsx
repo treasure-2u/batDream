@@ -36,7 +36,7 @@ function Pictures() {
         <p className="end-text">
           가족과 친구와 함께 새로운 재미를 느끼러 주말농장에 가보는건 어떨까요?
         </p>
-        <Link to="/FarmMain">
+        <Link to="/FarmSearch">
           {' '}
           {/* Link to FarmMain page */}
           <button>주말농장 보러가기</button>
