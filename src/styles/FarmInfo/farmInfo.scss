@@ -1,5 +1,16 @@
+@import '../root.scss';
+
 * {
   list-style: none;
+}
+
+.copy {
+  cursor: pointer;
+}
+
+.copy:hover {
+  text-decoration: underline;
+  color: $romain-green;
 }
 
 .custom-button {
@@ -7,10 +18,10 @@
   height: 45px;
   margin: 5px;
   border-radius: 20px;
-  background-color: #d9b487;
+  background-color: $potato-beige;
   border: 1px solid black;
 }
 
-.custom-button.active {
-  background-color: #77a642;
+.custom-button:hover {
+  background-color: $romain-green;
 }
