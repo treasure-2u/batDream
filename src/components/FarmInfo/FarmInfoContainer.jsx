@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
+import CopyToClipboard from './CopyToClipboard'; // CopyToClipboard 컴포넌트 가져오기
 
 export default function FarmInfoContainer() {
   const [farmInfo, setFarmInfo] = useState([]);
@@ -13,8 +14,6 @@ export default function FarmInfoContainer() {
           `https://data.gm.go.kr/openapi/weekendfarm?key=${process.env.REACT_APP_FARMINFO_API_KEY}&Type=json&pIndex=1&pSize=100`,
         );
         const jsonData = await response.json();
-        // setFarmInfo(jsonData.weekendfarm[1].row);
-        // console.log(jsonData.weekendfarm[1].row);
 
         const selectedFarm = jsonData.weekendfarm[1].row.find(
           (info) => info.FARM_NAME === farmName.replace('_', ' '),
@@ -27,7 +26,7 @@ export default function FarmInfoContainer() {
     };
 
     fetchFarmInfo();
-  }, []);
+  }, [farmName]);
 
   return (
     <div>
@@ -35,13 +34,12 @@ export default function FarmInfoContainer() {
       {farmInfo ? (
         <ul>
           <li>
-            {/* <p>주말농장명: {farmInfo.FARM_NAME}</p> */}
-            <p>주소: {farmInfo.ADDRESS}</p>
+            <CopyToClipboard text={farmInfo.ADDRESS}>
+              주소: {farmInfo.ADDRESS}
+            </CopyToClipboard>
             <p>규모: {farmInfo.SCALE}</p>
             <p>운영 시작일: {farmInfo.USE_START_DATE}</p>
-            {/* <p>운영 종료일: {farmInfo.USE_END_DATE}</p> */}
             <p>텃밭면적(m2): {farmInfo.VEGE_AREA}</p>
-            {/* <p>참고사항: {farmInfo.ETC}</p> */}
             <div>
               <span>주말농장 신청 바로가기</span>
               <button

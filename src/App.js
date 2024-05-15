@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
-import FarmMain from './pages/FarmMain';
 import FarmSearch from './pages/FarmSearch';
 import FarmInfo from './pages/FarmInfo';
 import FarmGuide from './pages/FarmGuide';
@@ -18,7 +17,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/FarmMain" element={<FarmMain />} />
         <Route path="/FarmSearch" element={<FarmSearch />} />
         <Route path="/FarmInfo/:farmName" element={<FarmInfo />} />
         <Route path="/FarmGuide" element={<FarmGuide />} />

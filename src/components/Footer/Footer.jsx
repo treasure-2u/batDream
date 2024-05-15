@@ -1,3 +1,5 @@
+import React from 'react';
+import CopyToClipboard from '../FarmInfo/CopyToClipboard'; // CopyToClipboard 컴포넌트 가져오기
 import '../../styles/Footer/footer.scss'; // 일반적인 CSS 파일 가져오기
 import logoImage from '../../assets/header/logo.png';
 
@@ -20,31 +22,37 @@ const Footer = () => {
             <div className="title">(주)밭드림</div>
             <div className="title">대표이사: 이유진</div>
             <div className="title">
-              주소: 서울시 강동구 새싹대로 415 밭드림빌딩
+              <CopyToClipboard text="서울시 강동구 새싹대로 415 밭드림빌딩">
+                주소: 서울시 강동구 새싹대로 415 밭드림빌딩
+              </CopyToClipboard>
             </div>
           </div>
           <div>
-            <div className="title">FAX: 02-1234-5678</div>
-            <div className="title">사업자등록번호: 123-45-67890</div>
+            <div className="title">
+              <CopyToClipboard text="02-1234-5678">
+                FAX: 02-1234-5678
+              </CopyToClipboard>
+            </div>
+            <div className="title">
+              <CopyToClipboard text="123-45-67890">
+                사업자등록번호: 123-45-67890
+              </CopyToClipboard>
+            </div>
           </div>
           <div>
-            <div className="title">E-mail: batdream@batdream.or.kr</div>
+            <div className="title">
+              <CopyToClipboard text="batdream@batdream.or.kr">
+                E-mail: batdream@batdream.or.kr
+              </CopyToClipboard>
+            </div>
             <div className="title" id="popup" onClick={handleClick}>
-              대표 번호: 1588-0001 (상세보기)
+              대표번호: 1588-0001 (상세보기)
             </div>
           </div>
-          {/* <div>
-            <br />
-            <div className="title">© BATDREAM Corp.</div>
-          </div> */}
-          {/* Corp. == 주식회사 */}
           <br />
           <div className="title">© BATDREAM Corp.</div>
-          {/* All rights reserved. == 모든 권리 보유 */}
-          {/* <div className="title">© BATDREAM. All rights reserved.</div> */}
         </div>
         <div className="bat-text">
-          {/* <div style={{ display: 'inline-block', float: 'right' }}> */}
           <div className="title-2">Bountiful harvest, fields wide,</div>
           <div className="title-2">Abundant joy, where dreams reside.</div>
           <div className="title-2">Thriving farm, nature's pride.</div>
