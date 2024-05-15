@@ -1,7 +1,7 @@
 @import '../root.scss';
 
 // banner scss
-.banner {
+.modified-banner {
   position: relative;
   width: 40vw;
   height: 40vw;
@@ -11,13 +11,13 @@
   align-items: center;
   margin-top: 50px;
   overflow: hidden;
-  // margin-left: 100px;
   border-radius: 30px;
 
   img {
     margin-top: 50px;
     position: absolute;
     z-index: 0;
+    border-radius: 30px;
   }
 
   h1 {
@@ -44,12 +44,12 @@
     padding: 8px 50px;
     margin-right: 10px;
     border-radius: 5px;
-    border: 0.5px solid $romain-green;
+    border: 0.5px solid #56960d; /* 수정: 변수가 아닌 직접 색상 코드 사용 */
   }
 
   .search-bar button {
     padding: 6px 10px;
-    background-color: $romain-green; /* 버튼 색상을 조정합니다. */
+    background-color: #56960d; /* 수정: 변수가 아닌 직접 색상 코드 사용 */
     color: white;
     border: none;
     border-radius: 5px;
@@ -371,6 +371,8 @@ strong {
 
 //rotation.scss
 
+$romain-green: #008000; // 원하는 색상 값으로 수정
+
 h1 {
   padding-top: 50px;
   padding-bottom: 40px;
@@ -378,10 +380,11 @@ h1 {
   text-align: center;
   color: $romain-green !important;
 }
+
 .image-container {
   display: flex;
-  flex-wrap: wrap; /* 요소가 넘칠 경우 줄바꿈 */
-  justify-content: center; /* 가로 중앙 정렬 */
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 70px;
   margin-top: 50px;
 }
@@ -389,24 +392,24 @@ h1 {
 .image-info {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 세로 중앙 정렬 */
-  margin: 0 20px; /* 이미지 정보 간격 조정 */
+  align-items: center;
+  margin: 0 20px;
 }
 
 .main-image {
-  width: 420px; /* 이미지 폭 설정 */
-  height: 235px; /* 이미지 높이 설정 */
+  width: 420px;
+  height: 237px;
   margin-bottom: 20px;
-  border-radius: 10px; /* 이미지 모서리 둥글게 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-  transition: transform 0.3s ease-in-out; /* 애니메이션 효과 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .main-image:hover {
-  transform: scale(1.1); /* 마우스 호버 시 이미지 확대 */
+  transform: scale(1.1);
 }
 
 .name {
@@ -414,6 +417,21 @@ h1 {
   margin-bottom: 10px;
   font-weight: bold;
   color: $romain-green;
+}
+
+.farm-image {
+  width: 420px; /* 원하는 크기로 조정 */
+  height: 305px; /* 원하는 크기로 조정 */
+}
+
+.plant-guide-image {
+  width: 420px; /* 원하는 크기로 조정 */
+  height: 236px; /* 원하는 크기로 조정 */
+}
+
+.pest-guide-image {
+  width: 420px; /* 원하는 크기로 조정 */
+  height: 238px; /* 원하는 크기로 조정 */
 }
 
 // .Gallery {
