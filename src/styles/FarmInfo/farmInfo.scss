@@ -1,7 +1,48 @@
 @import '../root.scss';
 
-* {
-  list-style: none;
+.farm-info-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($color: #d9b487, $alpha: 0.5); /* 색상 및 투명도 조정 */
+  margin-bottom: 50px;
+}
+.farm-name {
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.farm-details {
+  padding: 0;
+}
+
+.farm-details li {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-button {
+  width: 80px;
+  height: 28px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #388e3c;
 }
 
 .copy {
@@ -10,18 +51,9 @@
 
 .copy:hover {
   text-decoration: underline;
-  color: $romain-green;
 }
 
-.custom-button {
-  width: 45px;
-  height: 45px;
-  margin: 5px;
-  border-radius: 20px;
-  background-color: $potato-beige;
-  border: 1px solid black;
-}
-
-.custom-button:hover {
-  background-color: $romain-green;
+.loading {
+  font-style: italic;
+  color: #888;
 }
