@@ -1,0 +1,16 @@
+* {
+  list-style: none;
+}
+
+.custom-button {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #d9b487;
+  border: 1px solid black;
+}
+
+.custom-button.active {
+  background-color: #77a642;
+}
