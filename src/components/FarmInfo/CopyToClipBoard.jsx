@@ -7,9 +7,9 @@ const CopyToClipboard = ({ text, children }) => {
   };
 
   return (
-    <p className="copy" onClick={handleCopy}>
+    <div className="copy" onClick={handleCopy}>
       {children}
-    </p>
+    </div>
   );
 };
 
