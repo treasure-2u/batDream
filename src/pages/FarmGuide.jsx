@@ -2,7 +2,6 @@
 
 import React from 'react';
 import FarmGuideInfo from '../components/FarmGuide/FarmGuideInfo';
-import ShapeExample from '../components/FarmGuide/ShapeExample';
 import QuizGame from '../components/FarmGuide/QuizGame';
 import '../styles/FarmSearch/FarmGuideInfo.scss';
 
@@ -10,7 +9,6 @@ export default function FarmGuide() {
   return (
     <div>
       <FarmGuideInfo />
-      <ShapeExample />
       <QuizGame />
     </div>
   );

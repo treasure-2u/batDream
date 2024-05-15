@@ -84,9 +84,10 @@ const QuizGame = () => {
           <p>질문: {questions[currentQuestion].question}</p>
           <form>
             {questions[currentQuestion].options.map((option, index) => (
-              <div key={index}>
+              <div className="QuizContainer" key={index}>
                 <label>
                   <input
+                    className="Radio"
                     type="radio"
                     value={option}
                     checked={selectedOption === option}
