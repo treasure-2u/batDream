@@ -1,5 +1,5 @@
 import React from 'react';
-import CopyToClipboard from '../FarmInfo/CopyToClipboard'; // CopyToClipboard 컴포넌트 가져오기
+import Copy from '../FarmInfo/Copy'; // Copy 컴포넌트 가져오기
 import '../../styles/Footer/footer.scss'; // 일반적인 CSS 파일 가져오기
 import logoImage from '../../assets/header/logo.png';
 
@@ -22,28 +22,24 @@ const Footer = () => {
             <div className="title">(주)밭드림</div>
             <div className="title">대표이사: 이유진</div>
             <div className="title">
-              <CopyToClipboard text="서울시 강동구 새싹대로 415 밭드림빌딩">
+              <Copy text="서울시 강동구 새싹대로 415 밭드림빌딩">
                 주소: 서울시 강동구 새싹대로 415 밭드림빌딩
-              </CopyToClipboard>
+              </Copy>
             </div>
           </div>
           <div>
             <div className="title">
-              <CopyToClipboard text="02-1234-5678">
-                FAX: 02-1234-5678
-              </CopyToClipboard>
+              <Copy text="02-1234-5678">FAX: 02-1234-5678</Copy>
             </div>
             <div className="title">
-              <CopyToClipboard text="123-45-67890">
-                사업자등록번호: 123-45-67890
-              </CopyToClipboard>
+              <Copy text="123-45-67890">사업자등록번호: 123-45-67890</Copy>
             </div>
           </div>
           <div>
             <div className="title">
-              <CopyToClipboard text="batdream@batdream.or.kr">
+              <Copy text="batdream@batdream.or.kr">
                 E-mail: batdream@batdream.or.kr
-              </CopyToClipboard>
+              </Copy>
             </div>
             <div className="title" id="popup" onClick={handleClick}>
               대표번호: 1588-0001 (상세보기)

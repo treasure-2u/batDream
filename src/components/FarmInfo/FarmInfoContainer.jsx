@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
-import CopyToClipboard from './CopyToClipboard'; // CopyToClipboard 컴포넌트 가져오기
+import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
 
 export default function FarmInfoContainer() {
   const [farmInfo, setFarmInfo] = useState([]);
@@ -34,9 +34,7 @@ export default function FarmInfoContainer() {
       {farmInfo ? (
         <ul>
           <li>
-            <CopyToClipboard text={farmInfo.ADDRESS}>
-              주소: {farmInfo.ADDRESS}
-            </CopyToClipboard>
+            <Copy text={farmInfo.ADDRESS}>주소: {farmInfo.ADDRESS}</Copy>
             <p>규모: {farmInfo.SCALE}</p>
             <p>운영 시작일: {farmInfo.USE_START_DATE}</p>
             <p>텃밭면적(m2): {farmInfo.VEGE_AREA}</p>

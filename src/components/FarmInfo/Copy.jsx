@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CopyToClipboard = ({ text, children }) => {
+const Copy = ({ text, children }) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     alert('복사되었습니다!');
@@ -13,4 +13,4 @@ const CopyToClipboard = ({ text, children }) => {
   );
 };
 
-export default CopyToClipboard;
+export default Copy;
