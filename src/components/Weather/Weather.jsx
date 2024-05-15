@@ -55,6 +55,7 @@ export default function Weather() {
       <div className="weather-info">
         {icon && (
           <img
+            className="weather-icon"
             src={`http://openweathermap.org/img/w/${icon}.png`}
             alt="Weather-icon"
           />

@@ -529,6 +529,7 @@ $breakpoint-small: 999px;
     left: -10%; /* 부모 요소의 가로축 이동 */
     bottom: 8%;
     height: 13rem;
+    padding: 25px;
   }
 
   @media screen and (max-width: $breakpoint-small) {
@@ -538,6 +539,7 @@ $breakpoint-small: 999px;
     margin: 10px 0;
     width: 18rem;
     height: 12rem;
+    padding: 18px;
   }
 
   .weather-info {
@@ -551,8 +553,13 @@ $breakpoint-small: 999px;
     font-weight: 600;
   }
 
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+  }
+
   .temp-now {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 900;
   }
 }
