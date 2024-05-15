@@ -1,7 +1,9 @@
+// FarmInfoContainer.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
 import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
+import NotFound from '../../pages/NotFound'; // NotFound 컴포넌트 가져오기
 
 export default function FarmInfoContainer() {
   const [farmInfo, setFarmInfo] = useState([]);
@@ -27,6 +29,10 @@ export default function FarmInfoContainer() {
 
     fetchFarmInfo();
   }, [farmName]);
+
+  if (!farmInfo) {
+    return <NotFound />;
+  }
 
   return (
     <>
