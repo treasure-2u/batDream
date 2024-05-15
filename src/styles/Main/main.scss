@@ -147,7 +147,7 @@ $button-hover-background-color: $potato-beige; // 감자 베이지
 .Brandstory h2 {
   text-align: center;
   padding: 50px;
-  color: #77a642;
+  color: $romain-green;
   font-size: 2.7rem;
 }
 
@@ -245,7 +245,7 @@ strong {
   }
 }
 
-//picture.scss
+// picture.scss
 .picture-container {
   position: relative;
   display: flex;
@@ -288,7 +288,7 @@ strong {
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 15px;
-      color: #77a642;
+      color: $romain-green;
     }
 
     .middle-text {
@@ -307,12 +307,12 @@ strong {
     .end-text {
       font-size: 16px;
       margin-top: auto;
-      color: #77a642;
+      color: $romain-green;
       font-weight: bold;
     }
 
     button {
-      background-color: #77a642;
+      background-color: $romain-green;
       color: white;
       font-weight: bold;
       padding: 10px 20px;
@@ -323,7 +323,7 @@ strong {
       transition: background-color 0.3s, color 0.3s;
 
       &:hover {
-        background-color: #d9b487;
+        background-color: $potato-beige;
         color: white;
       }
     }
@@ -369,9 +369,7 @@ strong {
   }
 }
 
-//rotation.scss
-
-$romain-green: #008000; // 원하는 색상 값으로 수정
+// rotation.scss
 
 h1 {
   padding-top: 50px;
