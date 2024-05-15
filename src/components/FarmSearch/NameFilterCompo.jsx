@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 
-export default function NameFilterCompo({ farms, setDisplayedFarms }) {
+export default function NameFilterCompo() {
   const [searchInput, setSearchInput] = useState('');
 
   const handleInputChange = (e) => {
-    const userInput = e.target.value;
-    setSearchInput(userInput);
-    const filteredFarms = farms.filter((farm) =>
-      farm.FARM_NAME._text.includes(userInput),
-    );
-    setDisplayedFarms(filteredFarms);
+    setSearchInput(e.target.value);
   };
 
   return (
