@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import FarmSearch from './pages/FarmSearch';
@@ -9,9 +10,20 @@ import BugInfo from './pages/BugInfo';
 import NotFound from './pages/NotFound';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-// import Footer from './components/Footer/Footer420';
+import Footer420 from './components/Footer/Footer420';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 700);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="App">
       <Header />
@@ -25,7 +37,7 @@ function App() {
         <Route path="/BugInfo/:BugId/" element={<BugInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {isMobile ? <Footer420 /> : <Footer />}
     </div>
   );
 }
