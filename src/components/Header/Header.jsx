@@ -23,7 +23,7 @@ export default function Header() {
         </div>
         <div className="icon-container">
           <Leaf className="icon" />
-          <Link to="/FarmMain" className="header-link" id="color1">
+          <Link to="/FarmSearch" className="header-link" id="color1">
             주말농장
           </Link>
         </div>
