@@ -1,17 +1,19 @@
+// Banner.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/Main/main.scss';
 import bannerImage from '../../assets/main/banner.svg';
 
 const ModifiedBanner = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const handleSearch = () => {
-    console.log('검색어:', searchTerm);
+    navigate(`/FarmInfo/${searchTerm.replace(' ', '_')}`);
   };
 
   return (
     <div className="modified-banner">
-      {/* <div className="banner__image"> */}
       <img src={bannerImage} alt="" />
       <h1>주말, 농장의 자연과 함께</h1>
       <p>
@@ -29,7 +31,6 @@ const ModifiedBanner = () => {
         />
         <button onClick={handleSearch}>검색</button>
       </div>
-      {/* </div> */}
     </div>
   );
 };
