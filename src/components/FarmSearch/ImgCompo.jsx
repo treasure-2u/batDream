@@ -33,7 +33,14 @@ const ImgCompo = ({ farm }) => {
         <div className="card">
           <div className="front">
             {/* 농장 정보 페이지로 이동하는 링크 */}
-            <Link to={`/FarmInfo/${encodeURIComponent(farm.FARM_NAME._text)}`}>
+            <Link
+              to={{
+                pathname: `/FarmInfo/${encodeURIComponent(
+                  farm.FARM_NAME._text,
+                )}`,
+                state: { imgUrl: farm.imgUrl }, // 이미지 URL 상태로 전달
+              }}
+            >
               <img
                 src={farm.imgUrl}
                 alt={`Farm Image`}

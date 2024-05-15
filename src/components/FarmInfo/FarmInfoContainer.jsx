@@ -29,34 +29,41 @@ export default function FarmInfoContainer() {
   }, [farmName]);
 
   return (
-    <div>
-      <h2>{farmInfo.FARM_NAME}</h2>
-      {farmInfo ? (
-        <ul>
-          <li>
-            <Copy text={farmInfo.ADDRESS}>주소: {farmInfo.ADDRESS}</Copy>
-            <p>규모: {farmInfo.SCALE}</p>
-            <p>운영 시작일: {farmInfo.USE_START_DATE}</p>
-            <p>텃밭면적(m2): {farmInfo.VEGE_AREA}</p>
-            <div>
-              <span>주말농장 신청 바로가기</span>
-              <button
-                className="custom-button"
-                onClick={() => {
-                  window.open(
-                    'http://www.gm.go.kr/pt/cp/weekendFarm/info.do',
-                    '_blank',
-                  );
-                }}
-              >
-                Go
-              </button>
-            </div>
-          </li>
-        </ul>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+    <>
+      <div className="farm-info-container">
+        <h2 className="farm-name">{farmInfo.FARM_NAME}</h2>
+        {farmInfo ? (
+          <ul className="farm-details">
+            {' '}
+            {/* Added class for styling */}
+            <li>
+              <Copy text={farmInfo.ADDRESS}>주소: {farmInfo.ADDRESS}</Copy>
+              <br />
+              <p>🌱규모: {farmInfo.SCALE}</p>
+              <p>🌱운영 시작일: {farmInfo.USE_START_DATE}</p>
+              <p>🌱 텃밭면적(m2): {farmInfo.VEGE_AREA}</p>
+              <div className="button-container">
+                {' '}
+                {/* Added class for styling */}
+                <span>🌱주말농장 신청 바로가기</span>
+                <button
+                  className="custom-button"
+                  onClick={() => {
+                    window.open(
+                      'http://www.gm.go.kr/pt/cp/weekendFarm/info.do',
+                      '_blank',
+                    );
+                  }}
+                >
+                  Go
+                </button>
+              </div>
+            </li>
+          </ul>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
+    </>
   );
 }
