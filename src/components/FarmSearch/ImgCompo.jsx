@@ -30,10 +30,19 @@ const ImgCompo = ({ farm }) => {
             </Link>
           </div>
           <div className="back">
-            <div className="farmInfoContainer">
-              <p className="farmName">{farm.FARM_NAME._text}</p>
-              <p className="farmAddress">{farm.ADDRESS._text}</p>
-            </div>
+            <Link
+              to={{
+                pathname: `/FarmInfo/${encodeURIComponent(
+                  farm.FARM_NAME._text,
+                )}`,
+                state: { imgUrl: farm.imgUrl }, // 이미지 URL 상태로 전달
+              }}
+            >
+              <div className="farmInfoContainer">
+                <p className="farmName">{farm.FARM_NAME._text}</p>
+                <p className="farmAddress">{farm.ADDRESS._text}</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
