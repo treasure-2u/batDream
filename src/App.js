@@ -5,7 +5,6 @@ import FarmSearch from './pages/FarmSearch';
 import FarmInfo from './pages/FarmInfo';
 import FarmGuide from './pages/FarmGuide';
 import PlantMain from './pages/PlantMain';
-import PlantInfo from './pages/PlantInfo';
 import BugMain from './pages/BugMain';
 import BugInfo from './pages/BugInfo';
 import NotFound from './pages/NotFound';
@@ -24,7 +23,6 @@ function App() {
         <Route path="/FarmInfo/:farmName" element={<FarmInfo />} />
         <Route path="/FarmGuide" element={<FarmGuide />} />
         <Route path="/PlantMain" element={<PlantMain />} />
-        <Route path="/PlantInfo" element={<PlantInfo />} />
         <Route path="/BugMain" element={<BugMain />} />
         <Route path="/BugInfo/:BugId/" element={<BugInfo />} />
         <Route path="*" element={<NotFound />} />
