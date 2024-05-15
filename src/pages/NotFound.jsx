@@ -1,6 +1,6 @@
-// Not Found 예외처리 페이지
-import '../styles/NotFound.scss';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/NotFound.scss';
 
 export default function NotFound() {
   const navigate = useNavigate();
