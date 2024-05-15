@@ -6,7 +6,7 @@ import farm1 from '../../assets/main/gallery1.png';
 import farm2 from '../../assets/main/gallery2.png';
 import farm3 from '../../assets/main/gallery3.png';
 import farm4 from '../../assets/main/gallery4.png';
-import farm5 from '../../assets/main/gallery5.png';
+import farm5 from '../../assets/main/gallery2.png';
 import farm6 from '../../assets/main/gallery6.png';
 import farm7 from '../../assets/main/gallery7.png';
 import farm8 from '../../assets/main/gallery8.png';
@@ -17,6 +17,11 @@ import farm12 from '../../assets/main/gallery2.png';
 import farm13 from '../../assets/main/gallery3.png';
 import farm14 from '../../assets/main/gallery4.png';
 import farm15 from '../../assets/main/gallery5.png';
+import farm16 from '../../assets/main/gallery2.png';
+import farm17 from '../../assets/main/gallery4.png';
+import farm18 from '../../assets/main/gallery1.png';
+import farm19 from '../../assets/main/gallery10.png';
+import farm20 from '../../assets/main/gallery8.png';
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // 현재 사진 인덱스 상태 추가
@@ -39,6 +44,11 @@ const Gallery = () => {
     { url: farm13, description: '농장 체험' },
     { url: farm14, description: '자연과 함께' },
     { url: farm15, description: '가족과 함께' },
+    { url: farm16, description: '가족과 함께' },
+    { url: farm17, description: '가족과 함께' },
+    { url: farm18, description: '가족과 함께' },
+    { url: farm19, description: '가족과 함께' },
+    { url: farm20, description: '가족과 함께' },
     // 필요에 따라 추가할 수 있습니다.
   ];
 
@@ -57,16 +67,7 @@ const Gallery = () => {
     const slicedPhotos = farmPhotos.slice(startIndex, startIndex + 5); // 5장씩 사진 슬라이싱
 
     return slicedPhotos.map((photo, index) => (
-      <div
-        className={`photo ${
-          slideDirection === 'left'
-            ? 'slide-out'
-            : slideDirection === 'right'
-            ? 'slide-in'
-            : ''
-        }`}
-        key={startIndex + index}
-      >
+      <div className="photo" key={startIndex + index}>
         <img src={photo.url} alt={photo.description} />
         <p>{photo.description}</p>
       </div>
@@ -74,17 +75,13 @@ const Gallery = () => {
   };
 
   const handleNext = () => {
-    setSlideDirection('left'); // 왼쪽으로 슬라이드
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => prevIndex + 5); // 다음 사진들 보여주기
-      setSlideDirection('right'); // 오른쪽에서 슬라이드 인
-    }, 200); // 애니메이션 시간(0.5초) 후에 실행
+    setCurrentIndex((prevIndex) => prevIndex + 1); // 다음 사진 인덱스 설정
   };
 
   return (
     <div className="Gallery">
       <h1>Gallery</h1>
-      <div className="gallery">{renderPhotos()}</div>
+      <div className={`gallery ${slideDirection}`}>{renderPhotos()}</div>
     </div>
   );
 };
