@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
 import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
 import NotFound from '../../pages/NotFound'; // NotFound 컴포넌트 가져오기
-import ImgCompo from '../../components/FarmSearch/ImgCompo'; // ImgCompo 컴포넌트 가져오기
+// import ImgCompo from '../../components/FarmSearch/ImgCompo'; // ImgCompo 컴포넌트 가져오기
 
 import imageUrls from '../../assets/farm/data'; // 이미지 URL 배열 가져오기
 
@@ -49,7 +49,8 @@ export default function FarmInfoContainer() {
     <>
       <div className="farm-info-container">
         <h2 className="farm-name">{farmInfo.FARM_NAME}</h2>
-        <ImgCompo farm={farmInfo} /> {/* ImgCompo 컴포넌트에 farm 정보 전달 */}
+        {/* <ImgCompo farm={farmInfo} /> */}{' '}
+        {/* ImgCompo 컴포넌트에 farm 정보 전달 */}
         {farmInfo ? (
           <ul className="farm-details">
             <li>
