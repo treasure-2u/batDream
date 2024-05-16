@@ -1,12 +1,14 @@
-// FarmInfoContainer.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
 import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
 import NotFound from '../../pages/NotFound'; // NotFound 컴포넌트 가져오기
+import ImgCompo from '../../components/FarmSearch/ImgCompo'; // ImgCompo 컴포넌트 가져오기
+
+import imageUrls from '../../assets/farm/data'; // 이미지 URL 배열 가져오기
 
 export default function FarmInfoContainer() {
-  const [farmInfo, setFarmInfo] = useState([]);
+  const [farmInfo, setFarmInfo] = useState(null); // 초기값을 null로 설정
   const { farmName } = useParams();
 
   useEffect(() => {
@@ -21,16 +23,25 @@ export default function FarmInfoContainer() {
           (info) => info.FARM_NAME === farmName.replace('_', ' '),
         );
 
-        setFarmInfo(selectedFarm);
+        // 이미지 URL을 랜덤하게 선택하여 farmInfo에 추가
+        if (selectedFarm) {
+          const randomIndex = Math.floor(Math.random() * imageUrls.length);
+          selectedFarm.imgUrl = imageUrls[randomIndex];
+          setFarmInfo(selectedFarm);
+        } else {
+          console.error('Farm not found:', farmName);
+          setFarmInfo(null); // 농장 정보를 찾을 수 없는 경우에는 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
+        }
       } catch (error) {
         console.error('Error fetching farm info:', error);
+        setFarmInfo(null); // 에러 발생 시 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
       }
     };
 
     fetchFarmInfo();
   }, [farmName]);
 
-  if (!farmInfo) {
+  if (farmInfo === null) {
     return <NotFound />;
   }
 
@@ -38,20 +49,16 @@ export default function FarmInfoContainer() {
     <>
       <div className="farm-info-container">
         <h2 className="farm-name">{farmInfo.FARM_NAME}</h2>
+        <ImgCompo farm={farmInfo} /> {/* ImgCompo 컴포넌트에 farm 정보 전달 */}
         {farmInfo ? (
           <ul className="farm-details">
-            {' '}
-            {/* Added class for styling */}
             <li>
-              <Copy className="copy" text={farmInfo.ADDRESS}>
-                <p>🌱 주소 : {farmInfo.ADDRESS}</p>
-              </Copy>
+              <Copy className="copy" text={farmInfo.ADDRESS} />
+              <p>🌱 주소 : {farmInfo.ADDRESS}</p>
               <p>🌱 규모 : {farmInfo.SCALE}</p>
               <p>🌱 운영 시작일 : {farmInfo.USE_START_DATE}</p>
               <p>🌱 텃밭면적(m2) : {farmInfo.VEGE_AREA}</p>
               <div className="button-container">
-                {' '}
-                {/* Added class for styling */}
                 <span>🌱 주말농장 신청 바로가기 : </span>
                 <button
                   className="custom-button"
