@@ -29,11 +29,11 @@ export default function FarmInfoContainer() {
           selectedFarm.imgUrl = imageUrls[randomIndex];
           setFarmInfo(selectedFarm);
         } else {
-          console.error('Farm not found:', farmName);
+          alert('Farm not found:', farmName);
           setFarmInfo(null); // 농장 정보를 찾을 수 없는 경우에는 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
         }
       } catch (error) {
-        console.error('Error fetching farm info:', error);
+        alert('Error fetching farm info:', error);
         setFarmInfo(null); // 에러 발생 시 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
       }
     };
