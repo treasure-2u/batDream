@@ -28,8 +28,7 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
 }
 
 .main-logo {
-  // margin-left: -3.125rem;
-  margin-right: 3.75rem;
+  margin-right: 3.75rem; /* 변경: margin-left를 주석 처리하고 margin-right를 설정했습니다. */
 }
 
 .logo {
@@ -98,27 +97,33 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
   .icon-container {
     flex-direction: column;
     text-align: center;
-    width: 10%;
+    width: 25%; /* 변경: 너비를 25%로 조정했습니다. */
   }
 
   .main-logo {
-    margin-left: 0;
-    margin-right: 0;
+    margin-right: 0; /* 변경: margin-left를 주석 처리하고 margin-right를 설정했습니다. */
   }
 
   .logo {
     margin-right: 0;
   }
+
+  .header-link {
+    display: none;
+  }
 }
+
 @media (max-width: 30rem) {
   .logo-1 {
-    font-size: 0.9375rem;
+    font-size: 1.25rem; /* 변경: 화면이 작을 때 폰트 크기를 줄입니다. */
   }
   .main-logo {
-    width: 5%;
+    width: 25%; /* 변경: 너비를 25%로 조정했습니다. */
   }
 }
-@media (max-width: 62rem) {
+
+@media (max-width: 23.4375rem) {
+  // 375px를 rem 단위로 변환하면 대략 23.4375rem입니다.
   .container {
     max-width: 90%;
   }
