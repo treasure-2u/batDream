@@ -46,6 +46,10 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
   font-family: 'ONE-Mobile-POP';
   color: $romain-green;
   font-size: 1.5625rem;
+
+  @media (max-width: 480px) {
+    display: none; /* 너비가 480px 이하일 때 "밭드림" 텍스트 숨김 처리 */
+  }
 }
 
 .icon-container {
@@ -71,8 +75,8 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
   color: inherit;
   transition: color 0.3s ease;
 
-  @media (max-width: 48rem) {
-    display: none;
+  @media (max-width: 768px) {
+    display: none; /* 텍스트 링크는 숨김 처리 */
   }
 }
 
@@ -108,8 +112,12 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
     margin-right: 0;
   }
 
+  .icon-container > .header-link {
+    display: inline; /* 아이콘과 함께 표시할 링크는 보이도록 설정 */
+  }
+
   .header-link {
-    display: none;
+    display: none; /* 텍스트 링크는 숨김 처리 */
   }
 }
 
@@ -134,3 +142,9 @@ $logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
     max-width: 75rem;
   }
 }
+@media (max-width: 27.9375rem) {
+  .icon-container {
+    display: none;
+  }
+}
+//447px 이하일 때 적용 헤더

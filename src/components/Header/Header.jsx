@@ -22,25 +22,33 @@ export default function Header() {
           </Link>
         </div>
         <div className="icon-container">
-          <Leaf className="icon" />
+          <Link to="/FarmSearch" className="header-link" id="color1">
+            <Leaf className="icon" />
+          </Link>
           <Link to="/FarmSearch" className="header-link" id="color1">
             주말농장
           </Link>
         </div>
         <div className="icon-container">
-          <Book className="icon" />
+          <Link to="/PlantMain" className="header-link" id="color2">
+            <Book className="icon" />
+          </Link>
           <Link to="/PlantMain" className="header-link" id="color2">
             식물도감
           </Link>
         </div>
         <div className="icon-container">
-          <BadBook className="icon" />
+          <Link to="/BugMain" className="header-link" id="color3">
+            <BadBook className="icon" />
+          </Link>
           <Link to="/BugMain" className="header-link" id="color3">
             유해충도감
           </Link>
         </div>
         <div className="icon-container">
-          <Notice className="icon" />
+          <Link to="/FarmGuide" className="header-link" id="color4">
+            <Notice className="icon" />
+          </Link>
           <Link to="/FarmGuide" className="header-link" id="color4">
             팜가이드
           </Link>
