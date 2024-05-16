@@ -26,7 +26,7 @@ export default function Header() {
             <Leaf className="icon" />
           </Link>
           <Link to="/FarmSearch" className="header-link" id="color1">
-            주말농장
+            <span>주말농장</span>
           </Link>
         </div>
         <div className="icon-container">
@@ -34,7 +34,7 @@ export default function Header() {
             <Book className="icon" />
           </Link>
           <Link to="/PlantMain" className="header-link" id="color2">
-            식물도감
+            <span>식물도감</span>
           </Link>
         </div>
         <div className="icon-container">
@@ -42,7 +42,7 @@ export default function Header() {
             <BadBook className="icon" />
           </Link>
           <Link to="/BugMain" className="header-link" id="color3">
-            유해충도감
+            <span>유해충도감</span>
           </Link>
         </div>
         <div className="icon-container">
@@ -50,7 +50,7 @@ export default function Header() {
             <Notice className="icon" />
           </Link>
           <Link to="/FarmGuide" className="header-link" id="color4">
-            팜가이드
+            <span>팜가이드</span>
           </Link>
         </div>
       </div>
