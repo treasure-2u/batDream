@@ -21,7 +21,7 @@ export default function Dust() {
 
   // 데이터 불러오기
   const getDust = () => {
-    let dust_url = `http://localhost:3000/dust_api/${DUST_API.key}/json/RealtimeCityAir/1/25/`;
+    let dust_url = `/dust_api/${DUST_API.key}/json/RealtimeCityAir/1/25/`;
     fetch(dust_url)
       .then((response) => response.json())
       .then((data) => {
