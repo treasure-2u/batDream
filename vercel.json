@@ -1,20 +1,12 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "source": "/proxy_plants/:path*",
+      "destination": "http://api.nongsaro.go.kr/:path*"
     },
     {
-      "src": "/proxy_plants/service/varietyInfo/varietyList",
-      "dest": "https://api.example.com",
-      "methods": ["GET"]
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/dust_api/:path*/",
+      "destination": "http://openapi.seoul.go.kr:8088/:path*/"
     }
   ]
 }
