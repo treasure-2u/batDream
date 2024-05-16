@@ -1,29 +1,18 @@
-// 주말농장 상세 - 농장 찾기
-import NameFilterCompo from '../components/FarmSearch/NameFilterCompo';
-import ImgCompo from '../components/FarmSearch/ImgCompo';
 import React, { useState, useEffect } from 'react';
 import { xml2js } from 'xml-js';
 import imageUrls from '../assets/farm/data.js';
 import PageNation from '../components/PlantMain/PageNation';
 import AreaFilterCompo from '../components/FarmSearch/AreaFilterCompo.jsx';
+import NameFilterCompo from '../components/FarmSearch/NameFilterCompo.jsx';
+import ImgCompo from '../components/FarmSearch/ImgCompo';
 import '../styles/FarmSearch/FarmSearch.scss';
 
 export default function FarmSearch() {
   const [farms, setFarms] = useState([]);
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [farmArr, setFarmArr] = useState([]); // 현재 페이지에 따라 보여줄 농장 배열 (농장 정보와 이미지를 합친 객체의 배열)
-
-  const currentFarmArr = (currPage, farmsArr) => {
-    if (currPage == 1) {
-      farmsArr
-        ? setFarmArr(farmsArr.slice(0, 4))
-        : setFarmArr(farms.slice(0, 4));
-    } else {
-      farmsArr
-        ? setFarmArr(farmsArr.slice((currPage * 4 - 4, currPage * 4)))
-        : setFarmArr(farms.slice(currPage * 4 - 4, currPage * 4));
-    }
-  };
+  const [displayedFarms, setDisplayedFarms] = useState([]); // 검색 결과로 보여줄 농장 배열
+  const [searchInput, setSearchInput] = useState(''); // 검색어 상태 추가
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +48,7 @@ export default function FarmSearch() {
         // fetchData가 완료된 후에 currentFarmArr 실행
         currentFarmArr(currentPage, combinedFarms);
         setFarms(combinedFarms); // 병합된 데이터 저장
+        setDisplayedFarms(combinedFarms); // 검색 결과로 보여줄 농장 배열 초기화
       } catch (error) {
         // 에러 발생 시 에러 상태 업데이트
         console.error('Fetch error:', error);
@@ -72,10 +62,35 @@ export default function FarmSearch() {
     currentFarmArr(currentPage);
   }, [currentPage]);
 
+  useEffect(() => {
+    currentFarmArr(currentPage);
+  }, [displayedFarms]); // displayedFarms가 업데이트될 때마다 currentFarmArr 호출
+
+  const currentFarmArr = (currPage) => {
+    if (currPage === 1) {
+      setFarmArr(displayedFarms.slice(0, 4));
+    } else {
+      setFarmArr(displayedFarms.slice(currPage * 4 - 4, currPage * 4));
+    }
+  };
+
+  const handleSearch = () => {
+    const filteredFarms = farms.filter((farm) =>
+      farm.FARM_NAME._text.includes(searchInput),
+    );
+    setDisplayedFarms(filteredFarms);
+  };
+
   return (
     <div>
       <div className="farmFilter">
-        <NameFilterCompo />
+        <NameFilterCompo
+          farms={farms}
+          setDisplayedFarms={setDisplayedFarms}
+          handleSearch={handleSearch}
+          setSearchInput={setSearchInput}
+        />{' '}
+        {/* setSearchInput 함수를 NameFilterCompo로 전달 */}
         <AreaFilterCompo />
       </div>
       <div className="farmImg">
@@ -84,7 +99,7 @@ export default function FarmSearch() {
         ))}
       </div>
       <PageNation
-        totalPages={Math.ceil(farms.length / 4)}
+        totalPages={Math.ceil(displayedFarms.length / 4)}
         currentPageNum={currentPage}
         onPageChange={setCurrentPage}
       />
