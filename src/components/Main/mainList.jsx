@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/Main/main.scss';
-import recommendationImage from '../../assets/main/mainListfarm.jpeg'; // 추천작물 이미지를 가져옵니다.
 
 const MainList = () => {
   return (

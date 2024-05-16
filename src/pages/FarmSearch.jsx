@@ -28,7 +28,6 @@ export default function FarmSearch() {
         const xmlText = await response.text();
         // XML을 JavaScript 객체로 변환
         const parsedXml = xml2js(xmlText, { compact: true });
-        // console.log(parsedXml);
 
         // 필요한 데이터를 추출
         const farmsData = parsedXml.weekendfarm?.row || [];
@@ -46,7 +45,7 @@ export default function FarmSearch() {
         }));
 
         // fetchData가 완료된 후에 currentFarmArr 실행
-        currentFarmArr(currentPage, combinedFarms);
+        currentFarmArr(1, combinedFarms);
         setFarms(combinedFarms); // 병합된 데이터 저장
         setDisplayedFarms(combinedFarms); // 검색 결과로 보여줄 농장 배열 초기화
       } catch (error) {
@@ -59,18 +58,14 @@ export default function FarmSearch() {
   }, []);
 
   useEffect(() => {
-    currentFarmArr(currentPage);
-  }, [currentPage]);
+    currentFarmArr(currentPage, displayedFarms);
+  }, [currentPage, displayedFarms]);
 
-  useEffect(() => {
-    currentFarmArr(currentPage);
-  }, [displayedFarms]); // displayedFarms가 업데이트될 때마다 currentFarmArr 호출
-
-  const currentFarmArr = (currPage) => {
+  const currentFarmArr = (currPage, farms) => {
     if (currPage === 1) {
-      setFarmArr(displayedFarms.slice(0, 4));
+      setFarmArr(farms.slice(0, 4));
     } else {
-      setFarmArr(displayedFarms.slice(currPage * 4 - 4, currPage * 4));
+      setFarmArr(farms.slice(currPage * 4 - 4, currPage * 4));
     }
   };
 
@@ -79,6 +74,7 @@ export default function FarmSearch() {
       farm.FARM_NAME._text.includes(searchInput),
     );
     setDisplayedFarms(filteredFarms);
+    setCurrentPage(1); // 검색 후 첫 페이지로 이동
   };
 
   return (
@@ -89,8 +85,7 @@ export default function FarmSearch() {
           setDisplayedFarms={setDisplayedFarms}
           handleSearch={handleSearch}
           setSearchInput={setSearchInput}
-        />{' '}
-        {/* setSearchInput 함수를 NameFilterCompo로 전달 */}
+        />
         <AreaFilterCompo />
       </div>
       <div className="farmImg">

@@ -13,35 +13,35 @@ export default function PlantMain() {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
+    const fetchPlants = () => {
+      fetch(
+        `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API_KEY}&categoryCode=FC&pageNo=${currentPageNum}`,
+      )
+        .then((response) => response.text())
+        .then((xmlString) => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+          const itemElements = Array.from(
+            xmlDoc.getElementsByTagName('item'),
+          ).map((item) => ({
+            svcCodeNm: item.querySelector('svcCodeNm').textContent,
+            mainChartrInfo: item.querySelector('mainChartrInfo').textContent,
+            imgFileLinkOriginal: item.querySelector('imgFileLinkOriginal')
+              .textContent,
+          }));
+          setPlants(itemElements);
+          setFilteredPlants(itemElements);
+
+          // 전체 페이지 수 계산
+          const totalCount = xmlDoc.querySelector('totalCount').textContent;
+          const pages = Math.ceil(totalCount / 5); // 한 페이지에 10개씩 표시
+          setTotalPages(pages);
+        })
+        .catch((error) => console.log(error));
+    };
+
     fetchPlants();
-  }, [currentPageNum]); // currentPageNum이 변경될 때마다 데이터를 새로 가져옴
-
-  const fetchPlants = () => {
-    fetch(
-      `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API_KEY}&categoryCode=FC&pageNo=${currentPageNum}`,
-    )
-      .then((response) => response.text())
-      .then((xmlString) => {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
-        const itemElements = Array.from(
-          xmlDoc.getElementsByTagName('item'),
-        ).map((item) => ({
-          svcCodeNm: item.querySelector('svcCodeNm').textContent,
-          mainChartrInfo: item.querySelector('mainChartrInfo').textContent,
-          imgFileLinkOriginal: item.querySelector('imgFileLinkOriginal')
-            .textContent,
-        }));
-        setPlants(itemElements);
-        setFilteredPlants(itemElements);
-
-        // 전체 페이지 수 계산
-        const totalCount = xmlDoc.querySelector('totalCount').textContent;
-        const pages = Math.ceil(totalCount / 5); // 한 페이지에 10개씩 표시
-        setTotalPages(pages);
-      })
-      .catch((error) => console.log(error));
-  };
+  }, [currentPageNum]); // fetchPlants 함수를 의존성 배열에서 제거
 
   const handleSearch = () => {
     if (inputValue === '') {

@@ -1,12 +1,8 @@
-// InfoComponent.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/BugInfo/InfoComponent.scss'; // Sass 파일을 import합니다.
-import NavbarDarkExample from '../BugMain/bootstrap';
 import BugData from '../BugMain/BugData.json';
 import { useParams } from 'react-router-dom';
 
-import { useState, useEffect } from 'react';
-import BugMain from './../../pages/BugMain';
 export default function InfoComponent() {
   const { BugId } = useParams();
   console.log(BugId);
@@ -16,7 +12,7 @@ export default function InfoComponent() {
     if (BugData && BugData.length > 0) {
       setBugData(BugData.find((bug) => bug.id.toString() === BugId));
     }
-  }, [BugData, BugId]);
+  }, [BugId]); // 여기서 BugData를 제거합니다.
 
   return (
     <>

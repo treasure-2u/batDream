@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../../styles/Main/main.scss'; // SCSS 파일을 import
 
 // 사진 import
@@ -51,6 +51,10 @@ const Gallery = () => {
     // 필요에 따라 추가할 수 있습니다.
   ];
 
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % farmPhotos.length); // 다음 사진 인덱스 설정
+  }, [farmPhotos.length]);
+
   useEffect(() => {
     // 4초마다 슬라이드하는 setInterval 설정
     const id = setInterval(() => {
@@ -59,7 +63,7 @@ const Gallery = () => {
 
     // 컴포넌트가 언마운트되면 clearInterval 호출하여 메모리 누수 방지
     return () => clearInterval(id);
-  }, []); // 초기 렌더링 시에만 실행
+  }, [handleNext]); // handleNext를 의존성 배열에 추가
 
   const renderPhotos = () => {
     const startIndex = currentIndex % farmPhotos.length; // 시작 인덱스 계산
@@ -79,10 +83,6 @@ const Gallery = () => {
         <p>{photo.description}</p>
       </div>
     ));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % farmPhotos.length); // 다음 사진 인덱스 설정
   };
 
   return (
