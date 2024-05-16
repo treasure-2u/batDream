@@ -135,11 +135,13 @@
     display: none; /* 병해충 도감정보 숨기기 */
   }
 }
-
 @media only screen and (max-width: 480px) {
   .input input {
-    margin-left: 0; /* 왼쪽 마진 제거 */
-    width: calc(100% - 20px); /* 부모 요소에 맞게 너비 조정 */
+    width: calc(100% - 65px); /* 버튼의 크기와 간격을 고려하여 조정 */
+  }
+
+  .input button {
+    padding: 8px 10px; /* 버튼의 패딩을 조정 */
   }
 
   .search-container div {
