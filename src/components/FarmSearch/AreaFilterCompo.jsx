@@ -1,3 +1,4 @@
+// AreaFilterCompo.jsx
 export default function AreaFilterCompo({ handleAreaChange }) {
   const handleSelectChange = (event) => {
     const selectedArea = event.target.value;
