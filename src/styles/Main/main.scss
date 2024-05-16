@@ -467,6 +467,7 @@ $breakpoint-small: 480px;
   border-radius: 20px;
   margin-top: 4rem;
   padding: 40px;
+  cursor: pointer;
 
   // 미세먼지 정도에 따라 다른 배경색 지정
   &.good {
