@@ -4,7 +4,7 @@
 
 <br>
 <p align=center><img src="https://github.com/treasure-2u/batDream/blob/devel/public/logo-readme.png" alt="logo" style="width: 200px"></p>
-SeSAC 강동 3기 - 3차 팀 프로젝트에서 만든 페이지입니다. 프론트엔드 기술과 OPEN API를 활용하여 주말농장 초보자들을 위한 정보 제공 사이트 '밭드림'을 제작해보았습니다.
+SeSAC 강동 3기 - 3차 팀 프로젝트에서 제작한 주말농장 초보자들을 위한 정보 제공 사이트 '밭드림'입니다.
 
 <br>
 <br>
