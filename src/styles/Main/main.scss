@@ -492,14 +492,12 @@ $breakpoint-small: 480px;
 
   @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
     // 769px ~ 1200px
-    left: -10%; /* 부모 요소의 가로축 이동 */
     bottom: 14%;
     width: 23rem;
   }
 
   @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     // 480px ~ 768px
-    left: -10%; /* 부모 요소의 가로축 이동 */
     bottom: 14%;
     width: 20rem;
     height: 13rem;
@@ -547,19 +545,17 @@ $breakpoint-small: 480px;
   @media screen and (min-width: $breakpoint-large) {
     // 1200px 이상
     left: -10%; /* 부모 요소의 가로축 이동 */
-    bottom: 5%;
+    bottom: 6%;
   }
 
   @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
     // 769px ~ 1200px
-    left: -10%; /* 부모 요소의 가로축 이동 */
     bottom: 8%;
     width: 23rem;
   }
 
   @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     // 480px ~ 768px
-    left: -10%; /* 부모 요소의 가로축 이동 */
     bottom: 8%;
     width: 20rem;
     height: 13rem;
