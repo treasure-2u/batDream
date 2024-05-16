@@ -456,7 +456,8 @@ h1 {
 // from dust.scss
 // 미세먼지 위젯 스타일링
 $breakpoint-large: 1200px;
-$breakpoint-small: 999px;
+$breakpoint-medium: 769px;
+$breakpoint-small: 480px;
 
 .dust-box {
   width: 25rem;
@@ -489,15 +490,21 @@ $breakpoint-small: 999px;
     bottom: 14%;
   }
 
-  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
-    // 999px ~ 1200px
-    left: -10%; /* 부모 요소의 가로축 이동 */
+  @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+    // 769px ~ 1200px
     bottom: 14%;
+    width: 23rem;
+  }
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    // 480px ~ 768px
+    bottom: 14%;
+    width: 20rem;
     height: 13rem;
   }
 
   @media screen and (max-width: $breakpoint-small) {
-    // 999px 이하
+    // 480px 이하
     margin: 10px 0;
     width: 18rem;
     height: 12rem;
@@ -538,19 +545,25 @@ $breakpoint-small: 999px;
   @media screen and (min-width: $breakpoint-large) {
     // 1200px 이상
     left: -10%; /* 부모 요소의 가로축 이동 */
-    bottom: 5%;
+    bottom: 6%;
   }
 
-  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
-    // 999px ~ 1200px
-    left: -10%; /* 부모 요소의 가로축 이동 */
+  @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+    // 769px ~ 1200px
     bottom: 8%;
+    width: 23rem;
+  }
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    // 480px ~ 768px
+    bottom: 8%;
+    width: 20rem;
     height: 13rem;
     padding: 25px;
   }
 
   @media screen and (max-width: $breakpoint-small) {
-    // 999px 이하
+    // 480px 이하
     margin: 10px 0;
     width: 18rem;
     height: 12rem;
