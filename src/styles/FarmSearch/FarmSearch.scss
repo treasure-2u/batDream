@@ -158,32 +158,49 @@ input {
   color: $potato-beige;
 }
 
+/* 가장 작은 디바이스부터 스타일을 정의하고, 크기가 커질수록 오버라이드합니다 */
 @media only screen and (max-width: 375px) {
   .farmImg {
     flex-direction: column; /* 컬럼 방향으로 아이템을 쌓습니다 */
     align-items: center; /* 아이템들을 중앙 정렬합니다 */
   }
-  // .farmSerchInfo {
-  //   width: 10px;
-  // }
+
   .farmSearchImage,
   .farmSerchInfo {
-    width: 40vh;
-    height: 30vh;
-    align-items: center;
+    width: 90vw; /* 화면 너비의 90% */
+    height: 60vw; /* 높이를 화면 너비의 60%로 설정 */
   }
 
   .card {
-    width: 100%;
+    width: 100%; /* 카드 너비를 100%로 설정 */
   }
 
-  .SearchBtn {
-    display: none;
-  }
-  .name {
-    display: none;
-  }
+  .SearchBtn,
+  .name,
   .filterArea {
-    display: none;
+    display: none; /* 일부 요소를 화면에서 제거 */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .farmImg {
+    flex-direction: column; /* 컬럼 방향으로 아이템을 쌓습니다 */
+    align-items: center; /* 아이템들을 중앙 정렬합니다 */
+  }
+
+  .farmSearchImage,
+  .farmSerchInfo {
+    width: 80vw; /* 화면 너비의 80% */
+    height: 60vw; /* 높이를 화면 너비의 60%로 설정 */
+  }
+
+  .card {
+    width: 100%; /* 카드 너비를 100%로 설정 */
+  }
+
+  .SearchBtn,
+  .name,
+  .filterArea {
+    display: none; /* 일부 요소를 화면에서 제거 */
   }
 }
