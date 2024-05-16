@@ -42,8 +42,14 @@ export default function Dust() {
       .catch((error) => setError('ERROR'));
   };
 
+  // 위젯 클릭시 네이버 미세먼지 정보 페이지로 이동
+  const goToNaverDust = () => {
+    let url = `https://weather.naver.com/air`;
+    window.open(url, '_blank'); // 새 창에서 열기
+  };
+
   return (
-    <div className={`dust-box ${bgClass}`}>
+    <div className={`dust-box ${bgClass}`} onClick={goToNaverDust}>
       <div className="dust-info">
         오늘의 미세먼지 현황
         <br />
