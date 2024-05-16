@@ -30,6 +30,7 @@ export default function Dust() {
         // setPlace(gangdongData.MSRSTE_NM);
         // setDustGrade(gangdongData.IDEX_NM);
 
+        // 중구 정보만 추출
         const jungguData = data.RealtimeCityAir.row[0];
         setPlace(jungguData.MSRSTE_NM);
         setDustGrade(jungguData.IDEX_NM);
