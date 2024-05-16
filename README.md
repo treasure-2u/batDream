@@ -3,7 +3,7 @@
 # '밭드림 | BatDream' 사이트 제작
 
 <br>
-<p align=center><img src="https://github.com/treasure-2u/batDream/blob/devel/public/logo-readme.png" alt="logo" style="width: 200px"></p>
+<p align=center><img src="https://github.com/treasure-2u/batDream/blob/main/public/logo-readme.png" alt="logo" style="width: 200px"></p>
 SeSAC 강동 3기 - 3차 팀 프로젝트에서 제작한 주말농장 초보자들을 위한 정보 제공 사이트 '밭드림'입니다.
 
 <br>
