@@ -13,7 +13,6 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
   };
 
   return (
-    // <div className="farmFilter">
     <div className="filter nameFilter">
       <div className="name filterName">텃밭명</div>
       <div className="searchInput">
@@ -40,6 +39,5 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
         </button>
       </div>
     </div>
-    // </div>
   );
 }
