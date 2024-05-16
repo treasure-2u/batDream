@@ -19,7 +19,7 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
       <div className="searchInput">
         <input
           type="text"
-          placeholder="검색어를 입력하세요."
+          placeholder="텃밭명을 입력하세요."
           value={searchInput}
           onChange={handleInputChange}
         />

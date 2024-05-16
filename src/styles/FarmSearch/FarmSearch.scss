@@ -157,3 +157,33 @@ input {
   font-weight: bold;
   color: $potato-beige;
 }
+
+@media only screen and (max-width: 375px) {
+  .farmImg {
+    flex-direction: column; /* 컬럼 방향으로 아이템을 쌓습니다 */
+    align-items: center; /* 아이템들을 중앙 정렬합니다 */
+  }
+  // .farmSerchInfo {
+  //   width: 10px;
+  // }
+  .farmSearchImage,
+  .farmSerchInfo {
+    width: 40vh;
+    height: 30vh;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .SearchBtn {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+  .filterArea {
+    display: none;
+  }
+}
