@@ -43,11 +43,9 @@ export default function FarmInfoContainer() {
             {' '}
             {/* Added class for styling */}
             <li>
-              <p>
-                <Copy className="copy" text={farmInfo.ADDRESS}>
-                  🌱 주소 : {farmInfo.ADDRESS}
-                </Copy>
-              </p>
+              <Copy className="copy" text={farmInfo.ADDRESS}>
+                <p>🌱 주소 : {farmInfo.ADDRESS}</p>
+              </Copy>
               <p>🌱 규모 : {farmInfo.SCALE}</p>
               <p>🌱 운영 시작일 : {farmInfo.USE_START_DATE}</p>
               <p>🌱 텃밭면적(m2) : {farmInfo.VEGE_AREA}</p>
