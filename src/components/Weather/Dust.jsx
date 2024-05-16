@@ -29,8 +29,6 @@ export default function Dust() {
         // const gangdongData = data.RealtimeCityAir.row[24];
         // setPlace(gangdongData.MSRSTE_NM);
         // setDustGrade(gangdongData.IDEX_NM);
-        // console.log(gangdongData);
-        // console.log(data);
 
         const jungguData = data.RealtimeCityAir.row[0];
         setPlace(jungguData.MSRSTE_NM);
