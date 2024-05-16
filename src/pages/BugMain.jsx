@@ -16,7 +16,6 @@ export default function BugMain() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // console.log('조회 버튼이 클릭되었습니다. 입력된 값:', inputValue);
 
     const filteredData = BugData.filter((item) => {
       return item.name.includes(inputValue) || item.crop.includes(inputValue);

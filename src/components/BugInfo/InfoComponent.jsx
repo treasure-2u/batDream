@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 
 export default function InfoComponent() {
   const { BugId } = useParams();
-  console.log(BugId);
   const [bugData, setBugData] = useState({});
 
   useEffect(() => {
