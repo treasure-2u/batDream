@@ -18,7 +18,7 @@ export default function Weather() {
 
   useEffect(() => {
     getCurrentLocation();
-  }, []);
+  });
 
   // 위치 가져오기
   const getCurrentLocation = () => {
