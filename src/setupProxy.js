@@ -16,4 +16,16 @@ module.exports = function (app) {
       pathRewrite: { '^/proxy_bug': '' },
     })(req, res, next);
   });
+
+  // 미세먼지 위젯
+  app.use(
+    '/dust_api',
+    createProxyMiddleware({
+      target: 'http://openapi.seoul.go.kr:8088',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/dust_api': '', // '/api'로 시작하는 경로를 빈 문자열로 대체
+      },
+    }),
+  );
 };
