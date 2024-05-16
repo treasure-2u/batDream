@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/proxy_plants/:path*",
+      "destination": "http://api.nongsaro.go.kr/:path*"
+    },
+    {
+      "source": "/dust_api/:path*/",
+      "destination": "http://openapi.seoul.go.kr:8088/:path*/"
+    }
+  ]
+}
