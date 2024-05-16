@@ -15,7 +15,7 @@ export default function PlantMain() {
   useEffect(() => {
     const fetchPlants = () => {
       fetch(
-        `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API_KEY}&categoryCode=FC&pageNo=${currentPageNum}`,
+        `/proxy_plants/service/varietyInfo/varietyList?apiKey=${process.env.REACT_APP_PLANT_API}&categoryCode=FC&pageNo=${currentPageNum}`,
       )
         .then((response) => response.text())
         .then((xmlString) => {
