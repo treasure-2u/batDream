@@ -16,4 +16,13 @@ module.exports = function (app) {
       pathRewrite: { '^/proxy_bug': '' },
     })(req, res, next);
   });
+
+  app.use('/dust_api', (req, res, next) => {
+    createProxyMiddleware({
+      target: 'http://openapi.seoul.go.kr:8088',
+      changeOrigin: true,
+      pathRewrite: { '^/dust_api': '' }, // 경로를 빈 문자열로 대체
+      secure: false, // HTTPS 검증 비활성화 (개발용)
+    })(req, res, next);
+  });
 };

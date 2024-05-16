@@ -21,19 +21,14 @@ export default function Dust() {
 
   // 데이터 불러오기
   const getDust = () => {
-    let url = `http://openAPI.seoul.go.kr:8088/${DUST_API.key}/json/RealtimeCityAir/1/25/`;
-    fetch(url)
+    let dust_url = `https://localhost:3000/api/${DUST_API.key}/json/RealtimeCityAir/1/25/`;
+    fetch(dust_url)
       .then((response) => response.json())
       .then((data) => {
         // 서울시 25개 지역구 중에 강동구만 추출
         // const gangdongData = data.RealtimeCityAir.row[24];
         // setPlace(gangdongData.MSRSTE_NM);
         // setDustGrade(gangdongData.IDEX_NM);
-
-        // 중구 정보만 추출
-        const jungguData = data.RealtimeCityAir.row[0];
-        setPlace(jungguData.MSRSTE_NM);
-        setDustGrade(jungguData.IDEX_NM);
 
         // 강동구 미세먼지 정도에 따라 다른 배경색 지정
         // if (gangdongData.IDEX_NM === '좋음') {
@@ -43,6 +38,14 @@ export default function Dust() {
         // } else {
         //   setBgClass('bad');
         // }
+
+        console.log(data);
+        console.log(jungguData);
+
+        // 중구 정보만 추출
+        const jungguData = data.RealtimeCityAir.row[0];
+        setPlace(jungguData.MSRSTE_NM);
+        setDustGrade(jungguData.IDEX_NM);
 
         // 중구 미세먼지 정도에 따라 다른 배경색 지정
         if (jungguData.IDEX_NM === '좋음') {
