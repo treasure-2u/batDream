@@ -421,17 +421,17 @@ h1 {
 }
 
 .farm-image {
-  width: 100%; /* 원하는 크기로 조정 */
+  width: 420px; /* 원하는 크기로 조정 */
   height: 305px; /* 원하는 크기로 조정 */
 }
 
 .plant-guide-image {
-  width: 100%; /* 원하는 크기로 조정 */
+  width: 420px; /* 원하는 크기로 조정 */
   height: 236px; /* 원하는 크기로 조정 */
 }
 
 .pest-guide-image {
-  width: 100%; /* 원하는 크기로 조정 */
+  width: 420px; /* 원하는 크기로 조정 */
   height: 238px; /* 원하는 크기로 조정 */
 }
 
@@ -595,14 +595,13 @@ $breakpoint-small: 480px;
 
 // 메인에서 위젯 위치 조정
 .main-full-container {
-  width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 20px;
 }
 
 .main-full-weather {
   display: flex;
   flex-direction: column;
-  margin: 60px;
+  margin: 90px;
 }
