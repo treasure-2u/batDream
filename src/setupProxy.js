@@ -24,7 +24,7 @@ module.exports = function (app) {
       target: 'http://openapi.seoul.go.kr:8088',
       changeOrigin: true,
       pathRewrite: {
-        '^/dust_api': '', // '/api'로 시작하는 경로를 빈 문자열로 대체
+        '^/dust_api': '', // '/dust_api'로 시작하는 경로를 빈 문자열로 대체
       },
     }),
   );
