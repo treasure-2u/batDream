@@ -1,0 +1,33 @@
+@import '../root.scss';
+
+.pagination {
+  justify-content: center;
+  margin: 10px;
+}
+
+.div.pagination {
+  display: flex;
+  justify-content: center; // 수정된 부분
+  margin: 20px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.pagination button {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #d9b487;
+  border: 1px solid black;
+
+  @media (max-width: 768px) {
+    margin: 5px 2px;
+  }
+}
+
+.pagination button.active {
+  background-color: #77a642;
+}

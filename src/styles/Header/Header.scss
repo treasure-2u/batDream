@@ -1,0 +1,150 @@
+@import '../root.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+$icon-color: #333;
+$spacing: 2.5rem; /* rem 단위 사용 */
+$header-padding-top: 1rem; /* rem 단위 사용 */
+$header-padding-bottom: 1.25rem; /* rem 단위 사용 */
+$header-border-bottom: 0.125rem solid $potato-beige; /* rem 단위 사용 */
+$logo-margin-right: $spacing; /* 로고와 버튼 사이의 간격 조정 */
+
+.header {
+  font-weight: bold;
+  color: #333;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-bottom: $header-border-bottom;
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-logo {
+  margin-right: 3.75rem; /* 변경: margin-left를 주석 처리하고 margin-right를 설정했습니다. */
+}
+
+.logo {
+  margin-right: $logo-margin-right;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 3.4375rem;
+  height: auto;
+}
+
+.logo-1 {
+  font-family: 'ONE-Mobile-POP';
+  color: $romain-green;
+  font-size: 1.5625rem;
+
+  @media (max-width: 480px) {
+    display: none; /* 너비가 480px 이하일 때 "밭드림" 텍스트 숨김 처리 */
+  }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4.0625rem;
+}
+
+.icon {
+  color: $romain-green;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.3125rem;
+  display: flex;
+  transition: color 0.3s ease;
+}
+
+.header-link {
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  @media (max-width: 768px) {
+    display: none; /* 텍스트 링크는 숨김 처리 */
+  }
+}
+
+#color1:hover {
+  color: $romain-green;
+}
+
+#color2:hover {
+  color: #8b6a42;
+}
+
+#color3:hover {
+  color: #5b5959;
+}
+
+#color4:hover {
+  color: #f6cd68;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 48rem) {
+  .icon-container {
+    flex-direction: column;
+    text-align: center;
+    width: 25%; /* 변경: 너비를 25%로 조정했습니다. */
+  }
+
+  .main-logo {
+    margin-right: 0; /* 변경: margin-left를 주석 처리하고 margin-right를 설정했습니다. */
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .icon-container > .header-link {
+    display: inline; /* 아이콘과 함께 표시할 링크는 보이도록 설정 */
+  }
+
+  .header-link {
+    display: none; /* 텍스트 링크는 숨김 처리 */
+  }
+}
+
+@media (max-width: 30rem) {
+  .logo-1 {
+    font-size: 1.25rem; /* 변경: 화면이 작을 때 폰트 크기를 줄입니다. */
+  }
+  .main-logo {
+    width: 25%; /* 변경: 너비를 25%로 조정했습니다. */
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  // 375px를 rem 단위로 변환하면 대략 23.4375rem입니다.
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 27.9375rem) {
+  .header-link span {
+    display: none;
+  }
+}
+//447px 이하일 때 적용 헤더

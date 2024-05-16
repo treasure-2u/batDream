@@ -1,0 +1,65 @@
+@import '../root.scss';
+
+.plant-main-container {
+  .plant-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0;
+  }
+
+  .searchWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%; // 변경된 부분
+  }
+
+  .searchContainer {
+    width: 90%; // 변경된 부분
+    max-width: 500px; // 선택적으로 최대 너비를 지정할 수 있습니다.
+    border: 2px solid #77a642;
+    border-radius: 10px;
+    padding: 2%; // 변경된 부분
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchContainer button {
+    margin: 2px;
+  }
+
+  .searchBox {
+    display: flex;
+  }
+
+  .searchBox {
+    input {
+      margin-right: 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      border: 2px solid #77a642;
+      width: 70%; // 변경된 부분
+    }
+
+    .searchButton {
+      border-radius: 5px;
+      border: 2px solid #77a642;
+      background-color: #77a642;
+      color: white;
+      width: 25%; // 변경된 부분
+    }
+
+    button {
+      border-radius: 5px;
+      border: 2px solid #d9b487;
+      background-color: #d9b487;
+      color: white;
+      width: 25%; // 변경된 부분
+    }
+  }
+
+  .searchContainer div {
+    margin-left: 10px;
+  }
+}
