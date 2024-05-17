@@ -26,14 +26,14 @@ const PageNation = ({ totalPages, currentPageNum, onPageChange }) => {
         disabled={currentPageNum === 1}
         onClick={() => onPageChange(currentPageNum - 1)}
       >
-        이전
+        &lt;
       </button>
       {getPageNumbers()}
       <button
         disabled={currentPageNum === totalPages}
         onClick={() => onPageChange(currentPageNum + 1)}
       >
-        다음
+        &gt;
       </button>
     </div>
   );
