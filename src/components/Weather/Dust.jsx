@@ -25,19 +25,32 @@ export default function Dust() {
     fetch(dust_url)
       .then((response) => response.json())
       .then((data) => {
-        // 중구 정보만 추출
-        const jungguData = data.RealtimeCityAir.row[0];
-        setPlace(jungguData.MSRSTE_NM);
-        setDustGrade(jungguData.IDEX_NM);
+        // 강동구 정보만 추출
+        const gangdongData = data.RealtimeCityAir.row[24];
+        setPlace(gangdongData.MSRSTE_NM);
+        setDustGrade(gangdongData.IDEX_NM);
 
-        // 중구 미세먼지 정도에 따라 다른 배경색 지정
-        if (jungguData.IDEX_NM === '좋음') {
+        // 강동구 미세먼지 정도에 따라 다른 배경색 지정
+        if (gangdongData.IDEX_NM === '좋음') {
           setBgClass('good');
-        } else if (jungguData.IDEX_NM === '보통') {
+        } else if (gangdongData.IDEX_NM === '보통') {
           setBgClass('normal');
         } else {
           setBgClass('bad');
         }
+
+        // 중구 정보만 추출
+        // const jungguData = data.RealtimeCityAir.row[0];
+        // setPlace(jungguData.MSRSTE_NM);
+        // setDustGrade(jungguData.IDEX_NM);
+
+        // if (jungguData.IDEX_NM === '좋음') {
+        //   setBgClass('good');
+        // } else if (jungguData.IDEX_NM === '보통') {
+        //   setBgClass('normal');
+        // } else {
+        //   setBgClass('bad');
+        // }
       })
       .catch((error) => setError('ERROR'));
   };
