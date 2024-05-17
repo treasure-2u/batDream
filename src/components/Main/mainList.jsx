@@ -5,9 +5,7 @@ const MainList = () => {
   return (
     <div className="mainListPage">
       {/* Brandstory 섹션 */}
-      <div className="Brandstory">
-        <h2>Brandstory</h2>
-      </div>
+      <div className="Brandstory">Brandstory</div>
 
       {/* Recommendation 섹션 */}
       <div className="BrandstoryMain">

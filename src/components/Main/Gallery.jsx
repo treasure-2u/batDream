@@ -87,7 +87,7 @@ const Gallery = () => {
 
   return (
     <div className="Gallery">
-      <h1>Gallery</h1>
+      <div className="GalleryTitle">Gallery</div>
       <div className="gallery">{renderPhotos()}</div>
     </div>
   );
