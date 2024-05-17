@@ -35,7 +35,6 @@ export default function Weather() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setPlace(data.name);
         setIcon(data.weather[0].icon);
         setNowWeather(data.weather[0].description);
