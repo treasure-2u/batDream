@@ -15,7 +15,7 @@ export default function PlantBox({
         <div className="svc-code">{svcCodeNm}</div>
         <div className="main-chartr-info">특징: {mainChartrInfo}</div>
         <img
-          src={imgFileLinkOriginal}
+          src={imgFileLinkOriginal.replace('http', 'https')}
           alt={svcCodeNm}
           className="plant-image"
         />
