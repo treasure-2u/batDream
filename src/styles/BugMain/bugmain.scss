@@ -53,6 +53,7 @@
 .search-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: solid 1px #77a642;
   padding: 15px;
   border-radius: 20px;
@@ -79,6 +80,7 @@
   border: 1px solid #77a642;
   border-radius: 5px;
   background-color: #fff;
+  color: black !important;
   cursor: pointer;
 }
 
