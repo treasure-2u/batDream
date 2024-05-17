@@ -70,7 +70,7 @@ export default function BugMain() {
             <div className="api-item">순번</div>
             <div className="api-item">작물</div>
             <div className="api-item">이름</div>
-            <div className="api-item">영문영</div>
+            <div className="api-item">영문명</div>
             <div className="api-item">대표사진</div>
           </div>
           <MyContainer data={filteredData} setSelectedBug={setSelectedBug} />
