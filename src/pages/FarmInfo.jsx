@@ -1,10 +1,10 @@
-import WeekendFarmInfo from '../components/FarmInfo/FarmInfo';
+import FarmInfoContainer from '../components/FarmInfo/FarmInfoContainer';
 
 const App = () => {
   return (
     <>
-      <h1>주말농장 현황</h1>
-      <WeekendFarmInfo />
+      <h1>주말농장 상세정보</h1>
+      <FarmInfoContainer />
     </>
   );
 };

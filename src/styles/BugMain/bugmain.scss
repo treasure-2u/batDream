@@ -1,7 +1,7 @@
 .bug-title {
   text-align: center;
   font-size: 40px;
-  margin: 40px 40px;
+  margin: 20px 0; /* 모바일에서 마진 조정 */
   width: 100%;
 }
 
@@ -9,15 +9,22 @@
   height: 1px;
   background-color: #77a642;
 }
+
 .body-title {
-  // width: 1000px;
   text-align: center;
 }
 
+.NavbarDarkExample {
+  background-color: #77a642;
+}
 .BugPageMain {
   display: flex;
-  margin: 0 100px; /* 양쪽 여백 100px 추가 */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
+
 .Kategorie-title {
   border: 1px solid #77a642;
   padding: 30px;
@@ -25,14 +32,28 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.accordion-header {
+  border: 1px solid #77a642;
+  border-radius: 5px;
+}
+
+.accordion-body {
+  border: 1px solid #77a642;
+  border-radius: 5px;
+  margin: 5px;
+}
+
 .Main-Main {
   margin-top: 20px;
   width: 1000px;
   margin-left: 20px;
 }
+
 .search-container {
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 추가 */
+  align-items: center;
+  justify-content: center;
   border: solid 1px #77a642;
   padding: 15px;
   border-radius: 20px;
@@ -42,6 +63,25 @@
 .search-container div {
   margin-left: 10px;
   line-height: 32px;
+}
+
+.input input {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 1px solid #77a642;
+}
+
+.input button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: 1px solid #77a642;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black !important;
+  cursor: pointer;
 }
 
 .input {
@@ -67,17 +107,56 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid #d9b487;
-  padding: 10px;
+  padding: 3px;
   margin-top: 5px;
+  align-items: center;
 }
 
 .api-item {
   flex: 1;
   border-right: 1px solid lightgray;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
 }
 
 .api-item:last-child {
   border-right: none;
+}
+
+.api-item img {
+  width: 200px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bootstrap-container {
+    display: none; /* 병해충 정보 칸 숨기기 */
+  }
+
+  .api-container-title {
+    display: none; /* 병해충 도감정보 숨기기 */
+  }
+}
+@media only screen and (max-width: 480px) {
+  .input input {
+    width: calc(100% - 65px); /* 버튼의 크기와 간격을 고려하여 조정 */
+  }
+
+  .input button {
+    width: 130px;
+  }
+
+  .search-container div {
+    display: none; /* 미디어 쿼리에서는 텍스트 숨김 */
+  }
+
+  .api-item {
+    display: none; /* 모바일에서 숨김 */
+  }
+
+  .api-item:nth-child(3), /* 이름 */
+  .api-item:nth-child(5) {
+    /* 사진 */
+    display: block; /* 해당 요소들만 표시 */
+  }
 }

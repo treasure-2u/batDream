@@ -1,0 +1,61 @@
+@import '../root.scss';
+
+// Define the plant emoji as a variable
+$plantEmoji: '🌱';
+
+.FarmGuideBox {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($color: #d9b487, $alpha: 0.5); /* 색상 및 투명도 조정 */
+  margin-bottom: 50px;
+
+  ul {
+    margin-top: 0px;
+    padding: 20px;
+    list-style: none; // Remove default list styles
+    li {
+      &::before {
+        content: $plantEmoji; // Insert plant emoji before each list item
+        margin-right: 5px; // Add some space between emoji and text
+      }
+    }
+  }
+}
+
+.QuizBox {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($color: #d9b487, $alpha: 0.5); /* 색상 및 투명도 조정 */
+  margin-bottom: 50px;
+  text-align: left; // 내용을 왼쪽으로 정렬합니다.
+
+  form {
+    margin-top: 20px; // 폼의 위쪽 여백을 추가합니다.
+  }
+
+  button {
+    margin-top: 20px; // 버튼의 위쪽 여백을 추가합니다.
+    padding: 10px 20px; // 버튼의 패딩을 조정합니다.
+    background-color: #3d9970; // 버튼의 배경색을 변경합니다.
+    color: white; // 버튼 텍스트의 색상을 변경합니다.
+    border: none; // 버튼의 테두리를 제거합니다.
+    border-radius: 5px; // 버튼의 모서리를 둥글게 만듭니다.
+    cursor: pointer; // 커서를 포인터로 변경합니다.
+  }
+
+  .Radio {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 10px;
+    padding: 20px;
+  }
+}

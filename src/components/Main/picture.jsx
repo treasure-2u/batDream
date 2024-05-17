@@ -1,21 +1,46 @@
-import React from 'react';
-import '../../styles/Main/pictures.scss';
-import pictureImg from '../../assets/pictures.svg';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
+import '../../styles/Main/main.scss';
+import picture1 from '../../assets/main/sesacimg.jpeg';
+import picture2 from '../../assets/main/blueimg.jpeg';
+import picture3 from '../../assets/main/conimg.jpeg';
+import middleImage from '../../assets/main/person.png';
 
 function Pictures() {
+  const images = [picture1, picture2, picture3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const nextIndex = (currentImageIndex + 1) % images.length;
+      setCurrentImageIndex(nextIndex);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [currentImageIndex, images.length]);
+
   return (
-    <div className="container">
-      <img src={pictureImg} alt="이미지" width="400" />
+    <div className="picture-container">
+      <img
+        src={images[currentImageIndex]}
+        alt="이미지"
+        // width="1000" // 이미지 너비 조정
+        // style={{ height: 'auto' }} // 높이 자동으로 조정
+      />
       <div className="overlay">
         <h2>서울에 있는 주말농장</h2>
         <p className="middle-text">
-          서울시에 있는 주말농장에 대한 설명
-          블라블라블라블라블라블라블라블라블라블라블라.
+          도심 속에서 자연을 경험하고 농업 활동을 즐길 수 있는 장소입니다.
         </p>
+        <img src={middleImage} alt="중간 이미지" className="middle-image" />
         <p className="end-text">
           가족과 친구와 함께 새로운 재미를 느끼러 주말농장에 가보는건 어떨까요?
         </p>
-        <button>주말농장 보러가기</button>
+        <Link to="/FarmSearch">
+          {' '}
+          {/* Link to FarmMain page */}
+          <button>주말농장 보러가기</button>
+        </Link>
       </div>
     </div>
   );

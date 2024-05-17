@@ -1,7 +1,7 @@
 import '../../styles/Footer/footer.scss'; // 일반적인 CSS 파일 가져오기
-import logoImage from '../../assets/logo.png';
+import logoImage from '../../assets/header/logo.png';
 
-const Footer = () => {
+const Footer420 = () => {
   const handleClick = () => {
     alert(
       '밭드림 고객센터 안내\n운영시간 : 평일 9:00am ~6:00pm\n1번) 비밀번호, 보호조치, 이용제한 등 계정 관련\n2번) 추가 콘텐츠 제보\n3번) 주말농장 신청, 지역 농장정보\n4번) 권리보호 센터\n5번) 그 외 서비스',
@@ -29,4 +29,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer420;

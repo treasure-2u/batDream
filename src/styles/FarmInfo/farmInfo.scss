@@ -1,0 +1,83 @@
+@import '../root.scss';
+
+li {
+  list-style: none;
+}
+
+.farm-info-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: $chiliflower-white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba($potato-beige, $alpha: 0.5); /* 색상 및 투명도 조정 */
+  margin-bottom: 50px;
+}
+
+.farm-name {
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.farm-details {
+  padding: 0;
+}
+
+.farm-details li {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-button {
+  width: 80px;
+  height: 28px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: $romain-green;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: $potato-beige;
+}
+
+.copy {
+  cursor: pointer;
+}
+
+.copy:hover {
+  text-decoration: underline;
+  color: $romain-green;
+}
+
+.loading {
+  font-style: italic;
+  color: #888;
+}
+
+// 미디어 쿼리 추가
+@media screen and (max-width: 768px) {
+  .farm-info-container {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .farm-name {
+    font-size: 24px;
+  }
+
+  .custom-button {
+    width: 60px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
