@@ -9,7 +9,8 @@ const ModifiedBanner = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate(`/FarmInfo/${searchTerm.replace(' ', '_')}`);
+    // navigate(`/FarmInfo/${searchTerm.replace(' ', '_')}`);
+    navigate(`/FarmInfo/${encodeURIComponent(searchTerm)}`);
   };
 
   return (
