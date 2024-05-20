@@ -11,7 +11,7 @@ export default function InfoComponent() {
     if (BugData && BugData.length > 0) {
       setBugData(BugData.find((bug) => bug.id.toString() === BugId));
     }
-  }, [BugId]); // 여기서 BugData를 제거합니다.
+  }, [BugId]);
 
   return (
     <>
