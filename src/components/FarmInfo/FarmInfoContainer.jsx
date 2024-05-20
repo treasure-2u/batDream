@@ -76,7 +76,7 @@ export default function FarmInfoContainer() {
             </ul>
           </>
         ) : (
-          <div>검색결과가 없습니다.</div>
+          <div>🌱 검색 결과가 없습니다. 등록된 농장을 이용해 주세요!</div>
         )}
       </div>
     </>
