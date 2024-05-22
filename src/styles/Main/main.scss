@@ -377,8 +377,6 @@ strong {
 
 // rotation.scss
 
-// main.scss
-
 $romain-green: #4caf50; // 로맨 그린 컬러 정의 (필요에 따라 변경)
 $chiliflower-white: #fffafa;
 $potato-beige: #d2b48c;
@@ -420,8 +418,14 @@ $potato-beige: #d2b48c;
     }
   }
 
+  &__link {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   &__image {
-    width: 420px;
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -470,7 +474,7 @@ $potato-beige: #d2b48c;
 }
 
 .photo img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
