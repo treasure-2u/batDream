@@ -6,17 +6,19 @@ function MyContainer(props) {
   return (
     <div className="my-container">
       {props.data.map((item) => (
-        <div className="api-container" key={item.id}>
+        <Link
+          to={`/BugInfo/${item.id}`}
+          key={item.id}
+          className="api-container"
+        >
           <div className="api-item">{item.id}</div>
           <div className="api-item">{item.crop}</div>
-          <div className="api-item">
-            <Link to={`/BugInfo/${item.id}`}>{item.name}</Link>
-          </div>
+          <div className="api-item">{item.name}</div>
           <div className="api-item">{item.english_name}</div>
           <div className="api-item">
             <img src={item.image_url} alt={item.name} />
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
