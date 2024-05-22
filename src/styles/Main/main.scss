@@ -377,71 +377,90 @@ strong {
 
 // rotation.scss
 
-h1 {
-  padding-top: 50px;
-  padding-bottom: 40px;
-  font-weight: bold;
+// main.scss
+
+$romain-green: #4caf50; // 로맨 그린 컬러 정의 (필요에 따라 변경)
+$chiliflower-white: #fffafa;
+$potato-beige: #d2b48c;
+
+.rotation {
   text-align: center;
-  color: $romain-green !important;
+  padding: 20px;
+
+  &__title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: $romain-green !important;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+  }
+
+  &__image-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__image {
+    width: 420px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: $romain-green;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #777;
+    padding: 0 10px 20px;
+    text-align: center;
+  }
+
+  // 특정 이미지의 크기를 설정
+  &__image--farm {
+    height: 230px;
+  }
+
+  &__image--plant-guide {
+    height: 236px;
+  }
+
+  &__image--pest-guide {
+    height: 238px;
+  }
 }
 
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 70px;
-  margin-top: 50px;
-}
-
-.image-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
-}
-
-.main-image {
-  width: 420px;
-  height: 237px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-image:hover {
-  transform: scale(1.1);
-}
-
-.name {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: $romain-green;
-}
-
-.farm-image {
-  width: 420px; /* 원하는 크기로 조정 */
-  height: 305px; /* 원하는 크기로 조정 */
-}
-
-.plant-guide-image {
-  width: 420px; /* 원하는 크기로 조정 */
-  height: 236px; /* 원하는 크기로 조정 */
-}
-
-.pest-guide-image {
-  width: 420px; /* 원하는 크기로 조정 */
-  height: 238px; /* 원하는 크기로 조정 */
-}
-
-// .Gallery {
-//   display: flex;
-//   justify-content: center;
-// }
 .photo {
   position: relative;
   justify-content: center;
