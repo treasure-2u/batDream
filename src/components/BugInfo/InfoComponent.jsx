@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/BugInfo/InfoComponent.scss'; // Sass 파일을 import합니다.
+import '../../styles/BugInfo/InfoComponent.scss';
 import BugData from '../BugMain/BugData.json';
 import { useParams } from 'react-router-dom';
 
