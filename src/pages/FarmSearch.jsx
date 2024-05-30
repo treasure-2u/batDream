@@ -60,6 +60,7 @@ export default function FarmSearch() {
 
   useEffect(() => {
     currentFarmArr(currentPage, displayedFarms);
+
     setNoResultsFound(displayedFarms.length === 0);
   }, [currentPage, displayedFarms]);
 
