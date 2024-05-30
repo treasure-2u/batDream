@@ -4,14 +4,21 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
   const [searchInput, setSearchInput] = useState('');
 
   const handleInputChange = (e) => {
-    const userInput = e.target.value;
-    setSearchInput(userInput);
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearch = () => {
     const filteredFarms = farms.filter((farm) =>
-      farm.FARM_NAME._text.includes(userInput),
+      farm.FARM_NAME._text.includes(searchInput),
     );
     setDisplayedFarms(filteredFarms);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
   return (
     <div className="filter nameFilter">
       <div className="name filterName">텃밭명</div>
@@ -21,10 +28,11 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
           placeholder="텃밭명을 입력하세요."
           value={searchInput}
           onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
         />
       </div>
       <div className="SearchBtnContainer">
-        <button className="SearchBtn">
+        <button className="SearchBtn" onClick={handleSearch}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

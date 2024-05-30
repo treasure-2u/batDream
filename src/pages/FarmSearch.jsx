@@ -12,7 +12,7 @@ export default function FarmSearch() {
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [farmArr, setFarmArr] = useState([]); // 현재 페이지에 따라 보여줄 농장 배열 (농장 정보와 이미지를 합친 객체의 배열)
   const [displayedFarms, setDisplayedFarms] = useState([]); // 검색 결과로 보여줄 농장 배열
-  const [searchInput, setSearchInput] = useState(''); // 검색어 상태 추가
+  // const [searchInput, setSearchInput] = useState(''); // 검색어 상태 추가
 
   useEffect(() => {
     const fetchData = async () => {
@@ -69,13 +69,13 @@ export default function FarmSearch() {
     }
   };
 
-  const handleSearch = () => {
-    const filteredFarms = farms.filter((farm) =>
-      farm.FARM_NAME._text.includes(searchInput),
-    );
-    setDisplayedFarms(filteredFarms);
-    setCurrentPage(1); // 검색 후 첫 페이지로 이동
-  };
+  // const handleSearch = () => {
+  //   // const filteredFarms = farms.filter((farm) =>
+  //   //   farm.FARM_NAME._text.includes(searchInput),
+  //   // );
+  //   // // setDisplayedFarms(filteredFarms);
+  //   // setCurrentPage(1); // 검색 후 첫 페이지로 이동
+  // };
 
   const handleAreaChange = (area) => {
     if (area) {
@@ -95,8 +95,8 @@ export default function FarmSearch() {
         <NameFilterCompo
           farms={farms}
           setDisplayedFarms={setDisplayedFarms}
-          handleSearch={handleSearch}
-          setSearchInput={setSearchInput}
+          // handleSearch={handleSearch}
+          // setSearchInput={setSearchInput}
         />
         <AreaFilterCompo handleAreaChange={handleAreaChange} />
       </div>
