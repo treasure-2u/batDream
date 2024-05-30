@@ -14,7 +14,7 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
     setDisplayedFarms(filteredFarms);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleSearch();
     }
@@ -28,7 +28,7 @@ export default function NameFilterCompo({ farms, setDisplayedFarms }) {
           placeholder="텃밭명을 입력하세요."
           value={searchInput}
           onChange={handleInputChange}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyDown}
         />
       </div>
       <div className="SearchBtnContainer">

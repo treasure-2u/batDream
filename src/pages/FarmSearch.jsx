@@ -13,6 +13,7 @@ export default function FarmSearch() {
   const [farmArr, setFarmArr] = useState([]); // 현재 페이지에 따라 보여줄 농장 배열 (농장 정보와 이미지를 합친 객체의 배열)
   const [displayedFarms, setDisplayedFarms] = useState([]); // 검색 결과로 보여줄 농장 배열
   // const [searchInput, setSearchInput] = useState(''); // 검색어 상태 추가
+  const [noResultsFound, setNoResultsFound] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +60,7 @@ export default function FarmSearch() {
 
   useEffect(() => {
     currentFarmArr(currentPage, displayedFarms);
+    setNoResultsFound(displayedFarms.length === 0);
   }, [currentPage, displayedFarms]);
 
   const currentFarmArr = (currPage, farms) => {
@@ -70,11 +72,11 @@ export default function FarmSearch() {
   };
 
   // const handleSearch = () => {
-  //   // const filteredFarms = farms.filter((farm) =>
-  //   //   farm.FARM_NAME._text.includes(searchInput),
-  //   // );
-  //   // // setDisplayedFarms(filteredFarms);
-  //   // setCurrentPage(1); // 검색 후 첫 페이지로 이동
+  //    const filteredFarms = farms.filter((farm) =>
+  //      farm.FARM_NAME._text.includes(searchInput),
+  //    );
+  //    setDisplayedFarms(filteredFarms);
+  //    setCurrentPage(1); // 검색 후 첫 페이지로 이동
   // };
 
   const handleAreaChange = (area) => {
@@ -104,6 +106,9 @@ export default function FarmSearch() {
         {farmArr.map((farmInfo, index) => (
           <ImgCompo key={index} farm={farmInfo} />
         ))}
+        {noResultsFound && (
+          <div className="noMatchMessage">검색 결과가 존재하지 않습니다.</div>
+        )}
       </div>
       <PageNation
         totalPages={Math.ceil(displayedFarms.length / 4)}
