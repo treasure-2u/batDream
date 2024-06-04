@@ -157,8 +157,37 @@ input {
   font-weight: bold;
   color: $potato-beige;
 }
+// 모바일
+.back-M {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex; /* flexbox 사용 */
+  flex-direction: column; /* 수직 방향으로 정렬 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+}
 
-/* 가장 작은 디바이스부터 스타일을 정의하고, 크기가 커질수록 오버라이드합니다 */
+.farmInfoContainer-M {
+  margin-top: 20px; /* 사진과 이름/주소 사이 간격 조절 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.farmName-M,
+.farmAddress-M {
+  font-size: xx-large;
+  // background-color: $romain-green;
+  color: white;
+  margin: 0; /* 기본 마진 제거 */
+}
+
+.farmAddress-M {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+}
+
+/* 가장 작은 디바이스부터 스타일을 정의하고, 크기가 커질수록 오버라이드 */
 @media only screen and (max-width: 375px) {
   .farmImg {
     flex-direction: column; /* 컬럼 방향으로 아이템을 쌓습니다 */
@@ -204,3 +233,12 @@ input {
     display: none; /* 일부 요소를 화면에서 제거 */
   }
 }
+// @media only screen and (max-width: 480px) {
+//   .back {
+//     display: block; /* 모바일에서는 상세 정보를 무조건 보여줍니다. */
+//   }
+
+//   .farmInfoContainer {
+//     display: block; /* 모바일에서는 기본 정보를 무조건 보여줍니다. */
+//   }
+// }
