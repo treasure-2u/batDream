@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
 import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
-import imageUrls from '../../assets/farm/data'; // 이미지 URL 배열 가져오기
 
-export default function FarmInfoContainer() {
+export default function FarmInfoContainer({ imgUrl }) {
   const [farmInfo, setFarmInfo] = useState(null); // 초기값을 null로 설정
   const [loading, setLoading] = useState(true); // 로딩 상태를 추가
   const { farmName } = useParams();
@@ -23,8 +22,6 @@ export default function FarmInfoContainer() {
 
         // 이미지 URL을 랜덤하게 선택하여 farmInfo에 추가
         if (selectedFarm) {
-          const randomIndex = Math.floor(Math.random() * imageUrls.length);
-          selectedFarm.imgUrl = imageUrls[randomIndex];
           setFarmInfo(selectedFarm);
         } else {
           console.log('Farm not found:', farmName);
@@ -50,7 +47,10 @@ export default function FarmInfoContainer() {
       <div className="farm-info-container">
         {farmInfo ? (
           <>
-            <h2 className="farm-name">{farmInfo.FARM_NAME}</h2>
+            <img src={imgUrl} />
+            <h2 className="farm-name" style={{ marginTop: '15px' }}>
+              {farmInfo.FARM_NAME}
+            </h2>
             <ul className="farm-details">
               <li>
                 <Copy className="copy" text={farmInfo.ADDRESS} />

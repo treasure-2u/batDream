@@ -43,12 +43,8 @@ const ImgCompo = ({ farm }) => {
           </div>
           <div className="back">
             <Link
-              to={{
-                pathname: `/FarmInfo/${encodeURIComponent(
-                  farm.FARM_NAME._text,
-                )}`,
-                state: { imgUrl: farm.imgUrl },
-              }}
+              to={`/FarmInfo/${encodeURIComponent(farm.FARM_NAME._text)}`}
+              state={{ imgUrl: farm.imgUrl }}
             >
               <div className="farmInfoContainer">
                 <p className="farmName">{farm.FARM_NAME._text}</p>
@@ -60,10 +56,8 @@ const ImgCompo = ({ farm }) => {
       </div>
       {/* 모바일*/}
       <Link
-        to={{
-          pathname: `/FarmInfo/${encodeURIComponent(farm.FARM_NAME._text)}`,
-          state: { imgUrl: farm.imgUrl },
-        }}
+        to={`/FarmInfo/${encodeURIComponent(farm.FARM_NAME._text)}`}
+        state={{ imgUrl: farm.imgUrl }}
       >
         <div className="back-M">
           {isMobile && (
