@@ -4,7 +4,6 @@
 
 <br>
 <p align=center><img src="https://github.com/treasure-2u/batDream/blob/main/public/logo-readme.png" alt="logo" style="width: 200px"></p>
-<br>
 SeSAC 강동 3기 - 3차 팀 프로젝트에서 제작한 주말농장 초보자들을 위한 정보 제공 사이트 '밭드림'입니다.
 
 <br>
@@ -109,6 +108,7 @@ https://github.com/treasure-2u/batDream/
 - **주말농장 메인**
 
   - 주말농장 리스트 이미지 hover event
+
   - 농장 검색 (검색 결과 실시간 반영하여 출력, 지역 필터링)
 
   - pagenation으로 여러 주말농장 데이터 출력
@@ -116,6 +116,7 @@ https://github.com/treasure-2u/batDream/
 - **주말농장 정보**
 
   - '광명시 주말농장 API'를 이용해 농장의 주소, 운영일 등 정보 제공
+
   - 주말농장 신청 페이지로 바로 이동 가능
 
 - **팜가이드**: 주말농장 초보자에게 이용 에티켓 및 퀴즈 제공
