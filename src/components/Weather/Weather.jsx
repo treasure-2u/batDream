@@ -31,7 +31,8 @@ export default function Weather() {
 
   // api 불러오기
   const getNowWeather = (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API.key}&units=metric&lang=kr`;
+    let openmap = `https://api.openweathermap.org/data/2.5/weather`
+    let url = `${openmap}?lat=${lat}&lon=${lon}&appid=${WEATHER_API.key}&units=metric&lang=kr`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

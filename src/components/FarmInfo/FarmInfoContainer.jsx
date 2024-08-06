@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../styles/FarmInfo/farmInfo.scss';
 import Copy from './Copy'; // CopyToClipboard 컴포넌트 가져오기
-import NotFound from '../../pages/NotFound'; // NotFound 컴포넌트 가져오기
-// import ImgCompo from '../../components/FarmSearch/ImgCompo'; // ImgCompo 컴포넌트 가져오기
 
-import imageUrls from '../../assets/farm/data'; // 이미지 URL 배열 가져오기
-
-export default function FarmInfoContainer() {
+export default function FarmInfoContainer({ imgUrl }) {
   const [farmInfo, setFarmInfo] = useState(null); // 초기값을 null로 설정
+  const [loading, setLoading] = useState(true); // 로딩 상태를 추가
   const { farmName } = useParams();
 
   useEffect(() => {
@@ -25,58 +22,61 @@ export default function FarmInfoContainer() {
 
         // 이미지 URL을 랜덤하게 선택하여 farmInfo에 추가
         if (selectedFarm) {
-          const randomIndex = Math.floor(Math.random() * imageUrls.length);
-          selectedFarm.imgUrl = imageUrls[randomIndex];
           setFarmInfo(selectedFarm);
         } else {
-          alert('Farm not found:', farmName);
-          setFarmInfo(null); // 농장 정보를 찾을 수 없는 경우에는 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
+          console.log('Farm not found:', farmName);
+          setFarmInfo(null); // 농장 정보를 찾을 수 없는 경우
         }
       } catch (error) {
-        alert('Error fetching farm info:', error);
-        setFarmInfo(null); // 에러 발생 시 farmInfo를 null로 설정하여 NotFound 컴포넌트를 렌더링하도록 함
+        console.log('Error fetching farm info:', error);
+        setFarmInfo(null); // 에러 발생 시 농장 정보를 null로 설정
+      } finally {
+        setLoading(false); // 로딩 상태 해제
       }
     };
 
     fetchFarmInfo();
   }, [farmName]);
 
-  if (farmInfo === null) {
-    return <NotFound />;
+  if (loading) {
+    return <p>Loading...</p>;
   }
 
   return (
     <>
       <div className="farm-info-container">
-        <h2 className="farm-name">{farmInfo.FARM_NAME}</h2>
-        {/* <ImgCompo farm={farmInfo} /> */}{' '}
-        {/* ImgCompo 컴포넌트에 farm 정보 전달 */}
         {farmInfo ? (
-          <ul className="farm-details">
-            <li>
-              <Copy className="copy" text={farmInfo.ADDRESS} />
-              <p>🌱 주소 : {farmInfo.ADDRESS}</p>
-              <p>🌱 규모 : {farmInfo.SCALE}</p>
-              <p>🌱 운영 시작일 : {farmInfo.USE_START_DATE}</p>
-              <p>🌱 텃밭면적(m2) : {farmInfo.VEGE_AREA}</p>
-              <div className="button-container">
-                <span>🌱 주말농장 신청 바로가기 : </span>
-                <button
-                  className="custom-button"
-                  onClick={() => {
-                    window.open(
-                      'http://www.gm.go.kr/pt/cp/weekendFarm/info.do',
-                      '_blank',
-                    );
-                  }}
-                >
-                  Go
-                </button>
-              </div>
-            </li>
-          </ul>
+          <>
+            <img src={imgUrl} />
+            <h2 className="farm-name" style={{ marginTop: '15px' }}>
+              {farmInfo.FARM_NAME}
+            </h2>
+            <ul className="farm-details">
+              <li>
+                <Copy className="copy" text={farmInfo.ADDRESS} />
+                <p>🌱 주소 : {farmInfo.ADDRESS}</p>
+                <p>🌱 규모 : {farmInfo.SCALE}</p>
+                <p>🌱 운영 시작일 : {farmInfo.USE_START_DATE}</p>
+                <p>🌱 텃밭면적(m2) : {farmInfo.VEGE_AREA}</p>
+                <div className="button-container">
+                  <span>🌱 주말농장 신청 바로가기 : </span>
+                  <button
+                    className="custom-button"
+                    onClick={() => {
+                      window.open(
+                        'http://www.gm.go.kr/pt/cp/weekendFarm/info.do',
+                        '_blank',
+                      );
+                    }}
+                  >
+                    Go
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </>
         ) : (
-          <p>Loading...</p>
+          <div>🌱 검색 결과가 없습니다. 등록된 농장을 이용해 주세요!</div>
         )}
       </div>
     </>
