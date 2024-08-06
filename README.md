@@ -4,6 +4,7 @@
 
 <br>
 <p align=center><img src="https://github.com/treasure-2u/batDream/blob/main/public/logo-readme.png" alt="logo" style="width: 200px"></p>
+<br>
 SeSAC 강동 3기 - 3차 팀 프로젝트에서 제작한 주말농장 초보자들을 위한 정보 제공 사이트 '밭드림'입니다.
 
 <br>
@@ -37,6 +38,46 @@ https://github.com/treasure-2u/batDream/
 
 <br>
 
+## 🛠 기술 스택
+
+- **Frontend**
+
+  ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+  ![Redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white)
+  ![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=Sass&logoColor=white)
+  ![Babel](https://img.shields.io/badge/babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=black)
+  ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+- **Version Control**
+
+  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+  ![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+- **Development Tool**
+
+  ![VScode](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+  ![eslint](https://img.shields.io/badge/eslint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+
+- **Design Tool**
+
+  ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+
+- **Deploy Platform**
+
+  ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+- **Scrum**
+
+  ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white)
+  ![discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+  ![Kakaotalk](https://img.shields.io/badge/KakaoTalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=black)
+  ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
+  (+ 대면 회의)
+
+<br>
+
 ## 👩‍💻 개발자 소개 & 업무분담
 
 - **이유진** [@treasure-2u](https://github.com/treasure-2u/) : `팀장` Favicon, Footer, 주말농장 상세정보
@@ -66,17 +107,15 @@ https://github.com/treasure-2u/batDream/
 ### 주말농장
 
 - **주말농장 메인**
-  
+
   - 주말농장 리스트 이미지 hover event
-    
   - 농장 검색 (검색 결과 실시간 반영하여 출력, 지역 필터링)
-  
+
   - pagenation으로 여러 주말농장 데이터 출력
 
 - **주말농장 정보**
 
   - '광명시 주말농장 API'를 이용해 농장의 주소, 운영일 등 정보 제공
-    
   - 주말농장 신청 페이지로 바로 이동 가능
 
 - **팜가이드**: 주말농장 초보자에게 이용 에티켓 및 퀴즈 제공
@@ -105,35 +144,6 @@ https://github.com/treasure-2u/batDream/
 
   <br>
 
-## 🛠 기술 스택
-
-- **Frontend**
-
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=Sass&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-- **Version Control**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-
-- **Development Tool**
-
-![VScode](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
-- **Scrum**
-
-![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white)
-![discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
-![Kakaotalk](https://img.shields.io/badge/KakaoTalk-FFCD00?style=for-the-badge&logo=kakaotalk&logoColor=black)
-![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
-(+ 대면 회의)
-<br>
-<br>
-
 ## 📌 API
 
 - **광명시 주말농장 API**
@@ -160,6 +170,12 @@ https://github.com/treasure-2u/batDream/
 
   - 웹에서 클릭 시 '네이버 날씨'의 미세먼지 페이지로 이동  
     <br>
+
+## 📍 User Flow
+
+<p align=center><img src="https://github.com/treasure-2u/batDream/blob/main/public/userflow.png" width="800"></p>
+
+<br>
 
 ## 📁 프로젝트 구조
 
@@ -255,6 +271,7 @@ https://github.com/treasure-2u/batDream/
  ┣ 📜package.json
  ┗ 📜README.md
 ```
+
 ---
 
 ### 📢 해당 사이트 제작에 사용한 모든 이미지의 저작권은 소유자에게 있으며, 학습용으로 사용했음을 알립니다.
