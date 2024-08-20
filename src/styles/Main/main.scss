@@ -394,11 +394,6 @@ strong {
 }
 
 // rotation.scss
-
-$romain-green: #4caf50; // 로맨 그린 컬러 정의 (필요에 따라 변경)
-$chiliflower-white: #fffafa;
-$potato-beige: #d2b48c;
-
 .rotation {
   text-align: center;
   padding: 20px;
@@ -408,7 +403,7 @@ $potato-beige: #d2b48c;
     padding-bottom: 40px;
     font-weight: bold;
     text-align: center;
-    color: $romain-green !important;
+    color: $romain-green;
   }
 
   &__images {
