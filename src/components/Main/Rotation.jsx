@@ -31,7 +31,7 @@ const Rotation = () => {
 
   return (
     <div className="rotation">
-      <h1 className="rotation__title">Introduction</h1>
+      <div className="rotation__title Introduction">Introduction</div>
       <div className="rotation__images">
         {images.map((image, index) => (
           <div key={index} className="rotation__image-info">
