@@ -399,11 +399,7 @@ strong {
   padding: 20px;
 
   &__title {
-    padding-top: 50px;
     padding-bottom: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: $romain-green;
   }
 
   &__images {
@@ -637,6 +633,10 @@ $breakpoint-small: 480px;
   display: flex;
   justify-content: space-evenly;
   margin: 20px;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .main-full-weather {
