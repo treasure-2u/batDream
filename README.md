@@ -83,7 +83,7 @@ https://github.com/treasure-2u/batDream/
 
 - **오유리** [@oooohri](https://github.com/oooohri) : 주말농장 검색 페이지
 
-- **조혜진** [@hjinn0813](http://github.com/hjinn0813) : 날씨 위젯, 미세먼지 위젯, Not Found 페이지
+- **조유진** [@yjinn0813](http://github.com/yjinn0813) : 날씨 위젯, 미세먼지 위젯, Not Found 페이지
 
 - **이윤호** [@Leeyoonho0310](http://github.com/Leeyoonho0310) : 식물도감, 주말농장 가이드
 
